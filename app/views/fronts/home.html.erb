@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wyfi | Social WIFI Marketing for small business</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body class="homeheight skylinebg indexbody">
+
+<div class="contain-to-grid">
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area logoul">
+    <li class="name">
+      <%= image_tag('logo.png', class: "logo") %>
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li><a href="#">CAFES AND RESTAURANTS</a></li>
+      <li><a href="#">HOTELS AND B&AMP;BS</a></li>
+      <li><a href="#">PUBS AND NIGHTCLUBS</a></li>
+      <li><a href="#">PRICING</a></li>
+      <li><a href="#"><span class="launchbutton">LAUNCH YOUR WYFI</span></a></li>
+    </ul>
+  </section>
+</nav>
+</div>
+
+<div class="row padding2t">
+  <div class="large-6 columns">
+    <h1 class="font100 font3">Automate, focus and transform your marketing using WIFI</h1>
+    <div class="mainbuttons">
+      <span class="getstartedbutton">LAUNCH YOUR WYFI</span>
+      <span class="loginbutton">LOGIN</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+
+  <div class="cafecontainer">
+    <div class="bubbletext">CAFES</div>
+    <%= image_tag('cafe.png', class: "maincafe") %>
+  </div>
+
+  <div class="restaurantcontainer">
+    <div class="bubbletext">RESTAURANTS</div>
+    <%= image_tag('restaurant.png', class: "mainrestaurant") %>
+  </div>
+  
+  <div class="hotelcontainer">
+    <div class="bubbletext">HOTELS</div>
+    <%= image_tag('hotel.png', class: "mainhotel") %>
+  </div>
+      
+  <div class="bandbcontainer">
+    <div class="bubbletext">B&amp;BS</div>
+    <%= image_tag('bandb.png', class: "mainbandb") %>
+  </div>
+  
+  <div class="pubcontainer">
+    <div class="bubbletext">PUBS</div>
+    <%= image_tag('pub.png', class: "mainpub") %>
+  </div>
+
+  <div class="nightclubcontainer">
+    <div class="bubbletext">CLUBS</div>
+    <%= image_tag('nightclub.png', class: "mainnightclub") %>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
+
+<script>
+  $(function() {
+
+      $('.maintown').matchHeight();
+
+  });
+</script>
