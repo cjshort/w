@@ -17,4 +17,4 @@
 //= require headroom
 //= require jQuery.headroom
 //= require foundation
-//= require_tree .
+//= require foundation.topbar.js

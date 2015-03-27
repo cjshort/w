@@ -9,7 +9,52 @@
 </head>
 <body>
 
+  <div class="fixed contain-to-grid">
+    <header>
+      <nav class="top-bar navheight" data-topbar role="navigation">
+            <ul class="title-area">
+              <li class="name">
+                <h1><%= link_to root_path do %><%= image_tag('logo.png') %><% end %></h1>
+              </li>
+               <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+              <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+            </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li><a href="#">HOW IT WORKS</a></li>
+            <li><a href="#">INDUSTRIES</a></li>
+            <li><a href="#">PRICING</a></li>
+            <li class="launch"><%= link_to new_user_session_path do %>GET WYFI<% end %></li>
+            <li class="login"><%= link_to new_user_session_path do %>LOGIN<% end %></li>
+          </ul>
+        </section>
+      </nav>
+    </header>
+  </div>
+
+
 <%= yield %>
+
+<div class="row footerbg">
+  <Br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+<script type="text/javascript">
+  $("header").headroom({
+    "offset": 1000000,
+  });
+</script>
+
+<script>
+  $(document).foundation();
+</script>
+
+<script>
+  $('.navheight').matchHeight();
+</script>
 
 </body>
 </html>

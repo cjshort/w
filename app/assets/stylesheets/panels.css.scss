@@ -1,40 +1,66 @@
+// Place all the styles related to the panels controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.loginbutton{
-  background: #E06B3C;
-  border: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 0.4rem 2rem;
+ul.dropdown a {
+  line-height: 3.3rem !important;
 }
 
-.rememberlabel{
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  position: relative;
-  top: -2.7px;
+.sidetitle{
+	color: #717881;
+	font-weight: 900;
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid #B3B5B8;
+	margin-bottom: 1rem;
 }
 
-ul.disc.orange li:before {
-  content: "\002022";
-  padding-right: 6px;
-  color: #E06B3C;
+.latestvisitorstext {
+	margin-bottom: 0;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
 }
 
-.greyborder{
-  border: 1px solid #DFDFD9;
+.imgcircle {
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
 }
 
-ul.disc.orange li{
-  margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.80);
+.lastvisitorscontainer {
+	opacity: 0.9;
+	transition-duration: 200ms;
 }
 
-ul.disc.orange{
-  list-style-type: none !important; 
-  margin-left: 0;
+.lastvisitorscontainer:hover{
+  opacity: 1;
+  transition-duration: 200ms;
+}
+
+.maincontainer{
+	padding-top: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.main{
+	background: #fff;
+	border: 1px solid #DFDFD9;
+}
+
+.rightbar{
+	position: fixed !important;
+	right: 0;
+	min-height: 100vh;
+	background: #F7F7F7;
+}
+
+.row.nopadding {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -51,8 +77,8 @@ ul.disc.orange{
   font-weight: 100;
 }
 
-.opacity02{
-  opacity: 0.2;
+.weight600{
+  font-weight: 600;
 }
 
 .content{
@@ -65,34 +91,37 @@ ul.disc.orange{
   padding-right: 3rem;
 }
 
-.padding1b{
-  padding-bottom: 1rem;
-}
-
 .padding6t{
   padding-top: 6rem;
 }
 
 .padding2v{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 .padding3v{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 
-.padding5v{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.padding04v{
+	padding-top: 0.4rem;
+	padding-bottom: 0.4rem;
 }
 
-.padding7v{
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+.margin0tb{
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
+.white{
+	color: #fff;
+}
+
+.opacity09{
+	opacity: 0.9;
+}
 
 .headroom {
     transition: transform 300ms linear;
@@ -104,111 +133,31 @@ ul.disc.orange{
     transform: translateY(-100%);
 }
 
-.row.nopadding {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.maintext{
-  font-size: 4rem;
-  font-weight: 400;
-  margin-top: 29vh;
-}
-
-.mainphone{
-  position: absolute;
-  right: 1%;
-  bottom: -7rem;
-  height: 29rem;
-  opacity: 0.5;
-}
-
-.whitebg{
-  background: #fff;
-}
-
-.footerbg{
-  background: #404040;
+.weight600{
+	font-weight: 600;
 }
 
 .bluebg {
-  background: #303944;
+	background: #303944;
 }
 
 .lightbluebg{
-  background: #474F59;
+	background: #474F59;
 }
 
-.mainbg{
-  background-image: image-url('mainbg.jpeg');
-  background-size: cover;
-  background-position: center left;
-  overflow: hidden;
+.pad{
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
-.shopbg{
-  background: rgba(42, 50, 56, 0.97);
-  overflow: hidden;
+.font14{
+	font-size: 1.4rem;
 }
 
-.mainbgoverlay{
-  background: rgba(31, 41, 49, 0.93);
-}
 
-.height100vh{
-  height: 100vh;
-}
 
-.white{
-  color: #fff;
-}
 
-.mainrender{
-  position: absolute;
-  bottom: -17rem;
-  height: 26rem;
-}
 
-.maingetwyfi{
-  color: #fff;
-  padding: 0.6rem 2rem;
-  background: #E06B3C;
-  border: 1px solid #E06B3C;
-  transition-duration: 300ms;
-}
-
-.maingetwyfi:hover {
-  background: #fff;
-  color: #E06B3C;
-  border: 1px solid #fff;
-  transition-duration: 300ms;
-}
-
-.mainlogin{
-  color: #fff;
-  margin-left: 2rem;
-  padding: 0.6rem 2rem;
-  border: 1px solid #FFF;
-  transition-duration: 300ms;
-}
-
-.mainlogin:hover {
-  background: #fff;
-  color: #E06B3C;
-  transition-duration: 300ms;
-}
-
-.margin3b{
-  margin-bottom: 3rem;
-}
-
-.margin2b{
-  margin-bottom: 2rem;
-}
-
-.margin0bimportant{
-  margin-bottom: 0 !important;
-}
 
 
 
@@ -278,7 +227,7 @@ body {
   font-size: 100%; }
 
 body {
-  background: #EFEFEF;
+  background: #ebebe4;
   color: #3A3A3A;
   padding: 0;
   margin: 0;
@@ -346,9 +295,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 90rem;
-  padding-right: 3rem;
-  padding-left: 3rem; }
+  max-width: 90rem; }
   .row:before, .row:after {
     content: " ";
     display: table; }
@@ -1902,7 +1849,7 @@ meta.foundation-mq-topbar {
     margin-bottom: 0; }
 
 .fixed {
-  width: 100%;
+  width: inherit;
   left: 0;
   position: fixed;
   top: 0;
@@ -1952,24 +1899,6 @@ meta.foundation-mq-topbar {
       .top-bar .button, .top-bar button {
         position: relative;
         top: -1px; } }
-  .top-bar-section li.login:not(.has-form) a:not(.button), .top-bar-section li.launch:not(.has-form) a:not(.button) {
-    padding: 0 3rem;
-    transition-duration: 300ms;
-  }
-  .top-bar-section li.launch:hover, .top-bar-section li.login:hover {
-    background: #fff;
-    transition-duration: 300ms;
-  }
-  .top-bar-section ul li.login:hover:not(.has-form) > a, .top-bar-section ul li.launch:hover:not(.has-form) > a{
-    color: #E06B3C;
-    transition-duration: 300ms;
-  }
-  .top-bar-section li.launch{
-    background: rgba(255, 255, 255, 0.28);
-  }
-  .top-bar-section li.login{
-    background: rgba(255, 255, 255, 0.12);
-  }
   .top-bar .title-area {
     position: relative;
     margin: 0; }
@@ -1986,7 +1915,7 @@ meta.foundation-mq-topbar {
         color: #FFFFFF;
         width: 75%;
         display: block;
-        padding: 0 2.9375rem; }
+        padding: 0 1.9375rem; }
   .top-bar .toggle-topbar {
     position: absolute;
     right: 0;
@@ -2155,8 +2084,8 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > button.warning:hover, .top-bar-section ul li > button.warning:focus {
           color: #FFFFFF; }
     .top-bar-section ul li:hover:not(.has-form) > a {
-      background-color: #555555;
-      background: #333333;
+      background-color: #E06B3C;
+      background: #E06B3C;
       }
     .top-bar-section ul li.active > a {
       background: #2ba6cb;
@@ -2174,7 +2103,7 @@ meta.foundation-mq-topbar {
       width: 0;
       height: 0;
       border: inset 5px;
-      border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
+      border-color: transparent transparent transparent rgba(255, 255, 255, 0.9);
       border-left-style: solid;
       margin-right: 0.9375rem;
       margin-top: -4.5px;
@@ -2210,7 +2139,7 @@ meta.foundation-mq-topbar {
       width: 100%;
       height: auto; }
       .top-bar-section .dropdown li a {
-        font-weight: normal;
+        font-weight: 600;
         padding: 8px 0.9375rem; }
         .top-bar-section .dropdown li a.parent-link {
           font-weight: normal; }
@@ -2317,10 +2246,10 @@ meta.foundation-mq-topbar {
         width: 0;
         height: 0;
         border: inset 5px;
-        border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
+        border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
         border-top-style: solid;
         margin-top: -2.5px;
-        top: 1.40625rem; }
+        top: 2.40625rem; }
     .top-bar-section .has-dropdown.moved {
       position: relative; }
       .top-bar-section .has-dropdown.moved > .dropdown {
@@ -2366,11 +2295,11 @@ meta.foundation-mq-topbar {
         background: #333333; }
       .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
         color: #FFFFFF;
-        background: #333333; }
+        background: #D4693E; }
       .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
-        color: #FFFFFF;
-        background-color: #555555;
-        background: #333333; }
+				color: #FFFFFF;
+				background-color: #E06B3C;
+				background: #E06B3C; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
         background: #333333; }
