@@ -56,6 +56,11 @@ end
 
 def self.find_for_linkedin_oauth(auth, signed_in_resource=nil, user)
   human = Human.where(:provider => auth.provider, :uid => auth.uid).first
+
+  client = LinkedIn::Client.new
+  client.authorize_from_access(auth.extra.access_token.token, auth.extra.access_token.secret)
+  linkedinpicture = client.picture_urls.all.first
+
   if human
     return human
   else
@@ -67,7 +72,7 @@ def self.find_for_linkedin_oauth(auth, signed_in_resource=nil, user)
                           provider: auth.provider,
                           uid: auth.uid,
                           fullname: auth.info.name,
-                          picture: auth.info.image ,
+                          picture: linkedinpicture,
                           location: auth.info.location,
                           email: auth.info.email,
                           password: Devise.friendly_token[0,20],
