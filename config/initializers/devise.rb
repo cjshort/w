@@ -234,7 +234,7 @@ Devise.setup do |config|
   config.omniauth :facebook, "1564136517208434", "eec363e725377bc3e8bcf8c7d2e78a3e"
 
   require 'omniauth-twitter'
-  config.omniauth :twitter , "AYInrOU1NMtkHgaaAmVZMnNbi", "NDHN3rhTVYi0SuvvYPXRVe9AM5LOeH309aBwVfc7tH5QDVxbA4", {:secure_image_url => true, :image_size => 'original'}
+  config.omniauth :twitter, "AYInrOU1NMtkHgaaAmVZMnNbi", "NDHN3rhTVYi0SuvvYPXRVe9AM5LOeH309aBwVfc7tH5QDVxbA4", {:secure_image_url => true, :image_size => 'original'}
 
   require 'omniauth-linkedin'
   config.omniauth :linkedin, "77xkqq8ugo2yac", "3wqOhsNdN3AP2uW5"

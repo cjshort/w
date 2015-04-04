@@ -51,7 +51,13 @@
 							<% end %>
 		        </div>
 		        <div class="large-20 columns">
-		          <p class="latestvisitorstext"><span class="weight600"><%= human.fullname %></span>  <span class="weight400 latestvisitorstime"><%= time_ago_in_words(human.human_logins.last.created_at) %> ago</span></p>
+		          <p class="latestvisitorstext"><span class="weight600"><%= human.fullname %></span>  <span class="weight400 latestvisitorstime">
+		          	<% if human.human_logins == 0 %>
+		          	  <%= time_ago_in_words(human.created_at) %>
+	          	  <% else %>
+			          	<%= time_ago_in_words(human.human_logins.last.created_at) %>
+			          	 ago</span></p>
+	          	  <% end %>
 		        </div>
 	        <% end %>
 	      </div>
