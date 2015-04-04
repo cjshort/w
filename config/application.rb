@@ -10,6 +10,11 @@ module Wyfi
   class Application < Rails::Application
 
     config.assets.initialize_on_precompile = false
+
+    config.to_prepare do
+      Devise::SessionsController.layout false 
+    end
+
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

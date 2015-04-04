@@ -1,6 +1,7 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
@@ -150,7 +151,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+  config.timeout_in = 30.minutes
 
   # If true, expires auth token on session timeout.
   # config.expire_auth_token_on_timeout = false
@@ -228,6 +229,15 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
+
+  require "omniauth-facebook"
+  config.omniauth :facebook, "1564136517208434", "eec363e725377bc3e8bcf8c7d2e78a3e"
+
+  require 'omniauth-twitter'
+  config.omniauth :twitter , "AYInrOU1NMtkHgaaAmVZMnNbi", "NDHN3rhTVYi0SuvvYPXRVe9AM5LOeH309aBwVfc7tH5QDVxbA4", {:secure_image_url => true, :image_size => 'original'}
+
+  require 'omniauth-linkedin'
+  config.omniauth :linkedin, "77xkqq8ugo2yac", "3wqOhsNdN3AP2uW5"
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting

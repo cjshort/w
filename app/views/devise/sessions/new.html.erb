@@ -1,62 +1,65 @@
-<div class="navheight"></div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wyfi | Social WIFI Marketing for small business</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
 
 
-<div class="row mainbg nopadding">
-  <div class="row padding7v mainbgoverlay">
-    <div class="large-1 columns">
-      <br>
-    </div>
-    <div class="large-4 columns whitebg content padding2v row1">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <h4 class="margin2b">Login to mission control</h4>
-      <div class="row nopadding padding1b">
-        <div class="large-2 columns bluebg fieldmatch">
-        </div>
-        <div class="large-10 columns fieldmatch">
-          <div class="field">
-            <%= f.email_field :email, autofocus: true, class: "margin0bimportant" %>
-          </div>
-        </div>
-      </div>
-
-      <div class="row nopadding padding1b">
-        <div class="large-2 columns bluebg fieldmatch">
-        </div>
-        <div class="large-10 columns fieldmatch">
-          <div class="field">
-            <%= f.password_field :password, autocomplete: "off", class: "margin0bimportant" %>
-          </div>
-        </div>
-      </div>
-
-      <div class="row nopadding">
-        <div class="large-6 columns text-left">
-          <% if devise_mapping.rememberable? -%>
+<div class="row mainbg nopadding height100vh">
+  <div class="large-14 columns">
+    <div class="row padding3v mainbgoverlay padding2h">
+      <div class="large-24 columns content padding3v">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <h4 class="margin2b font5 weight900 white">Hi.</h4>
+        <div class="row nopadding padding1b">
+          <div class="large-24 columns fieldmatch">
             <div class="field">
-              <%= f.check_box :remember_me %>
-              <%= f.label :remember_me, class: "rememberlabel" %>
+              <%= f.email_field :email, autofocus: true, class: "margin0bimportant login", :placeholder => "Enter your email", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Enter your email'" %>
             </div>
-          <% end %>
-        </div>
-        <div class="large-6 columns text-right">
-          <div class="actions">
-            <%= f.submit "Log in", class: "loginbutton" %>
           </div>
-          <% end %>
         </div>
-      </div>
 
+        <div class="row nopadding padding1b">
+          <div class="large-24 columns fieldmatch">
+            <div class="field">
+              <%= f.password_field :password, autocomplete: "off", class: "margin0bimportant login", :placeholder => "Enter your password", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Enter your password'" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row nopadding padding3v">
+          <div class="large-12 columns text-left">
+            <% if devise_mapping.rememberable? -%>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me, class: "rememberlabel" %>
+              </div>
+            <% end %>
+          </div>
+          <div class="large-12 columns text-right">
+            <div class="actions">
+              <a href="#"><%= f.submit "Log in", class: "loginbutton" %></a>
+            </div>
+            <% end %>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="large-6 columns whitebg opacity02 row1">
-      <br><br><br><br><br>
-    </div>
-    <div class="large-1 columns">
-      <br>
+  </div>
+  <div class="large-10 columns skybg height100vh text-center">
+    <div class="building2bg content">
+      <h2 class="white weight100 margin30vht margin2b">Haven't got Wyfi yet?</h2>
+      <span class="logingetbutton">GET WYFI</span>
     </div>
   </div>
 </div>
 
 <script>
-  $('.row1').matchHeight();
   $('.fieldmatch').matchHeight();
 </script>

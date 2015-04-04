@@ -1,18 +1,21 @@
 Rails.application.routes.draw do
 
-  get 'publics/login'
+  devise_for :humans, :controllers => { :omniauth_callbacks => "humans/omniauth_callbacks" }
 
+  get '/humans/:id', to: 'humans#profile', as: 'humans'
+
+  get 'publics/login'
   get 'publics/redirect'
 
   devise_for :users
-  get 'panels/dashboard'
 
+  get 'panels/dashboard'
   get 'panels/humans'
 
   root 'fronts#home'
 
-  get '/:id/login', to: 'publics#login' #hotspot portal
-  get '/:id/welcome', to: 'publics#redirect' #hotspot redirect
+  get '/:id/login', to: 'publics#login', as: 'public_login' #hotspot portal
+  get '/:id/welcome', to: 'publics#redirect', as: 'public_redirect' #hotspot redirect
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
