@@ -6,5 +6,6 @@ class PublicsController < ApplicationController
   end
 
   def redirect
+  	@user = User.find(params[:id])
   end
 end

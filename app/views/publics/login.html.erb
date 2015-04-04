@@ -1,3 +1,4 @@
+<h1><%= @user.businessname %></h1>
 <p>Login for wifi</p>
 <%= link_to "Sign in with Facebook", human_omniauth_authorize_path(:facebook, var: @user.id) %>
 <br>
