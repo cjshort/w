@@ -54,7 +54,7 @@ def self.find_for_twitter_oauth(auth, signed_in_resource=nil, user)
   end
 end
 
-def self.connect_to_linkedin(auth, signed_in_resource=nil, user)
+def self.find_for_linkedin_oauth(auth, signed_in_resource=nil, user)
   human = Human.where(:provider => auth.provider, :uid => auth.uid).first
   if human
     return human
