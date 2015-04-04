@@ -8,6 +8,8 @@
 							<img src="https://graph.facebook.com/<%= @human.uid %>/picture?width=300&height=300">
 						<% when "twitter" %>
 							<img src="<%= @human.picture.gsub(/_normal/,'') %>">
+						<% when "linkedin" %>
+							<img src="<%= @human.picture %>">
 					<% end %>
 				</div>
 				<div class="large-11 columns padding2v content3">
@@ -47,6 +49,8 @@
 								<% when "facebook" %>
 									<img class="imgcircle" src="https://graph.facebook.com/<%= human.uid %>/picture?width=50&height=50">
 								<% when "twitter" %>
+									<img class="imgcircle" src="<%= human.picture %>">
+								<% when "linkedin" %>
 									<img class="imgcircle" src="<%= human.picture %>">
 							<% end %>
 		        </div>
