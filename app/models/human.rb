@@ -67,7 +67,7 @@ def self.find_for_linkedin_oauth(auth, signed_in_resource=nil, user)
                           provider: auth.provider,
                           uid: auth.uid,
                           fullname: auth.info.name,
-                          picture: auth.extra.raw_info.pictureUrl ,
+                          picture: auth.info.image ,
                           location: auth.info.location,
                           email: auth.info.email,
                           password: Devise.friendly_token[0,20],
