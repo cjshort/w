@@ -44,9 +44,9 @@ class Humans::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     @human = Human.find_for_linkedin_oauth(request.env["omniauth.auth"], current_user, user)
 
-    if @user.persisted?
+    if @human.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success"
-      sign_in @user, :event => :authentication
+      sign_in @human, :event => :authentication
       HumanLogin.create(:user_agent => request.user_agent, :ip => request.remote_ip, :human_id => current_human.id)
       redirect_to public_redirect_path(user)
     else
