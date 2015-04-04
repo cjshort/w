@@ -12,18 +12,30 @@
 							<img src="<%= @human.picture %>">
 					<% end %>
 				</div>
-				<div class="large-11 columns padding2v content3">
+				<div class="large-12 columns padding2v content3">
 					<h3 class="weight600"><%= @human.fullname %></h3>
-					<p>Last visited <span class="weight600"><%= time_ago_in_words(@lastvisit.created_at) %> ago</span></p>
+					<p class="blue09">Last visited <span class="weight600"><%= time_ago_in_words(@lastvisit.created_at) %> ago</span></p>
 				</div>
-				<div class="large-9 columns">
+				<div class="large-3 columns text-center padding2v">
+					<h4 class="profilestat"><%= @visits %></h4>
+					<p class="profilecontext">Visits</p>
+				</div>
+				<div class="large-3 columns text-center padding2v">
+					<h4 class="profilestat">#1</h4>
+					<p class="profilecontext">Rank</p>
+				</div>
+				<div class="large-2 columns">
+					<br>
 				</div>
 			</div>
 			<div class="row padding1v">
-				<div class="large-14 columns content">
-					<div class="profilegraph"></div>
+				<div class="large-14 columns content row1 padding05t">
+
+					<div id="visitsgraph" class="row1"></div>
+
+
 				</div>
-				<div class="large-10 columns content">
+				<div class="large-10 columns content row1">
 					<h4 class="title">Last 5 visits</h4>
 					<% @lastvisits.each do |human| %>
 						<p class="margin0b last5text"><%= human.created_at.strftime("%A the %e %B, %Y") %> <span class="weight400">at</span> <%= human.created_at.strftime("%I:%M %p") %></p>
@@ -73,4 +85,31 @@
 
 <script>
 	$('.row1').matchHeight();
+</script>
+
+<script>
+new Morris.Line({
+
+  element: 'visitsgraph',
+
+	 data: [
+	    { month: '<%= 5.months.ago.strftime("%B") %>', value: <%= @fivemonths %> },
+	    { month: '<%= 4.months.ago.strftime("%B") %>', value: <%= @fourmonths %> },
+	    { month: '<%= 3.months.ago.strftime("%B") %>', value: <%= @threemonths %>  },
+	    { month: '<%= 2.months.ago.strftime("%B") %>', value: <%= @twomonths %> },
+	    { month: '<%= 1.months.ago.strftime("%B") %>', value: <%= @onemonths %> },
+	    { month: '<%= Time.now.strftime("%B") %>', value: <%= @zeromonths %> }
+	  ],
+
+  xkey: 'month',
+  xlabels: 'month',
+  parseTime: false,
+  hideHover: 'auto',
+  lineColors: ['#E06B3C'],
+  lineWidth: '4px',
+  pointStrokeColors: ['#E05A3C'],
+  ykeys: ['value'],
+
+  labels: ['Visits']
+});
 </script>

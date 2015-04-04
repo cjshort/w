@@ -17,4 +17,6 @@
 //= require headroom
 //= require jQuery.headroom
 //= require foundation
-//= require foundation.topbar.js
+//= require foundation.topbar
+//= require raphael
+//= require morris

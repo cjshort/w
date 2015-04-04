@@ -1,7 +1,50 @@
-<h1><%= @user.businessname %></h1>
-<p>Login for wifi</p>
-<%= link_to "Sign in with Facebook", human_omniauth_authorize_path(:facebook, var: @user.id) %>
-<br>
-<%= link_to "Sign in with Twitter", human_omniauth_authorize_path(:twitter, var: @user.id) %>
-<br>
-<%= link_to "Sign in with LinkedIn", human_omniauth_authorize_path(:linkedin, var: @user.id) %>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400' rel='stylesheet' type='text/css'>
+	<title>Free WIFI Access - <%= @user.businessname %></title>
+	<style>
+
+	body{
+		height:100vh;
+		overflow: hidden;
+		background: url('http://static.pexels.com/wp-content/uploads/2014/09/beans-coffee-kitchen-2742.jpg');
+		background-size: cover;
+		margin: 0;
+		font-family: "Open Sans";
+	}
+
+	.container{
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.67);
+		padding: 2rem 0;
+		color: #fff;
+		text-align: center
+	}
+
+	.socialbuttons{
+		position: absolute;
+		bottom: 2rem;
+		width: 100%;
+	}
+
+	</style>
+</head>
+<body>	
+<div class="container">
+	<h1><%= @user.businessname %></h1>
+	<p>Login for wifi</p>
+	<div class="socialbuttons">
+		<%= link_to human_omniauth_authorize_path(:facebook, var: @user.id) do %>
+			<%= image_tag('facebook-button.png') %>
+		<% end %>
+		<br>
+		<%= link_to human_omniauth_authorize_path(:twitter, var: @user.id) do %>
+			<%= image_tag('twitter-button.png') %>
+		<% end %>
+		<br>
+		<%= link_to human_omniauth_authorize_path(:linkedin, var: @user.id) do %>
+			<%= image_tag('linkedin-button.png') %>
+		<% end %>
+	</div>
+</div>
+</body>
