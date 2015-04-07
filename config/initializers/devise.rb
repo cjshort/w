@@ -231,7 +231,7 @@ Devise.setup do |config|
   config.sign_out_via = :delete
 
   require "omniauth-facebook"
-  config.omniauth :facebook, "1564136517208434", "eec363e725377bc3e8bcf8c7d2e78a3e"
+  config.omniauth :facebook, "1564136517208434", "eec363e725377bc3e8bcf8c7d2e78a3e", info_fields: "age_range, email, name, gender"
 
   require 'omniauth-twitter'
   config.omniauth :twitter, "AYInrOU1NMtkHgaaAmVZMnNbi", "NDHN3rhTVYi0SuvvYPXRVe9AM5LOeH309aBwVfc7tH5QDVxbA4", {:secure_image_url => true, :image_size => 'original'}

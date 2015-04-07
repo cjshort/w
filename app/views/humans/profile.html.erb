@@ -5,11 +5,11 @@
 				<div class="large-4 columns">
 					<% case @human.provider %>
 						<% when "facebook" %>
-							<img src="https://graph.facebook.com/<%= @human.uid %>/picture?width=300&height=300">
+							<img class="width100" src="https://graph.facebook.com/<%= @human.uid %>/picture?width=300&height=300">
 						<% when "twitter" %>
-							<img src="<%= @human.picture.gsub(/_normal/,'') %>">
+							<img class="width100" src="<%= @human.picture.gsub(/_normal/,'') %>">
 						<% when "linkedin" %>
-							<img src="<%= @human.picture %>">
+							<img class="width100" src="<%= @human.picture %>">
 					<% end %>
 				</div>
 				<div class="large-12 columns padding2v content3">
@@ -42,7 +42,27 @@
 					<% end %>
 				</div>
 			</div>
-			<br><br><br><br><br><br><br><br>
+			<div class="row padding1v">
+				<div class="large-12 columns row2">
+					<br>
+				</div>
+				<div class="large-12 columns content row2">
+					<h4 class="title">About <%= @human.fullname %></h4>
+					<ul class="disc">
+						<li class="last5text">First visited <%= time_ago_in_words(@human.created_at) %> ago</li>
+						<% if @human.gender %>
+							<li class="last5text">Gender is male</li>
+						<% end %>
+						<% if @human.location %>
+							<li class="last5text">Current location is <%= @human.location %></li>
+						<% end %>
+						<% if @human.agerange %>
+						<li class="last5text">Approximate age is <%= @human.agerange %></li>
+						<% end %>
+						<li class="last5text">Logged in with <%= @human.provider %></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 		<div class="row">
 			<div class="large-24 columns">
@@ -85,6 +105,7 @@
 
 <script>
 	$('.row1').matchHeight();
+	$('.row2').matchHeight();
 </script>
 
 <script>

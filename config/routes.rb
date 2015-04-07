@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'panels/dashboard'
-  get 'panels/humans'
+  get 'panels/leaderboard'
+  get 'panels/leaderboard/:filter/:order', to: 'panels#leaderboardfilter', as: 'leaderboard_filter'
 
   root 'fronts#home'
 

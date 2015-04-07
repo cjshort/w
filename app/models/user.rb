@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-
 	has_many :humans
+	has_many :human_logins
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

@@ -238,6 +238,11 @@ ul.disc.orange{
   padding-bottom: 8rem;
 }
 
+.padding10v{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
 .headroom {
     transition: transform 300ms linear;
 }
@@ -320,7 +325,7 @@ ul.disc.orange{
   background-image: url(http://i.imgur.com/Lr1dml0.png);
   background-repeat: no-repeat;
   background-size: 45rem;
-  background-position: 52rem 10rem;
+  background-position: 52rem 13rem;
 }
 
 .building2bg{
@@ -352,7 +357,7 @@ ul.disc.orange{
 }
 
 .offwhite{
-  color: #e2e2e2;
+  color: #efefef;
 }
 
 .mainrender{
@@ -3581,7 +3586,7 @@ a {
 
 /* Default paragraph styles */
 p {
-  font-family: inherit;
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.6;

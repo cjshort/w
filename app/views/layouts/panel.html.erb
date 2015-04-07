@@ -27,16 +27,34 @@
 
 	          <ul class="left">
 	          	<li><%= link_to panels_dashboard_path do %>DASHBOARD<% end %></li>
-	            <li><a href="#">HUMANS</a></li>
+	            <li class="has-dropdown">
+	            	<a href="#">VISITORS</a>
+				        <ul class="dropdown">
+				        	<li><%= link_to leaderboard_filter_path('name', 'asc') do%>LEADERBOARDS<% end %></li>
+				          <li><a href="#">SEARCH</a></li>
+				        </ul>
+				      </li>
 				      <li class="has-dropdown">
 				        <a href="#">EMAIL</a>
 				        <ul class="dropdown">
-				        	<li><a href="#">BLAST</a></li>
+				        	<li><a href="#">EMAIL BLAST</a></li>
 				          <li><a href="#">SCHEDULE</a></li>
 				        </ul>
 				      </li>
-	            <li><a href="#">SETUP</a></li>
-	            <li ><a href="#">ANALYTICS</a></li>
+	            <li class="has-dropdown">
+	            	<a href="#">SETUP</a>
+				        <ul class="dropdown">
+				        	<li><a href="#">LOGIN PAGE</a></li>
+				          <li><a href="#">WELCOME PAGE</a></li>
+				        </ul>
+				      </li>
+	            <li class="has-dropdown">
+	            	<a href="#">ANALYTICS</a>
+				        <ul class="dropdown">
+				        	<li><a href="#">LOGIN PAGE</a></li>
+				          <li><a href="#">WELCOME PAGE</a></li>
+				        </ul>
+				      </li>
 	          </ul>
 	          <ul class="right">
 	          	<li><a href="#">ACCOUNT</a></li>

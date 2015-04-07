@@ -13,13 +13,24 @@
   text-align: center;}.morris-hover.morris-default-style .morris-hover-row-label{font-weight:bold;margin:0.25em 0}
 .morris-hover.morris-default-style .morris-hover-point{white-space:nowrap;margin:0.1em 0}
 
-
 #visitsgraph{
   min-height: 15rem;
 }
 
 ul.dropdown a {
   line-height: 3.3rem !important;
+}
+
+.profilelink{
+  height:17px;
+  opacity: 0.8;
+  transition-duration: 300ms;
+}
+
+.profilelink:hover{
+  height: 17px;
+  opacity: 1;
+  transition-duration: 300ms;
 }
 
 .title{
@@ -38,6 +49,7 @@ ul.dropdown a {
 	padding-bottom: 0.5rem;
 	border-bottom: 2px solid #B3B5B8;
 	margin-bottom: 1rem;
+  font-size:1.3rem;
 }
 
 .latestvisitorstext {
@@ -96,6 +108,10 @@ ul.dropdown a {
 ::selection {
     color: #fff; 
     background: rgba(224, 107, 60, 0.54);
+}
+
+.width100{
+  width: 100%;
 }
 
 .weight100{
@@ -2368,6 +2384,86 @@ form .row textarea.column,
 form .row textarea.columns {
   padding-left: 0.5rem; }
 
+
+table {
+  background: #FFFFFF;
+  margin-bottom: 1.11111rem;
+  border-spacing: 0;
+  table-layout: auto;
+  width: 100.1% }
+  table caption {
+    background: transparent;
+    color: #222222;
+    font-size: 0.88889rem;
+    font-weight: bold; }
+  table thead {
+    background: #F5F5F5; }
+    table thead tr th{
+      padding: 0;
+      background: linear-gradient(to bottom, #F7F7F7 1%, #F5F5F5 100%);
+      text-align: center;
+      border-bottom: 1px solid #DDDDDD;
+      border-right: 1px solid #dddddd;
+      transition-duration: 300ms;
+    }
+    table thead tr th div{
+      padding: 1.44444rem 0.555556rem 1.55556rem;
+    }
+    table thead tr td {
+      color: rgba(59, 65, 72, 0.9);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 1.44444rem 0.55556rem 1.55556rem;
+      background: linear-gradient(to bottom, #F7F7F7 1%, #F5F5F5 100%);
+      text-align: center;
+      border-bottom: 1px solid #DDDDDD;
+      border-right: 1px solid #dddddd;
+      transition-duration: 300ms;
+    }
+    table thead tr th:hover,
+    table thead tr td:hover{
+      background: linear-gradient(to bottom, #f7f7f7 1%, rgb(237, 237, 237) 100%);
+      transition-duration: 300ms;
+    }
+  table tfoot {
+    background: #F5F5F5; }
+    table tfoot tr th,
+    table tfoot tr td {
+      color: #222222;
+      font-size: 0.77778rem;
+      font-weight: bold;
+      padding: 0.44444rem 0.55556rem 0.55556rem; }
+  table tr th,
+  table tr td {
+  color: rgba(58, 58, 58, 0.85);
+  font-size: 0.9rem;
+  padding: 1.5rem 0.55556rem;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  text-align: left;
+  font-size: 0.93rem;
+  font-weight: 600; }
+  table tr.even, table tr.alt, table tr:nth-of-type(even) {
+    background: #FAFAFA; }
+  table thead tr th,
+  table tfoot tr th,
+  table tfoot tr td,
+  table tbody tr th,
+  table tbody tr td,
+  table tr td {
+    display: table-cell;
+    line-height: 1rem;
+    text-align: center; }
+  .tablereset{
+    border-right: 0;
+  }
+  td.namepadding{
+    padding-left: 2rem !important;
+  }
+  td .imgcircle{
+    margin-right: 1rem;
+  }
+
 /* Label Styles */
 label {
   font-size: 0.875rem;
@@ -2944,8 +3040,7 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > button.warning:hover, .top-bar-section ul li > button.warning:focus {
           color: #FFFFFF; }
     .top-bar-section ul li:hover:not(.has-form) > a {
-      background-color: #E06B3C;
-      background: #E06B3C;
+      background: none;
       }
     .top-bar-section ul li.active > a {
       background: #2ba6cb;
@@ -3071,7 +3166,7 @@ meta.foundation-mq-topbar {
     }
 
   .top-bar li.name:hover {
-    background: #EB7546;
+    background: #EA6942;
     transition-duration: 300ms;
   }
 
@@ -3166,11 +3261,12 @@ meta.foundation-mq-topbar {
         background: #333333; }
       .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
         color: #FFFFFF;
-        background: #D4693E; }
+        background: #E05A3C;
+        width: 11rem; }
       .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
-				color: #FFFFFF;
-				background-color: #E06B3C;
-				background: #E06B3C; }
+				color: #E9E9E9;
+				background-color: #E05A3C;
+				background: #E05A3C; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
         background: #333333; }

@@ -10,7 +10,7 @@ class Humans::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @human.persisted?
       sign_in @human, :event => :authentication #this will throw if @human is not activated
       set_flash_message(:notice, :success, :kind => "Facebook") if is_navigational_format?
-      HumanLogin.create(:user_agent => request.user_agent, :ip => request.remote_ip, :human_id => current_human.id)
+      HumanLogin.create(:user_agent => request.user_agent, :ip => request.remote_ip, :human_id => current_human.id, :user_id => user)
       redirect_to public_redirect_path(user)
     else
       session["devise.facebook_data"] = request.env["omniauth.auth"]
@@ -29,7 +29,7 @@ class Humans::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @human.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success"
       sign_in @human, :event => :authentication
-      HumanLogin.create(:user_agent => request.user_agent, :ip => request.remote_ip, :human_id => current_human.id)
+      HumanLogin.create(:user_agent => request.user_agent, :ip => request.remote_ip, :human_id => current_human.id, :user_id => user)
       redirect_to public_redirect_path(user)
     else
       session["devise.twitter_uid"] = request.env["omniauth.auth"]
@@ -47,7 +47,7 @@ class Humans::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @human.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success"
       sign_in @human, :event => :authentication
-      HumanLogin.create(:user_agent => request.user_agent, :ip => request.remote_ip, :human_id => current_human.id)
+      HumanLogin.create(:user_agent => request.user_agent, :ip => request.remote_ip, :human_id => current_human.id, :user_id => user)
       redirect_to public_redirect_path(user)
     else
       session["devise.linkedin_uid"] = request.env["omniauth.auth"]

@@ -21,7 +21,7 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil, user)
                           uid: auth.uid,
                           fullname: auth.extra.raw_info.name,
                           gender: auth.extra.raw_info.gender,
-                          agerange: auth.extra.raw_info.age_range,
+                          agerange: auth.extra.raw_info.age_range["max"],
                           email: auth.info.email,
                           password: Devise.friendly_token[0,20],
                           user_id: user

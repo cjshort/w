@@ -1,0 +1,70 @@
+<div class="row ">
+	<div class="large-18 columns maincontainer">
+		<div class="row main">
+			<div class="row">
+				<table>
+				  <thead>
+				    <tr>
+				      <th width="280"><%= link_to leaderboard_filter_path('name') do %><div>Name</div><% end %></th>
+				      <th><%= link_to leaderboard_filter_path('email') do %><div>Email</div><% end %></th>
+				      <th width="140"><%= link_to leaderboard_filter_path('visits') do %><div>Visits</div><% end %></th>
+				      <th width="140"><%= link_to leaderboard_filter_path('firstvisit') do %><div>First Visit</div><% end %></th>
+				      <th width="130" class="tablereset">Profile</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	<% @human.each do |human| %>
+					    <tr>
+					    	<td class="text-left namepadding">
+									<% case human.provider %>
+										<% when "facebook" %>
+											<img class="imgcircle" src="https://graph.facebook.com/<%= human.uid %>/picture?width=50&height=50">
+										<% when "twitter", "linkedin" %>
+											<img class="imgcircle" src="<%= human.picture %>">
+									<% end %>
+					      	<span class="name"><%= human.fullname %></span>
+					      </td>
+					      <td><%= human.email %></td>
+					      <td><%= human.human_logins.count %></td>
+					      <td><%= human.created_at.strftime("%d-%m-%Y") %></td>
+					      <td class="tablereset"><%= link_to humans_path(human) do %><%= image_tag('profilelink.png', class: "profilelink") %><% end %></td>
+					    </tr>
+				    <% end %>
+				  </tbody>
+				</table>
+			</div>
+
+
+
+
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div>
+	</div>
+  <div class="large-6 columns rightbar content">
+    <div class="navheight"></div>
+      <h4 class="sidetitle">Latest visitors</h4>
+      <% @latest.each do |human| %>
+	      <div class="row padding04v lastvisitorscontainer">
+	      	<%= link_to humans_path(human) do %>
+		        <div class="large-4 columns">
+							<% case human.provider %>
+								<% when "facebook" %>
+									<img class="imgcircle" src="https://graph.facebook.com/<%= human.uid %>/picture?width=50&height=50">
+								<% when "twitter", "linkedin" %>
+									<img class="imgcircle" src="<%= human.picture %>">
+							<% end %>
+		        </div>
+		        <div class="large-20 columns">
+		          <p class="latestvisitorstext"><span class="weight600"><%= human.fullname %></span>  <span class="weight400 latestvisitorstime"><%= time_ago_in_words(human.human_logins.last.created_at) %> ago</span></p>
+		        </div>
+	        <% end %>
+	      </div>
+      <% end %>
+    </div>
+	</div>
+</div>
+
+
+<script>
+	$('.row1').matchHeight();
+</script>
