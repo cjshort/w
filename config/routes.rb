@@ -4,14 +4,14 @@ Rails.application.routes.draw do
 
   get '/humans/:id', to: 'humans#profile', as: 'humans'
 
-  get 'templateeditor/:type', to: 'templates#editor', as: 'template_editor'
-
   get 'publics/login'
   get 'publics/redirect'
 
   devise_for :users
 
   post 'templates/update/:id', to: 'templates#update', as: 'template_update' 
+  get 'templates/editor/:type', to: 'templates#editor', as: 'template_editor'
+  get 'templates/preview/:id', to: 'templates#show', as: 'template_show'
 
   get 'panels/dashboard'
   get 'panels/leaderboard'

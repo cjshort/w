@@ -1,8 +1,10 @@
 class TemplatesController < ApplicationController
-	layout 'templateeditor'
+	layout 'templateeditor', :only => [ :editor ]
+	layout 'empty', :only => [ :show ]
 	before_action :authenticate_user!
 
   def editor
+  	render :layout => ""
   	case params[:type]
   	when "LoginOne"
   		@template = current_user.templates.where(:type => 'LoginOne').last
@@ -20,6 +22,8 @@ class TemplatesController < ApplicationController
   end
 
   def show
+  	@user = current_user
+  	@template = Template.find(params[:id])
   end
 
 end
