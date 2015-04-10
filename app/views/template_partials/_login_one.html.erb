@@ -12,6 +12,7 @@ body {
 	color: #fff !important;
 	background: url('http://static.pexels.com/wp-content/uploads/2014/07/beans-brew-coffee-2061.jpg');
 	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 a{
@@ -19,12 +20,12 @@ a{
 }
 
 .mask{
-  height: 100%;
   width: 100%;
+  height: 100%;
   background: rgba(5, 5, 5, 0.67);
 }
 
-.margin10t{
+.margin2t{
 	margin-top: 10rem;
 }
 
@@ -43,7 +44,7 @@ a{
 <div class="mask">
 <div class="row">
 	<div class="large-12 columns">
-		<h1 class="text-center margin10t"><%= template.title %></h1>
+		<h1 class="text-center magin2t"><%= template.title %></h1>
 		<div class="text-center padding5t">
 		<p class="padding1v">Select a network to connect with</p>
 			<%= link_to "Sign in with Facebook", human_omniauth_authorize_path(:facebook, var: @user.id) %>
