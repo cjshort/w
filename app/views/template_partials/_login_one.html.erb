@@ -1,0 +1,57 @@
+<style>
+
+h1{
+	font-size: 3rem;
+}
+
+.text-center{
+	text-align: center !important;
+}
+
+body {
+	color: #fff !important;
+	background: url('http://static.pexels.com/wp-content/uploads/2014/07/beans-brew-coffee-2061.jpg');
+	background-size: cover;
+}
+
+a{
+	color: inherit;
+}
+
+.mask{
+  height: 100%;
+  width: 100%;
+  background: rgba(5, 5, 5, 0.67);
+}
+
+.margin10t{
+	margin-top: 10rem;
+}
+
+.padding5t{
+	padding-top: 5rem;
+}
+
+.padding1v{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+</style>
+
+
+<div class="mask">
+<div class="row">
+	<div class="large-12 columns">
+		<h1 class="text-center margin10t"><%= template.title %></h1>
+		<div class="text-center padding5t">
+		<p class="padding1v">Select a network to connect with</p>
+			<%= link_to "Sign in with Facebook", human_omniauth_authorize_path(:facebook, var: @user.id) %>
+		<br>
+		<%= link_to "Sign in with Twitter", human_omniauth_authorize_path(:twitter, var: @user.id) %>
+		<br>
+		<%= link_to "Sign in with LinkedIn", human_omniauth_authorize_path(:linkedin, var: @user.id) %>
+		</div>
+	</div>
+</div>
+</div>

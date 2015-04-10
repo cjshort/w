@@ -1,0 +1,2 @@
+class LoginThree < Template
+end

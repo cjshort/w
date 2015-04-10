@@ -1,0 +1,9 @@
+<% case params[:type] %>
+	<% when 'LoginOne' %>
+		<%= form_for @template, url: template_update_path(@template) do |f| %>
+			<%= f.label :title %>
+			<%= f.text_field :title %>
+		<% end %>
+	<% when 'LoginTwo' %>
+	<% when 'LoginThree' %>
+<% end %>

@@ -1,5 +1,6 @@
 class HumansController < ApplicationController
 	layout 'panel'
+  before_action :authenticate_user!
 
   def profile
   	human = Human.find(params[:id])

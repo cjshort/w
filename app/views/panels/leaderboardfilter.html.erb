@@ -8,44 +8,60 @@
 				      <th width="280">
 				      	<% if (params[:filter] == 'name') && (params[:order] == 'asc') %>
 					      	<%= link_to leaderboard_filter_path('name', 'desc') do %>
-						      	<div>Name</div>
+						      	<div class="selected">Name<%= image_tag('arrows.png', class: "tablearrows") %></div>
+					      	<% end %>
+				      	<% elsif (params[:filter] == 'name') && (params[:order] == 'desc') %>
+					      	<%= link_to leaderboard_filter_path('name', 'asc') do %>
+						      	<div class="selected">Name<%= image_tag('arrows.png', class: "tablearrows") %></div>
 					      	<% end %>
 				      	<% else %>
 					      	<%= link_to leaderboard_filter_path('name', 'asc') do %>
-						      	<div>Name</div>
+						      	<div>Name<%= image_tag('arrows.png', class: "tablearrows") %></div>
 					      	<% end %>
 				      	<% end %>
 				      </th>
 				      <th>
 				      	<% if (params[:filter] == 'email') && (params[:order] == 'asc') %>
 					      	<%= link_to leaderboard_filter_path('email', 'desc') do %>
-						      	<div>Email</div>
+						      	<div class="selected">Email<%= image_tag('arrows.png', class: "tablearrows") %></div>
+					      	<% end %>
+				      	<% elsif (params[:filter] == 'email') && (params[:order] == 'desc') %>
+					      	<%= link_to leaderboard_filter_path('email', 'asc') do %>
+						      	<div class="selected">Email<%= image_tag('arrows.png', class: "tablearrows") %></div>
 					      	<% end %>
 				      	<% else %>
 					      	<%= link_to leaderboard_filter_path('email', 'asc') do %>
-						      	<div>Email</div>
+						      	<div>Email<%= image_tag('arrows.png', class: "tablearrows") %></div>
 					      	<% end %>
 				      	<% end %>
 				      </th>
 				      <th width="140">
 				      	<% if (params[:filter] == 'visits') && (params[:order] == 'asc') %>
 					      	<%= link_to leaderboard_filter_path('visits', 'desc') do %>
-						      	<div>Visits</div>
+						      	<div class="selected">Visits<%= image_tag('arrows.png', class: "tablearrows") %></div>
+					      	<% end %>
+				      	<% elsif (params[:filter] == 'visits') && (params[:order] == 'desc') %>
+					      	<%= link_to leaderboard_filter_path('visits', 'asc') do %>
+						      	<div class="selected">Visits<%= image_tag('arrows.png', class: "tablearrows") %></div>
 					      	<% end %>
 				      	<% else %>
 					      	<%= link_to leaderboard_filter_path('visits', 'asc') do %>
-						      	<div>Visits</div>
+						      	<div>Visits<%= image_tag('arrows.png', class: "tablearrows") %></div>
 					      	<% end %>
 				      	<% end %>
 				      </th>
 				      <th width="140">
 				      	<% if (params[:filter] == 'firstvisit') && (params[:order] == 'asc') %>
 					      	<%= link_to leaderboard_filter_path('firstvisit', 'desc') do %>
-						      	<div>First Visit</div>
+						      	<div class="selected">First Visit<%= image_tag('arrows.png', class: "tablearrows") %></div>
+					      	<% end %>
+				      	<% elsif (params[:filter] == 'firstvisit') && (params[:order] == 'desc') %>
+					      	<%= link_to leaderboard_filter_path('firstvisit', 'asc') do %>
+						      	<div class="selected">First Visit<%= image_tag('arrows.png', class: "tablearrows") %></div>
 					      	<% end %>
 				      	<% else %>
 					      	<%= link_to leaderboard_filter_path('firstvisit', 'asc') do %>
-						      	<div>First Visit</div>
+						      	<div>First Visit<%= image_tag('arrows.png', class: "tablearrows") %></div>
 					      	<% end %>
 				      	<% end %>
 				      </th>
@@ -64,7 +80,13 @@
 									<% end %>
 					      	<span class="name"><%= human.fullname %></span>
 					      </td>
-					      <td><%= human.email %></td>
+					      <td>
+					      	<% if human.provider == 'twitter' %>
+						      	N/A
+					      	<% else %>
+						      	<%= human.email %>
+					      	<% end %>
+					      </td>
 					      <td><%= human.human_logins.count %></td>
 					      <td><%= human.created_at.strftime("%d-%m-%Y") %></td>
 					      <td class="tablereset"><%= link_to humans_path(human) do %><%= image_tag('profilelink.png', class: "profilelink") %><% end %></td>
@@ -77,7 +99,7 @@
 
 
 
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
 		</div>
 	</div>
   <div class="large-6 columns rightbar content">

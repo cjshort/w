@@ -1,0 +1,2 @@
+class LoginOne < Template
+end

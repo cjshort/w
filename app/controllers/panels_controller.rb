@@ -31,9 +31,9 @@ class PanelsController < ApplicationController
 		  when 'visits'
 	  		case params[:order]
 		  		when 'asc'
-				  	@human = Human.all
+				  	@human = Human.joins(:human_logins).group("human_logins.human_id").order("count(human_logins.human_id) ASC")
 				  when 'desc'
-				  	@human = Human.all
+				  	@human = Human.joins(:human_logins).group("human_logins.human_id").order("count(human_logins.human_id) DESC")
 			  end
 		  when 'firstvisit'
 	  		case params[:order]
@@ -45,6 +45,9 @@ class PanelsController < ApplicationController
 		  else
 		  	redirect_to panels_leaderboard_path
 	  end
+  end
+
+  def loginpage
   end
 
 end

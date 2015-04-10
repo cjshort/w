@@ -9,3 +9,4 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( panels.css )
 Rails.application.config.assets.precompile += %w( panels.js )
+Rails.application.config.assets.precompile += %w( template.css )

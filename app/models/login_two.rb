@@ -1,0 +1,2 @@
+class LoginTwo < Template
+end

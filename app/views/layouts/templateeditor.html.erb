@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wyfi | Social WIFI Marketing for small business</title>
+  <%= stylesheet_link_tag    'panels', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'panels', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="row greybg">
+	<%= link_to :back do %>
+		<div class="large-3 columns row1 editorarrow">
+		</div>
+	<% end %>
+	<div class="large-21 columns content2 padding15v row1">
+		<h3 class="margin0b margin0t">Template Editor</h3>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-13 columns whitebg content2 padding3v row2">
+		<%= yield %><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+	<div class="large-11 columns row2 darkgreybg">
+	</div>
+</div>
+
+<div class="row footerbg">
+  <Br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<script>
+  $(document).foundation();
+</script>
+
+</body>
+</html>
+
+<script>
+	$('.row1').matchHeight();
+	$('.row2').matchHeight();
+</script>

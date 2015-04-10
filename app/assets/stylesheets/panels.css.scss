@@ -4,14 +4,42 @@
 
 .morris-hover{position:absolute;z-index:1000}
 .morris-hover.morris-default-style{
-  border-radius: 3px;
-  padding: 6px;
+  border-radius: 2px;
+  padding: 6px 18px;
   color: #FFF;
-  background: rgba(224, 98, 60, 1);
+  background: #e0623c;
   font-family: sans-serif;
   font-size: 12px;
   text-align: center;}.morris-hover.morris-default-style .morris-hover-row-label{font-weight:bold;margin:0.25em 0}
 .morris-hover.morris-default-style .morris-hover-point{white-space:nowrap;margin:0.1em 0}
+
+.templatecontainer{
+  background: #F7F7F7;
+  border-radius: 2px;
+  border: 3px solid #ededed;
+}
+
+.templatecontainer p.edit {
+  border-left: 1px solid rgb(222, 222, 222);
+  color: #458A35;
+}
+
+.templatepreview {
+  height: 14rem;
+  background: rgb(114, 114, 114);
+}
+
+.templatecontainer p.edit, .templatecontainer p.preview{
+  margin-bottom: 0;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.templatecontainer p.preview{
+  color: rgb(86, 94, 102);
+}
 
 #visitsgraph{
   min-height: 15rem;
@@ -88,6 +116,10 @@ ul.dropdown a {
 	border: 1px solid #DFDFD9;
 }
 
+.maintitle{
+  background: #F7F7F7;
+}
+
 .rightbar{
 	position: fixed !important;
 	right: 0;
@@ -136,6 +168,11 @@ ul.dropdown a {
   padding-right: 3rem;
 }
 
+.content2{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .padding05t{
   padding-top: 0.5rem;
 }
@@ -147,6 +184,16 @@ ul.dropdown a {
 .padding2v{
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+}
+
+.padding1v{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.padding15v{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .padding3v{
@@ -166,6 +213,10 @@ ul.dropdown a {
 
 .margin0b{
   margin-bottom: 0;
+}
+
+.margin0t{
+  margin-top: 0;
 }
 
 .last5text{
@@ -199,6 +250,46 @@ ul.dropdown a {
 
 .weight600{
 	font-weight: 600;
+}
+
+.editorarrow {
+  background-image: url(/assets/editorarrow.png);
+  background-color: #E8E8E8;
+  opacity: 0.5;
+  background-size: 2.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition-duration: 300ms;
+}
+
+.editorarrow:hover {
+  background-image: url(/assets/editorarrow.png);
+  background-color: #E8E8E8;
+  opacity: 0.7;
+  background-size: 2.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition-duration: 300ms;
+}
+
+.footerbg{
+  background: #404040;
+}
+
+.whitebg{
+  background: #fff;
+}
+
+.greybg{
+  background: #F7F7F7;
+}
+
+.darkgreybg{
+  background: #EFEFEF;
+}
+
+.darkergreybg{
+  background: #ebebe4;
 }
 
 .profiletopbg{
@@ -244,6 +335,10 @@ ul.dropdown a {
 
 .font14{
 	font-size: 1.4rem;
+}
+
+.font17{
+  font-size: 1.7rem;
 }
 
 
@@ -2409,10 +2504,13 @@ table {
     table thead tr th div{
       padding: 1.44444rem 0.555556rem 1.55556rem;
     }
+    table thead tr th div.selected{
+      background: linear-gradient(to bottom, #f7f7f7 1%, rgb(237, 237, 237) 100%);
+    }
     table thead tr td {
       color: rgba(59, 65, 72, 0.9);
       font-size: 0.9rem;
-      font-weight: 600;
+      font-weight: 900;
       padding: 1.44444rem 0.55556rem 1.55556rem;
       background: linear-gradient(to bottom, #F7F7F7 1%, #F5F5F5 100%);
       text-align: center;
@@ -2445,6 +2543,9 @@ table {
   font-weight: 600; }
   table tr.even, table tr.alt, table tr:nth-of-type(even) {
     background: #FAFAFA; }
+  table thead tr th{
+    font-weight: 900;
+  }
   table thead tr th,
   table tfoot tr th,
   table tfoot tr td,
@@ -2462,6 +2563,13 @@ table {
   }
   td .imgcircle{
     margin-right: 1rem;
+  }
+  table thead tr th {
+    color: rgba(51, 62, 72, 0.8);
+  }
+  .tablearrows{
+    margin-left: 0.4rem;
+    margin-bottom: 0.1rem;
   }
 
 /* Label Styles */

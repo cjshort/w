@@ -4,14 +4,19 @@ Rails.application.routes.draw do
 
   get '/humans/:id', to: 'humans#profile', as: 'humans'
 
+  get 'templateeditor/:type', to: 'templates#editor', as: 'template_editor'
+
   get 'publics/login'
   get 'publics/redirect'
 
   devise_for :users
 
+  post 'templates/update/:id', to: 'templates#update', as: 'template_update' 
+
   get 'panels/dashboard'
   get 'panels/leaderboard'
   get 'panels/leaderboard/:filter/:order', to: 'panels#leaderboardfilter', as: 'leaderboard_filter'
+  get 'panels/loginpage'
 
   root 'fronts#home'
 

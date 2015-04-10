@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150406222709) do
+ActiveRecord::Schema.define(version: 20150409152200) do
 
   create_table "human_logins", force: true do |t|
     t.string   "user_agent"
@@ -47,6 +47,16 @@ ActiveRecord::Schema.define(version: 20150406222709) do
 
   add_index "humans", ["email"], name: "index_humans_on_email", unique: true
   add_index "humans", ["reset_password_token"], name: "index_humans_on_reset_password_token", unique: true
+
+  create_table "templates", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "backgroundurl"
+    t.integer  "user_id"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
