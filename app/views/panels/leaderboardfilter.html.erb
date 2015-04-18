@@ -1,5 +1,5 @@
 <div class="row ">
-	<div class="large-18 columns maincontainer">
+	<div class="large-18 columns maincontainer containers">
 		<div class="row main">
 			<div class="row">
 				<table>
@@ -99,29 +99,37 @@
 
 
 
-			
+
 		</div>
 	</div>
-  <div class="large-6 columns rightbar content">
-    <div class="navheight"></div>
+  <div class="large-6 columns rightbar containers">
+	  	<a href="#">
+	  		<div class="videobg">
+		  		<div class="videoblock text-center">
+		  			<%= image_tag('playicon.png', class: "padding15v playicon") %>
+		  		</div>
+		  	</div>
+		  </a>
+		  <div class="content" id="sidebar">
       <h4 class="sidetitle">Latest visitors</h4>
-      <% @latest.each do |human| %>
-	      <div class="row padding04v lastvisitorscontainer">
-	      	<%= link_to humans_path(human) do %>
-		        <div class="large-4 columns">
-							<% case human.provider %>
-								<% when "facebook" %>
-									<img class="imgcircle" src="https://graph.facebook.com/<%= human.uid %>/picture?width=50&height=50">
-								<% when "twitter", "linkedin" %>
-									<img class="imgcircle" src="<%= human.picture %>">
-							<% end %>
-		        </div>
-		        <div class="large-20 columns">
-		          <p class="latestvisitorstext"><span class="weight600"><%= human.fullname %></span>  <span class="weight400 latestvisitorstime"><%= time_ago_in_words(human.human_logins.last.created_at) %> ago</span></p>
-		        </div>
-	        <% end %>
-	      </div>
-      <% end %>
+	      <% @latest.each do |human| %>
+		      <div class="row padding04v lastvisitorscontainer">
+		      	<%= link_to humans_path(human) do %>
+			        <div class="large-4 columns">
+								<% case human.provider %>
+									<% when "facebook" %>
+										<img class="imgcircle" src="https://graph.facebook.com/<%= human.uid %>/picture?width=50&height=50">
+									<% when "twitter", "linkedin" %>
+										<img class="imgcircle" src="<%= human.picture %>">
+								<% end %>
+			        </div>
+			        <div class="large-20 columns">
+			          <p class="latestvisitorstext"><span class="weight600"><%= human.fullname %></span>  <span class="weight400 latestvisitorstime"><%= time_ago_in_words(human.human_logins.last.created_at) %> ago</span></p>
+			        </div>
+		        <% end %>
+		      </div>
+	      <% end %>
+	    </div>
     </div>
 	</div>
 </div>
@@ -129,4 +137,5 @@
 
 <script>
 	$('.row1').matchHeight();
+	$('.containers').matchHeight();
 </script>

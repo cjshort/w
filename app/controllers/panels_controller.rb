@@ -6,11 +6,6 @@ class PanelsController < ApplicationController
   	@latest = Human.all.order('created_at DESC').limit(10)
   end
 
-  def leaderboard
-  	@human = Human.all.order('created_at DESC')
-  	@latest = Human.all.order('created_at DESC').limit(10)
-  end
-
   def leaderboardfilter
   	@latest = Human.all.order('created_at DESC').limit(10)
 	  case params[:filter]
@@ -49,5 +44,41 @@ class PanelsController < ApplicationController
 
   def loginpage
   end
+
+  def welcomepage
+  end
+
+  def emailblast
+  	@option1 = current_user.humans.count.to_s
+  	@option2 = current_user
+  	@option3 = current_user
+  	@blast = Blast.new
+  end
+
+  def emailblastcreate
+  	email = Blast.create(blast_params)
+  	user = current_user
+  	PanelMailer.blast(user, email).deliver
+  end
+
+  def blast_params
+  	params.require(:blast).permit(:to, :subject, :body)
+  end
+
+  def emailschedule
+  end
+
+  def settings
+  	@user = current_user
+  end
+
+  def settingsupdate
+  	current_user.update_attributes(user_params)
+  	redirect_to panels_settings_path
+  end
+
+  def user_params
+  	params.require(:user).permit(:logourl)
+	end
 
 end

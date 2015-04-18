@@ -1,0 +1,145 @@
+
+<div class="row ">
+	<div class="large-18 columns maincontainer containers">
+		<div class="row maintitle padding2v content2">
+			<div class="large-12 columns text-left">
+				<h1 class="blue09 font17 weight600">Email blast</h1>
+			</div>
+			<div class="large-12 columns text-right">
+				<h2 class="blue07 font17 weight600">20,000</h2>
+			</div>
+		</div>
+		<div class="row main">
+			<div class="row content padding2v">
+				<%= form_for @blast, url: panels_emailblast_create_path do |email| %>
+				<%= email.label "Recepients" %>
+				<%= email.select(:to, [['All Visitors ('+@option1+')', 1], ['You (1)', 2]]) %>
+				<%= email.label "Subject" %>
+				<%= email.text_field :subject %>
+				<div class="row wysihtml5-toolbar" id="wysihtml5-toolbar">
+					<a data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="large-4 columns content">
+						Font Size</a>
+						<ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+						  <li><a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">Header 1</a></li>
+						  <li><a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2">Header 2</a></li>
+						  <li><a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h3">Header 3</a></li>
+						  <li><a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h4">Header 4</a></li>
+						</ul>
+						<a data-dropdown="drop2" aria-controls="drop2" aria-expanded="false" class="large-4 columns content">
+						Font Color</a>
+						<ul id="drop2" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+						  <li><a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="grey"><span class="colorblock grey"></span></a></li>
+						  <li><a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="blue"><span class="colorblock blue"></span></a></li>
+						  <li><a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="purple"><span class="colorblock purple"></span></a></li>
+						  <li><a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red"><span class="colorblock red"></span></a></li>
+						  <li><a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="orange"><span class="colorblock orange"></span></a></li>
+						  <li><a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="yellow"><span class="colorblock yellow"></span></a></li>
+						  <li><a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green"><span class="colorblock green"></span></a></li>
+						</ul>
+					<a data-wysihtml5-command="bold">
+						<div class="large-2 columns text-center content">
+							<%= image_tag('format-bold.png') %>
+						</div>
+					</a>
+					<a data-wysihtml5-command="italic">
+						<div class="large-2 columns text-center content">
+							<%= image_tag('format-italic.png') %>
+						</div>
+					</a>
+					<a data-wysihtml5-command="underline">
+						<div class="large-2 columns text-center content">
+							<%= image_tag('format-underline.png') %>
+						</div>
+					</a>
+					<a data-wysihtml5-command="formatInline" data-wysihtml5-command-value="span">
+						<div class="large-2 columns text-center content">
+							<%= image_tag('format-inline.png') %>
+						</div>
+					</a>
+					<a data-wysihtml5-command="justifyCenter">
+						<div class="large-2 columns text-center content">
+							<%= image_tag('format-center.png') %>
+						</div>
+					</a>
+					<a data-wysihtml5-command="justifyLeft">
+						<div class="large-2 columns text-center content">
+							<%= image_tag('format-left.png') %>
+						</div>
+					</a>
+					<a data-wysihtml5-command="justifyRight">
+						<div class="large-2 columns text-center content">
+							<%= image_tag('format-right.png') %>
+						</div>
+					</a>
+					<a data-wysihtml5-command="link">
+						<div class="large-2 columns text-center content">
+							<%= image_tag('format-link.png', class: "link") %>
+						</div>
+					</a>
+				</div>
+				<%= email.text_area :body, id: 'wysihtml5-textarea' %>
+				<%= email.submit %>
+				<% end %>
+				<br><br><br><br><br><br><br><br><br><br><br>
+			</div>
+		</div>
+	</div>
+  <div class="large-6 columns rightbar containers">
+  	<a href="#">
+  		<div class="videobg">
+	  		<div class="videoblock text-center">
+	  			<%= image_tag('playicon.png', class: "padding15v playicon") %>
+	  		</div>
+	  	</div>
+	  </a>
+  	<div class="content" id="sidebar">
+      <h4 class="sidetitle">Guide</h4>
+      <div class="opacity08">
+	      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+	    </div>
+    </div>
+	</div>
+	</div>
+</div>
+
+
+<script>
+	$('.row1').matchHeight();
+	$('.containers').matchHeight();
+</script>
+
+<script>
+var wysihtml5ParserRules = {
+  classes: {
+    "wysiwyg-text-align-center": 1,
+    "wysiwyg-text-align-left": 1,
+    "wysiwyg-text-align-right": 1,
+    "wysiwyg-color-grey": 1,
+		"wysiwyg-color-blue": 1,
+		"wysiwyg-color-purple": 1,
+		"wysiwyg-color-red": 1,
+		"wysiwyg-color-orange": 1,
+		"wysiwyg-color-yellow": 1,
+		"wysiwyg-color-green": 1
+  },
+  tags: {
+    "div": 1,
+    "span": 1,
+    "h1": 1,
+    "h2": 1,
+    "h3": 1,
+    "h4": 1,
+    "h5": 1,
+    "br": 1,
+    "b": 1,
+    "u": 1,
+    "i": 1,
+    "p": 1
+  }
+};
+var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea element
+  toolbar:      "wysihtml5-toolbar", // id of toolbar element
+  parserRules:  wysihtml5ParserRules, // defined in parser rules set 
+  stylesheets: "<%= stylesheet_path "editor" %>" 
+});
+</script>

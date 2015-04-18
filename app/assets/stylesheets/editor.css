@@ -1,0 +1,34 @@
+
+.wysiwyg-color-grey{
+  color: #A9A9A9;
+}
+.wysiwyg-color-blue{
+  color: #333399;
+}
+.wysiwyg-color-purple{
+  color: #663399;
+}
+.wysiwyg-color-red{
+  color: #CC3333;
+}
+.wysiwyg-color-orange{
+  color: #FF6633;
+}
+.wysiwyg-color-yellow{
+  color: #FFCC33;
+}
+.wysiwyg-color-green{
+  color: #009933;
+}
+
+.wysiwyg-text-align-center {
+  text-align: center;
+}
+
+.wysiwyg-text-align-left {
+  text-align: left;
+}
+
+.wysiwyg-text-align-right {
+  text-align: right;
+}

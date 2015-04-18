@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
 	has_many :human_logins
 	has_many :templates
 
+	mount_uploader :logourl, ImageUploader
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

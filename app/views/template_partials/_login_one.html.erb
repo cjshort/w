@@ -11,7 +11,8 @@
 <style>
 
 h1{
-	font-size: 3rem;
+	font-size: 2.5rem;
+	line-height: 1;
 }
 
 .text-center{
@@ -20,9 +21,10 @@ h1{
 
 body {
 	color: #fff !important;
-	background: url('http://static.pexels.com/wp-content/uploads/2014/07/beans-brew-coffee-2061.jpg');
+	background: url('<%= template.backgroundurl_url %>');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 a{
@@ -35,12 +37,12 @@ a{
   background: rgba(5, 5, 5, 0.67);
 }
 
-.margin2t{
-	margin-top: 10rem;
+.margin4t{
+	margin-top: 4rem;
 }
 
-.padding5t{
-	padding-top: 5rem;
+.padding2t{
+	padding-top: 2rem;
 }
 
 .padding1v{
@@ -48,20 +50,31 @@ a{
 	padding-bottom: 1rem;
 }
 
+.logo {
+  height: 10rem;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+
 </style>
 
 
 <div class="mask">
 <div class="row">
 	<div class="large-12 columns">
-		<h1 class="text-center magin2t"><%= template.title %></h1>
-		<div class="text-center padding5t">
+		<%= image_tag(user.logourl_url, class: "padding2t text-center logo") %> 
+		<h1 class="text-center"><%= template.title %></h1>
+		<div class="text-center padding2t">
 		<p class="padding1v">Select a network to connect with</p>
-			<%= link_to "Sign in with Facebook", human_omniauth_authorize_path(:facebook, var: @user.id) %>
+			<%= link_to "Sign in with Facebook", human_omniauth_authorize_path(:facebook, var: user.id) %>
 		<br>
-		<%= link_to "Sign in with Twitter", human_omniauth_authorize_path(:twitter, var: @user.id) %>
+		<%= link_to "Sign in with Twitter", human_omniauth_authorize_path(:twitter, var: user.id) %>
 		<br>
-		<%= link_to "Sign in with LinkedIn", human_omniauth_authorize_path(:linkedin, var: @user.id) %>
+		<%= link_to "Sign in with LinkedIn", human_omniauth_authorize_path(:linkedin, var: user.id) %>
 		</div>
 	</div>
 </div>

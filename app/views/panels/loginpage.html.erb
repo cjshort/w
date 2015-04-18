@@ -1,5 +1,5 @@
 <div class="row ">
-	<div class="large-18 columns maincontainer">
+	<div class="large-18 columns maincontainer containers">
 		<div class="row maintitle padding2v content2">
 			<h1 class="blue09 font17 weight600">Select a login page to edit</h1>
 		</div>
@@ -58,11 +58,16 @@
 			
 		</div>
 	</div>
-  <div class="large-6 columns rightbar content">
-    <div class="navheight"></div>
+  <div class="large-6 columns rightbar containers">
+  	<a href="#">
+  		<div class="videobg">
+	  		<div class="videoblock text-center">
+	  			<%= image_tag('playicon.png', class: "padding15v playicon") %>
+	  		</div>
+	  	</div>
+	  </a>
+  	<div class="content" id="sidebar">
       <h4 class="sidetitle">Guide</h4>
-      <div class="content">
-	    </div>
     </div>
 	</div>
 </div>
@@ -70,4 +75,5 @@
 
 <script>
 	$('.row1').matchHeight();
+	$('.containers').matchHeight();
 </script>

@@ -3,7 +3,7 @@ class PublicsController < ApplicationController
 	
   def login
   	@user = User.find(params[:id])
-  	@template = User.find(params[:id]).templates.where(:type => "LoginOne").last
+  	@template = User.find(params[:id]).templates.find(@user.loginpage)
   end
 
   def redirect

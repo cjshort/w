@@ -3,6 +3,9 @@ class TemplatesController < ApplicationController
 	before_action :authenticate_user!
 
   def editor
+  	
+  	@user = current_user
+
   	case params[:type]
   	when "LoginOne"
   		@template = current_user.templates.where(:type => 'LoginOne').last
@@ -14,14 +17,36 @@ class TemplatesController < ApplicationController
   end
 
   def update
+  	template = Template.find(params[:id])
+  	user = current_user
+
+  	if params[:commit] == "Update"
+  		template.update_attributes(template_params)
+  		redirect_to :back
+  	elsif params[:commit] == "Update and Select"
+  		template.update_attributes(template_params)
+  		user.update_attributes(:loginpage => "#{template.id}")
+  		redirect_to :back
+  	end
   end
 
-  def updateselect
-  end
+  def template_params
+  	template = Template.find(params[:id])
+
+  	case template.type
+  	when "LoginOne"
+		  params.require(:login_one).permit(:title, :backgroundurl)
+		when "LoginTwo"
+			params.require(:login_two).permit(:title, :backgroundurl)
+		when "LoginThree"
+			params.require(:login_three).permit(:title, :backgroundurl)
+		end
+
+	end
 
   def show
-  	@user = current_user
   	@template = Template.find(params[:id])
+    @user = User.find(@template.user_id)
   end
 
 
@@ -30,7 +55,7 @@ class TemplatesController < ApplicationController
   def resolve_layout
     case action_name
     when "editor"
-      "templateeditor"
+      false
     when "show"
     	false
     end

@@ -1,9 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wyfi | Social WIFI Marketing for small business</title>
+  <%= stylesheet_link_tag    'panels', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'panels', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
 <% case params[:type] %>
-	<% when 'LoginOne' %>
-		<%= form_for @template, url: template_update_path(@template) do |f| %>
-			<%= f.label :title %>
-			<%= f.text_field :title %>
+<% when 'LoginOne' %>
+<%= form_for @template, url: template_update_path(@template), :html => {:multipart => true} do |f| %>
+
+<div class="row greybg">
+	<% if params[:type] == "LoginOne" || "LoginTwo" || "LoginThree" %>
+		<%= link_to panels_loginpage_path do %>
+			<div class="large-3 columns row1 editorarrow">
+			</div>
 		<% end %>
-	<% when 'LoginTwo' %>
+	<% elsif params[:type] == "WelcomeOne" || "WelcomeTwo" || "WelcomeThree" %>
+		<%= link_to panels_welcomepage_path do %>
+			<div class="large-3 columns row1 editorarrow">
+			</div>
+		<% end %>
+	<% end %>
+	<div class="large-11 columns content2 padding15v row1">
+		<h3 class="margin0b margin0t">Template Editor</h3>
+	</div>
+	<div class="large-5 columns padding08v content text-center">
+		<%= f.submit "Update", class: "updatebutton" %>
+	</div>
+	<div class="large-5 columns padding08v content text-center">
+		<%= f.submit "Update and Select", class: "updateandselectbutton" %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-15 columns whitebg content3 padding3v row2">
+	
+	<%= f.label "Change Logo Image" %>
+	<p>Your logo can be changed in <%= link_to(panels_settings_path, class: "weight600") do %>Account Settings<% end %></p> 
+	<%= f.label "Change Background Image" %>
+	<%= f.file_field :backgroundurl %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+<% end %>
+		<% when 'LoginTwo' %>
 	<% when 'LoginThree' %>
 <% end %>
+
+	</div>
+	<div class="large-9 columns row2 darkgreybg text-center">
+		<iframe class="previewframe" src="<%= url_for template_show_path(@template.id) %>"></iframe>
+	</div>
+</div>
+
+<script>
+  $(document).foundation();
+</script>
+
+</body>
+</html>
+
+<script>
+	$('.row1').matchHeight();
+	$('.row2').matchHeight();
+</script>

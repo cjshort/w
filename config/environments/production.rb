@@ -1,6 +1,13 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.action_mailer.smtp_settings = {
+        :address              => "smtp.mandrillapp.com",
+        :port                 => 587,
+        :user_name            => "callumshorty@hotmail.com",
+        :password             => "tQkmQ3Ps5E_YIHbOGviwDA"
+  }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

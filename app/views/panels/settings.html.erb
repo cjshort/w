@@ -1,0 +1,106 @@
+<%= stylesheet_link_tag 'colpick' %>
+
+<div class="row ">
+	<div class="large-18 columns maincontainer containers">
+		<div class="row maintitle padding2v content2">
+			<h1 class="blue09 font17 weight600">Settings</h1>
+		</div>
+		<div class="row main">
+			<div class="large-24 columns content2">
+				<%= form_for @user, url: panels_settingsupdate_path, :html => {:multipart => true} do |f|%>
+				<h4 class="title margin1t25b">Branding</h4>
+				<div class="row padding1b">
+					<div class="large-6 columns text-center padding15v">
+						<%= image_tag(@user.logourl_url, class: "height7") %>
+					</div>
+					<div class="large-18 columns">
+						<%= f.label "Change Logo Image" %>
+						<%= f.file_field :logourl %>
+						<%= f.label "Change Background Colour" %>
+						<div id="picker" style="background: #<%= @user.bghex %>"></div>
+						<%= f.text_field :bghex, class: "bghex" %>
+					</div>
+				</div>
+				<%= f.label "Business Name" %>
+				<%= f.text_field :businessname %>
+	      <div class="row">
+	        <%= f.label "Email Sender" %>
+	        <div class="large-15 columns">
+	          <%= f.text_field :mailer %>
+	        </div>
+	        <div class="large-9 columns">
+	          <span class="postfix">@fourbars.com</span>
+	        </div>
+	      </div>
+	      <h4 class="title margin1t25b">Personal Information</h4>
+	      <div class="row">
+	      	<div class="large-11 columns">
+						<%= f.label "First Name" %>
+						<%= f.text_field :firstname %>
+					</div>
+					<div class="large-2 columns">
+					</div>
+					<div class="large-11 columns">
+						<%= f.label "Last Name" %>
+						<%= f.text_field :lastname %>
+					</div>
+				</div>
+				<%= f.label "Email Address" %>
+				<%= f.text_field :email %>
+				<%= f.label "Mobile Number" %>
+				<%= f.text_field :mobile %>
+				<%= f.label "Address Line 1" %>
+				<%= f.text_field :address1 %>
+				<%= f.label "Address Line 2" %>
+				<%= f.text_field :address2 %>
+				<%= f.label "Region" %>
+				<%= f.text_field :region %>
+				<%= f.label "Postcode" %>
+				<%= f.text_field :postcode %>
+				<%= f.label "Country" %>
+				<%= f.text_field :country %>
+				<h4 class="title margin1t25b">Email Preferences</h4>
+				<% end %>
+				<br><br><br><br><br><br><br><br><br><br><br>
+			</div>
+		</div>
+	</div>
+  <div class="large-6 columns rightbar containers">
+  	<a href="#">
+  		<div class="videobg">
+	  		<div class="videoblock text-center">
+	  			<%= image_tag('playicon.png', class: "padding15v playicon") %>
+	  		</div>
+	  	</div>
+	  </a>
+  	<div class="content" id="sidebar">
+      <h4 class="sidetitle">Guide</h4>
+    </div>
+	</div>
+	</div>
+</div>
+
+
+<script>
+	$('.row1').matchHeight();
+	$('.containers').matchHeight();
+</script>
+
+<script>
+
+$('#picker').colpick({
+	layout:'hex',
+	submit:0,
+	color: '<%= @user.bghex %>',
+	colorScheme:'light',
+	onChange:function(hsb,hex,rgb,el,bySetColor) {
+		$(el).css('background','#'+hex);
+		$('#user_bghex').val(hex);
+		// Fill the text box just if the color was set using the picker, and not the colpickSetColor function.
+		if(!bySetColor) $(el).val(hex);
+	}
+}).keyup(function(){
+	$(this).colpickSetColor(this.value);
+});
+
+</script>

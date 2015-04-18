@@ -9,14 +9,20 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  post 'templates/update/:id', to: 'templates#update', as: 'template_update' 
+  patch 'templates/update/:id', to: 'templates#update', as: 'template_update' 
   get 'templates/editor/:type', to: 'templates#editor', as: 'template_editor'
   get 'templates/preview/:id', to: 'templates#show', as: 'template_show'
 
   get 'panels/dashboard'
-  get 'panels/leaderboard'
   get 'panels/leaderboard/:filter/:order', to: 'panels#leaderboardfilter', as: 'leaderboard_filter'
   get 'panels/loginpage'
+  get 'panels/welcomepage'
+  get 'panels/emailinbox'
+  get 'panels/emailblast'
+  get 'panels/emailschedule'
+  get 'panels/settings'
+  patch 'panels/settings/update', to: 'panels#settingsupdate', as: 'panels_settingsupdate'
+  post 'panels/emailblast/create', to: 'panels#emailblastcreate', as: 'panels_emailblast_create'
 
   root 'fronts#home'
 

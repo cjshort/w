@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150409152200) do
+ActiveRecord::Schema.define(version: 20150417150656) do
+
+  create_table "blasts", force: true do |t|
+    t.string   "subject"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "body"
+    t.integer  "to"
+  end
 
   create_table "human_logins", force: true do |t|
     t.string   "user_agent"
@@ -56,6 +64,7 @@ ActiveRecord::Schema.define(version: 20150409152200) do
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "logourl"
   end
 
   create_table "users", force: true do |t|
@@ -73,7 +82,20 @@ ActiveRecord::Schema.define(version: 20150409152200) do
     t.datetime "updated_at"
     t.string   "businessname"
     t.string   "businesscategory"
-    t.string   "fullname"
+    t.string   "loginpage"
+    t.string   "welcomepage"
+    t.string   "logourl"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "region"
+    t.string   "postcode"
+    t.string   "country"
+    t.boolean  "receivenewsletters"
+    t.string   "mobile"
+    t.string   "bghex"
+    t.string   "mailer"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

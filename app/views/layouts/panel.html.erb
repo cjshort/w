@@ -9,7 +9,7 @@
 </head>
 <body>
 
-
+<div class="row shadowmask">
 <div class="row">
 	<div class="large-24 columns">
 	  <div class="fixed contain-to-grid">
@@ -37,28 +37,31 @@
 				      <li class="has-dropdown">
 				        <a href="#">EMAIL</a>
 				        <ul class="dropdown">
-				        	<li><a href="#">EMAIL BLAST</a></li>
-				          <li><a href="#">SCHEDULE</a></li>
+				        	<li><%= link_to panels_emailinbox_path do %>INBOX<% end %></li>
+				        	<li><%= link_to panels_emailblast_path do %>EMAIL BLAST<% end %></li>
+				          <li><%= link_to panels_emailschedule_path do %>SCHEDULE<% end %></li>
 				        </ul>
 				      </li>
 	            <li class="has-dropdown">
 	            	<a href="#">SETUP</a>
 				        <ul class="dropdown">
 				        	<li><%= link_to panels_loginpage_path do %>LOGIN PAGE<% end %></li>
-				          <li><a href="#">WELCOME PAGE</a></li>
+				          <li><%= link_to panels_welcomepage_path do %>WELCOME PAGE<% end %></li>
 				        </ul>
 				      </li>
-	            <li class="has-dropdown">
+				      <li>
 	            	<a href="#">ANALYTICS</a>
-				        <ul class="dropdown">
-				        	<li><a href="#">LOGIN PAGE</a></li>
-				          <li><a href="#">WELCOME PAGE</a></li>
-				        </ul>
 				      </li>
 	          </ul>
 	          <ul class="right">
-	          	<li><a href="#">ACCOUNT</a></li>
-              <li class="login"><%= link_to(destroy_user_session_path, :method => :delete) do %>LOGOUT<% end %></li>
+	          	<li><a href="#">SUPPORT</a></li>
+	          	<li class="has-dropdown">
+	          		<a href="#">ACCOUNT</a>
+	          		<ul class="dropdown">
+	          			<li><%= link_to panels_settings_path do %>SETTINGS<% end %></li>
+	          			<li><a href="#">PAYMENTS</a></li>
+	          			<li class="login"><%= link_to(destroy_user_session_path, :method => :delete) do %>LOGOUT<% end %></li>
+	          		</ul>
 	          </ul>
 
 	        </section>
@@ -71,6 +74,12 @@
 </div>
 
 <%= yield %>
+
+<div class="row footerbg">
+	<br><br><br><br><br><br><br><br><br>
+</div>
+
+</div>
 
 <script type="text/javascript">
   $("header").headroom({
@@ -87,4 +96,5 @@
 
 <script>
 	$('.navheight').matchHeight();
+	$("#sidebar").stick_in_parent({"offset_top": 65})
 </script>

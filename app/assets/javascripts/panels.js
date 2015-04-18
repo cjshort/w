@@ -12,11 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require jquery.matchHeight
+//= require turbolinks
 //= require headroom
 //= require jQuery.headroom
 //= require foundation
 //= require foundation.topbar
 //= require raphael
 //= require morris
+//= require ./wysiwyg
+//= require colpick
+//= require jquery.sticky-kit.min.js
+

@@ -1,12 +1,17 @@
 source 'http://rubygems.org'
 
 
-gem 'devise'
-gem 'omniauth'
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem 'omniauth-linkedin'
+gem 'devise' #user systems
+gem 'omniauth' #oauth
+gem 'omniauth-twitter' #oauth
+gem 'omniauth-facebook' #oauth
+gem 'omniauth-linkedin' #oauth
 gem 'linkedin' #To make seperate profile picture API call 
+
+gem "carrierwave" #image receiving
+gem "mini_magick" #image processing
+
+gem 'mandrill_mailer'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'

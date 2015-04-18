@@ -10,3 +10,7 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( panels.css )
 Rails.application.config.assets.precompile += %w( panels.js )
 Rails.application.config.assets.precompile += %w( template.css )
+Rails.application.config.assets.precompile += %w( editor.css )
+Rails.application.config.assets.precompile += %w( wysiwyg.js )
+Rails.application.config.assets.precompile += %w( colpick.css )
+Rails.application.config.assets.precompile += %w( colpick.js )
