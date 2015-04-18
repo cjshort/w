@@ -13,7 +13,9 @@
 			<div class="row content padding2v">
 				<%= form_for @blast, url: panels_emailblast_create_path do |email| %>
 				<%= email.label "Recepients" %>
-				<%= email.select(:to, [['All Visitors ('+@option1+')', 1], ['You (1)', 2]]) %>
+				<%= email.select(:to, [
+					['All Visitors ('+@option1+')', 1], 
+					['You (1)', 4]]) %>
 				<%= email.label "Subject" %>
 				<%= email.text_field :subject %>
 				<div class="row wysihtml5-toolbar" id="wysihtml5-toolbar">

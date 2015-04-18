@@ -50,8 +50,6 @@ class PanelsController < ApplicationController
 
   def emailblast
   	@option1 = current_user.humans.count.to_s
-  	@option2 = current_user
-  	@option3 = current_user
   	@blast = Blast.new
   end
 
