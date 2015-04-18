@@ -11,6 +11,8 @@ module Wyfi
 
     config.assets.initialize_on_precompile = false
 
+    Fog.credentials = { path_style: true } #fix ssl glitch
+
     config.to_prepare do
       Devise::SessionsController.layout false 
     end

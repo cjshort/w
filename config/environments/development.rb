@@ -9,6 +9,7 @@ Rails.application.configure do
         :password             => "tQkmQ3Ps5E_YIHbOGviwDA"
   }
   
+  
 
   require 'openssl'
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE #SSL FIX SHOULD NOT BE USED IN PRODUCTION
