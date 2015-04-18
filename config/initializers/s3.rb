@@ -5,5 +5,5 @@ CarrierWave.configure do |config|
       :aws_secret_access_key  => "lOi1hanXPM4tfEtvf1LVDlPFXFAzCBvk87ytAOlv",
       :region                 => "us-west-2"
   }
-  config.fog_directory  = 'wifi-uploads'
+  config.fog_directory  = 'wifiuploads'
 end
