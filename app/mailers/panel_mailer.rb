@@ -14,7 +14,7 @@ class PanelMailer < MandrillMailer::TemplateMailer
       from_name: user.businessname, 
       template_content: {'body' => email.body},
       vars: {
-            'LOGO' => user.logourl_url,
+            'LOGO' => image_tag(user.logourl),
             'BG_COLOR' => user.bghex},
       inline_css: true,
       recipient_vars: var_humans
