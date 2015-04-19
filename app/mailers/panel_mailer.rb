@@ -14,7 +14,7 @@ class PanelMailer < MandrillMailer::TemplateMailer
       from_name: user.businessname, 
       template_content: {'body' => email.body},
       vars: {
-            'LOGO' => image_tag(user.logourl),
+            'LOGO' => "https://wifiuploads.s3.amazonaws.com/uploads/user/logourl/#{user.id}/#{user.logourl}",
             'BG_COLOR' => user.bghex},
       inline_css: true,
       recipient_vars: var_humans
