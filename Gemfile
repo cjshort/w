@@ -10,7 +10,7 @@ gem 'linkedin' #To make seperate profile picture API call
 
 gem "carrierwave" #image receiving
 gem "mini_magick" #image processing
-gem "fog-aws" #s3 integration
+gem "fog" #s3 integration
 
 gem 'mandrill_mailer'
 
