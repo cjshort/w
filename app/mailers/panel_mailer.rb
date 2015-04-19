@@ -1,7 +1,7 @@
 class PanelMailer < MandrillMailer::TemplateMailer
   default async: true
  
-  def blast(user, userlogo, email)
+  def blast(user, email)
 
     to_humans = user.humans.map { |human| { email: human.email, name: human.fullname }}
     var_humans = user.humans.map { |human| { human.email => {'FULL_NAME' => human.fullname}}}
@@ -14,7 +14,7 @@ class PanelMailer < MandrillMailer::TemplateMailer
       from_name: user.businessname, 
       template_content: {'body' => email.body},
       vars: {
-            'LOGO' => "https://wifiuploads.s3.amazonaws.com/uploads/user/logourl/#{user.id}/#{userlogo}",
+            'LOGO' => "https://wifiuploads.s3.amazonaws.com/uploads/user/logourl/#{user.id}/#{user.logourl.file.filename}",
             'BG_COLOR' => user.bghex},
       inline_css: true,
       recipient_vars: var_humans

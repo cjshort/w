@@ -58,7 +58,7 @@ class PanelsController < ApplicationController
   	user = current_user
   	userlogo = user.logourl.file.filename
   	if email.save
-	  	PanelMailer.blast(user, userlogo, email).deliver
+	  	PanelMailer.blast(user, email).deliver
 	  end
   end
 
