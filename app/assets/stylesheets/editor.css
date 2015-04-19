@@ -32,3 +32,7 @@
 .wysiwyg-text-align-right {
   text-align: right;
 }
+
+.wysihtml5-editor {
+  line-height: 1.5 !important;
+}

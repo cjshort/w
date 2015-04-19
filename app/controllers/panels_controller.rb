@@ -56,7 +56,9 @@ class PanelsController < ApplicationController
   def emailblastcreate
   	email = Blast.create(blast_params)
   	user = current_user
-  	PanelMailer.blast(user, email).deliver
+  	if email.save?
+	  	PanelMailer.blast(user, email).deliver
+	  end
   end
 
   def blast_params

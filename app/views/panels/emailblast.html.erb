@@ -82,7 +82,6 @@
 				<%= email.text_area :body, id: 'wysihtml5-textarea' %>
 				<%= email.submit %>
 				<% end %>
-				<br><br><br><br><br><br><br><br><br><br><br>
 			</div>
 		</div>
 	</div>
@@ -142,6 +141,7 @@ var wysihtml5ParserRules = {
 var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea element
   toolbar:      "wysihtml5-toolbar", // id of toolbar element
   parserRules:  wysihtml5ParserRules, // defined in parser rules set 
-  stylesheets: "<%= stylesheet_path "editor" %>" 
+  stylesheets: "<%= stylesheet_path "editor" %>" ,
+  style: true
 });
 </script>
