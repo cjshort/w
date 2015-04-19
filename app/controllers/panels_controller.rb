@@ -82,4 +82,5 @@ class PanelsController < ApplicationController
   	params.require(:user).permit(:logourl, :bghex, :mailer, :firstname, :lastname, :address1, :address2, :region, :postcode, :country)
 	end
 
+
 end

@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.newschedulebutton{
+  padding: 0.7rem 2rem;
+  background: #fff;
+  border: 1px solid rgba(179, 181, 184, 0.39);
+  border-radius: 2px;
+  font-size: 0.8rem;
+  color: rgba(86, 94, 102, 0.79);
+  font-weight: 900;
+  text-transform: uppercase
+}
 
 #picker {
   width: 3rem;
@@ -383,6 +393,11 @@ ul.dropdown a {
 .padding04v{
 	padding-top: 0.4rem;
 	padding-bottom: 0.4rem;
+}
+
+.padding05v{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .padding08v{
