@@ -5,7 +5,7 @@ class PanelMailer < MandrillMailer::TemplateMailer
 
     case email.to
     when 1
-      to_map = user.humans.where(:provider => "linkedin" OR "facebook").map { |human| { email: human.email, name: human.fullname }}
+      to_map = user.humans.where(provider: ["linkedin", "facebook"]).map { |human| { email: human.email, name: human.fullname }}
     when 2
       to_map = { email: user.email, name: user.firstname }
     end
