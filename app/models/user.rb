@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 	has_many :humans
 	has_many :human_logins
 	has_many :templates
+	has_many :schedules
 
 	mount_uploader :logourl, ImageUploader
 

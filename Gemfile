@@ -12,7 +12,9 @@ gem "carrierwave" #image receiving
 gem "mini_magick" #image processing
 gem "fog" #s3 integration
 
-gem 'mandrill_mailer'
+gem 'whenever' #CRON
+
+gem 'mandrill_mailer' #Mail Worker
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'

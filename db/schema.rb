@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417150656) do
+ActiveRecord::Schema.define(version: 20150420125950) do
 
   create_table "blasts", force: true do |t|
     t.string   "subject"
@@ -48,13 +48,23 @@ ActiveRecord::Schema.define(version: 20150417150656) do
     t.integer  "user_id"
     t.string   "fullname"
     t.string   "gender"
+    t.string   "agerange"
     t.string   "location"
     t.string   "picture"
-    t.string   "agerange"
   end
 
   add_index "humans", ["email"], name: "index_humans_on_email", unique: true
   add_index "humans", ["reset_password_token"], name: "index_humans_on_reset_password_token", unique: true
+
+  create_table "schedules", force: true do |t|
+    t.integer  "mode"
+    t.integer  "value"
+    t.string   "subject"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "templates", force: true do |t|
     t.string   "title"

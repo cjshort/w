@@ -5,7 +5,7 @@ class PanelMailer < MandrillMailer::TemplateMailer
 
     case email.to
     when 1
-      to_map = user.humans.map { |human| { email: human.email, name: human.fullname }}
+      to_map = user.humans.where(:provider => "linkedin" OR "facebook").map { |human| { email: human.email, name: human.fullname }}
     when 2
       to_map = { email: user.email, name: user.firstname }
     end
@@ -25,4 +25,15 @@ class PanelMailer < MandrillMailer::TemplateMailer
       inline_css: true,
       recipient_vars: var_humans
   end
+
+  def schedule(user, human, email)
+    mandrill_mail template: 'blast-1',
+      subject: "working!",
+      to: "callumshorty@hotmail.com",
+      from_email: "working@hotmail.com",
+      from: "working@hotmail.com",
+      from_name: "callum short", 
+      template_content: {'body' => "hello"}
+  end
+
 end
