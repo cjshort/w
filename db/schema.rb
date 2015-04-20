@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420161516) do
+ActiveRecord::Schema.define(version: 20150420204645) do
 
   create_table "blasts", force: true do |t|
     t.string   "subject"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150420161516) do
     t.string   "agerange"
     t.string   "location"
     t.string   "picture"
+    t.integer  "human_logins_count",     default: 0
   end
 
   add_index "humans", ["email"], name: "index_humans_on_email", unique: true

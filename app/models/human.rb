@@ -2,6 +2,8 @@ class Human < ActiveRecord::Base
   has_many :human_logins
 	belongs_to :user
 
+
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :omniauthable, :database_authenticatable,
