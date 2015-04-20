@@ -56,7 +56,6 @@ class PanelsController < ApplicationController
   def emailblastcreate
   	email = Blast.create(blast_params)
   	user = current_user
-  	userlogo = user.logourl.file.filename
   	if email.save
 	  	PanelMailer.blast(user, email).deliver
 	  end
