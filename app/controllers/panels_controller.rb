@@ -55,9 +55,15 @@ class PanelsController < ApplicationController
 
   def emailblastcreate
   	email = Blast.create(blast_params)
+    case email.to
+    when 1
+      to_map = user.humans.where(provider: ["linkedin", "facebook"]).map { |human| { email: human.email, name: human.fullname }}
+    when 2
+      to_map = { email: user.email, name: user.firstname }
+    end
   	user = current_user
-  	if email.save
-	  	PanelMailer.blast(user, email).deliver
+  	if email.save && to_map <= user.mailcount
+	  	PanelMailer.blast(user, email, to_map).deliver
 	  end
   end
 

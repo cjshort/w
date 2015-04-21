@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.matchHeight
-//= require turbolinks
 //= require headroom
 //= require jQuery.headroom
 //= require foundation
@@ -23,4 +22,5 @@
 //= require ./wysiwyg
 //= require colpick
 //= require jquery.sticky-kit.min.js
+//= require turbolinks
 

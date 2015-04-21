@@ -12,6 +12,7 @@ gem "carrierwave" #image receiving
 gem "mini_magick" #image processing
 gem "fog" #s3 integration
 
+
 gem 'whenever' #CRON
 
 gem 'mandrill_mailer' #Mail Worker

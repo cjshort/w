@@ -1,23 +1,39 @@
-
 <div class="row ">
 	<div class="large-18 columns maincontainer containers">
 		<div class="row maintitle padding2v content2">
-			<div class="large-12 columns text-left">
-				<h1 class="blue09 font17 weight600">Email blast</h1>
-			</div>
-			<div class="large-12 columns text-right">
-				<h2 class="blue07 font17 weight600"><%= number_with_delimiter(current_user.mailcount) %></h2>
+			<div class="large-24 columns">
+				<h1 class="blue09 font17 weight600">New Schedule</h1>
 			</div>
 		</div>
 		<div class="row main">
 			<div class="row content padding2v">
-				<%= form_for @blast, url: panels_emailblast_create_path do |email| %>
-				<%= email.label "Recepients" %>
-				<%= email.select(:to, [
-					['All Visitors ('+@option1+')', 1], 
-					['You (1)', 2]]) %>
-				<%= email.label "Subject" %>
-				<%= email.text_field :subject, placeholder: "Type the subject of your email" %>
+				<%= form_for @schedule, url: schedules_create_path do |f| %>
+					<%= f.label "Name" %>
+					<%= f.text_field :name, placeholder: "Use this to identify the schedule" %>
+					<div class="row">
+						<div class="large-12 columns">
+							<div class="row collapse">
+							  <%= f.label "Days" %>
+							  <div class="small-18 columns">
+							    <%= f.text_field :value, value: 1 %>
+							  </div>
+							  <div class="small-6 columns">
+							    <span class="postfix">Day(s) since</span>
+							  </div>
+							</div>
+						</div>
+						<div class="large-12 columns">
+							<%= f.label "Trigger" %>
+							<%= f.select(:mode, [
+								["Last visit", 1],
+								["Sign up", 2],
+								["Fith visit", 3],
+								["Tenth visit", 4]
+								]) %>
+						</div>
+					</div>
+					<%= f.label "Subject" %>
+					<%= f.text_field :subject, placeholder: "Type the subject of your email" %>
 				<div class="row wysihtml5-toolbar" id="wysihtml5-toolbar">
 					<a data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="large-4 columns content">
 						Font Size</a>
@@ -79,10 +95,14 @@
 						</div>
 					</a>
 				</div>
-				<%= email.text_area :body, id: 'wysihtml5-textarea' %>
-				<%= email.submit %>
+				<%= f.text_area :body, id: 'wysihtml5-textarea' %>
+				<%= f.label "Status" %>
+				<%= f.select(:status, [
+					['Active', true], 
+					['Inactive', false]]) %>
+				<%= f.submit %>
 				<% end %>
-			</div>
+	    </div>
 		</div>
 	</div>
   <div class="large-6 columns rightbar containers">
@@ -95,15 +115,6 @@
 	  </a>
   	<div class="content" id="sidebar">
       <h4 class="sidetitle">Guide</h4>
-      <div class="opacity08">
-	      <p>An email blast will allow you to send out targetted emails to your visitors. Ideal for the promotion of events and offers, as well as general notifications.</p>
-	      <p>Use the following tags for visitor-specific content:</p>
-	      <ul class="disc">
-	      	<li>*|FULL_NAME|* - Visitors full name</li>
-	      	<li>*|VISIT_COUNT|* - Count of visits</li>
-	      	<li>*|LAST_VISIT|* - Date of visitors last visit</li>
-	      </ul>
-	    </div>
     </div>
 	</div>
 	</div>

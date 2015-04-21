@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   get 'templates/editor/:type', to: 'templates#editor', as: 'template_editor'
   get 'templates/preview/:id', to: 'templates#show', as: 'template_show'
 
+  get 'schedules/:id/edit', to: 'schedules#edit', as: 'schedules_edit'
+  get 'schedules/new'
+  post 'schedules/create', to: 'schedules#create', as: 'schedules_create'
+  patch 'schedules/update', to: 'schedules#update', as: 'schedules_update'
+
   get 'panels/dashboard'
   get 'panels/leaderboard/:filter/:order', to: 'panels#leaderboardfilter', as: 'leaderboard_filter'
   get 'panels/loginpage'

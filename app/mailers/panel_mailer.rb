@@ -1,14 +1,7 @@
 class PanelMailer < MandrillMailer::TemplateMailer
   default async: true
  
-  def blast(user, email)
-
-    case email.to
-    when 1
-      to_map = user.humans.where(provider: ["linkedin", "facebook"]).map { |human| { email: human.email, name: human.fullname }}
-    when 2
-      to_map = { email: user.email, name: user.firstname }
-    end
+  def blast(user, email, to_map)
 
     var_humans = user.humans.map { |human| { human.email => {'FULL_NAME' => human.fullname}}}
 

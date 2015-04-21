@@ -5,7 +5,7 @@
 				<h1 class="blue09 font17 weight600">Email schedule</h1>
 			</div>
 			<div class="large-7 columns text-right padding05v">
-				<span class="newschedulebutton">New Schedule <%= image_tag('plus.png', class: "btn-plus") %></span>
+				<%= link_to schedules_new_path do %><span class="newschedulebutton">New Schedule <%= image_tag('plus.png', class: "btn-plus") %></span><% end %>
 			</div>
 		</div>
 		<div class="row main">

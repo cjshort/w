@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420204645) do
+ActiveRecord::Schema.define(version: 20150421145828) do
 
   create_table "blasts", force: true do |t|
     t.string   "subject"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20150420204645) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "status"
+    t.string   "name"
   end
 
   create_table "templates", force: true do |t|
@@ -108,6 +109,7 @@ ActiveRecord::Schema.define(version: 20150420204645) do
     t.string   "mobile"
     t.string   "bghex"
     t.string   "mailer"
+    t.integer  "mailcount"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
