@@ -62,7 +62,7 @@ class PanelsController < ApplicationController
     when 2
       to_map = { email: user.email, name: user.firstname }
     end
-  	if email.save && to_map <= user.mailcount
+  	if email.save && to_map.count <= user.mailcount
 	  	PanelMailer.blast(user, email, to_map).deliver
 	  else
 	  	redirect_to panels_dashboard_path
