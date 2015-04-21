@@ -64,6 +64,7 @@ class PanelsController < ApplicationController
     end
   	if email.save && to_map.count <= user.mailcount
 	  	PanelMailer.blast(user, email, to_map).deliver
+	  	user.update(mailcount: user.mailcount < to_map.count)
 	  else
 	  	redirect_to panels_dashboard_path
 	  end
