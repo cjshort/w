@@ -2,7 +2,7 @@
 	<div class="large-18 columns maincontainer containers">
 		<div class="row maintitle padding2v content2">
 			<div class="large-17 columns">
-				<h1 class="blue09 font17 weight600">Email schedule</h1>
+				<h1 class="blue09 font17 weight600">Schedule</h1>
 			</div>
 			<div class="large-7 columns text-right padding05v">
 				<%= link_to schedules_new_path do %><span class="newschedulebutton">New Schedule <%= image_tag('plus.png', class: "btn-plus") %></span><% end %>
@@ -11,9 +11,16 @@
 		<div class="row main">
 			<div class="row content">
 	      <h4 class="title">Active Schedules</h4>
-	      <h4 class="title">Disabled Schedules</h4>
+	      <% if current_user.schedules.where(status: true) %>
+	      <h5 class="text-center padding3v">You have no active schedules at the moment</h4>
+	      <% else %>
+	      <% end %>
+	      <h4 class="title">Inactive Schedules</h4>
+	      <% if current_user.schedules.where(status: false) %>
+	      <h5 class="text-center padding3v">You have no inactive schedules at the moment</h4>
+	      <% else %>
+	      <% end %>
 	    </div>
-			<br><br><br><br><br><br><br><br><br><br><br>
 		</div>
 	</div>
   <div class="large-6 columns rightbar containers">
@@ -26,6 +33,10 @@
 	  </a>
   	<div class="content" id="sidebar">
       <h4 class="sidetitle">Guide</h4>
+      <div class="opacity08">
+	      <p>Your email schedule allows you to automate email marketing based on certain visitor events.</p>
+	      <p>For example, you could use your schedule to automatically send customers who haven't visited for 90 days an email inviting them back. You could also use it to increase repeat business by sending a thankyou email after a visitors first visit, you could even offer them a discount incentive!  </p>
+	    </div>
     </div>
 	</div>
 	</div>

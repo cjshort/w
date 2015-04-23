@@ -5,6 +5,7 @@ class HumansController < ApplicationController
   def profile
   	human = Human.find(params[:id])
 
+    @rank = Human.all.order('human_logins_count DESC').index(human) + 1
   	@human = human
   	@latest = Human.all.order('created_at DESC').limit(10)
   	@lastvisits = human.human_logins.order('created_at DESC').limit(5)

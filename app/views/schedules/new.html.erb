@@ -18,16 +18,16 @@
 							    <%= f.text_field :value, value: 1 %>
 							  </div>
 							  <div class="small-6 columns">
-							    <span class="postfix">Day(s) since</span>
+							    <span class="postfix nobr">Day(s) since</span>
 							  </div>
 							</div>
 						</div>
 						<div class="large-12 columns">
 							<%= f.label "Trigger" %>
 							<%= f.select(:mode, [
-								["Last visit", 1],
-								["Sign up", 2],
-								["Fith visit", 3],
+								["Sign up", 1],
+								["Last Visit", 2],
+								["Fifth visit", 3],
 								["Tenth visit", 4]
 								]) %>
 						</div>
@@ -115,6 +115,15 @@
 	  </a>
   	<div class="content" id="sidebar">
       <h4 class="sidetitle">Guide</h4>
+      <div class="opacity08">
+	      <p>Make an impression. You can use a schedule to directly increase repeat-business and reduce the loss of current customers, we recommend adding a personal touch and keeping it short and sweet.</p>
+	      <p>Use the following tags for visitor-specific content:</p>
+	      <ul class="disc">
+	      	<li>*|FULL_NAME|* - Visitors full name</li>
+	      	<li>*|VISIT_COUNT|* - Count of visits</li>
+	      	<li>*|LAST_VISIT|* - Date of visitors last visit</li>
+	      </ul>
+	    </div>
     </div>
 	</div>
 	</div>

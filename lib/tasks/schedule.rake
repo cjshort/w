@@ -11,3 +11,29 @@
 			end
   	end
   end
+
+  task :lastvisit => :environment do
+  	User.all.each do |user|
+			Schedule.where(:mode => 2, :user_id => user.id).each do |schedule|
+				humans = user.humans.where()
+				if humans.count > 0
+					PanelMailer.schedule(user, humans, schedule).deliver
+				end
+			end
+  	end
+  end
+
+  task :fifthvisit => :environment do
+  	User.all.each do |user|
+			Schedule.where(:mode => 3, :user_id => user.id).each do |schedule|
+			end
+  	end
+  end
+
+
+   task :tenthvisit => :environment do
+  	User.all.each do |user|
+			Schedule.where(:mode => 4, :user_id => user.id).each do |schedule|
+			end
+  	end
+  end

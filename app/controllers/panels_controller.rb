@@ -3,7 +3,15 @@ class PanelsController < ApplicationController
 	before_action :authenticate_user!
 
   def dashboard
+  	@fivemonths = HumanLogin.all.where("created_at = ?", 5.months.ago).count
+  	@fourmonths = HumanLogin.all.where("created_at = ?", 4.months.ago).count
+  	@threemonths = HumanLogin.all.where("created_at = ?", 3.months.ago).count
+  	@twomonths = HumanLogin.all.where("created_at = ?", 2.months.ago).count
+  	@onemonths = HumanLogin.all.where("created_at = ?", 1.months.ago).count
+  	@zeromonths =  HumanLogin.all.where("created_at BETWEEN ? AND ?", Time.now.beginning_of_month, Time.now.end_of_month).count
+
   	@latest = Human.all.order('created_at DESC').limit(10)
+  	@value = current_user.humans.where("created_at BETWEEN ? AND ?", Time.now.beginning_of_month, Time.now.end_of_month).count * 8
   end
 
   def leaderboardfilter
