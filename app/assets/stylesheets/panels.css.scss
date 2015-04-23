@@ -222,14 +222,14 @@ textarea#wysihtml5-textarea{
 }
 
 .updatebutton{
-  background-image: url(/assets/refreshicon.png);
+  background-image: image-url('refreshicon.png');
   background-repeat: no-repeat;
   background-size: 0.9rem;
   background-position: 69% center;
 }
 
 .updateandselectbutton{
-  background-image: url(/assets/tickicon.png);
+  background-image: image-url('tickicon.png');
   background-repeat: no-repeat;
   background-size: 0.9rem;
   background-position: 88% center;
@@ -548,7 +548,7 @@ ul.dropdown a {
 }
 
 .editorarrow {
-  background-image: url(/assets/editorarrow.png);
+  background-image: image-url('editorarrow.png');
   background-color: #DBDBDB;
   opacity: 0.5;
   background-size: 2.5rem;
