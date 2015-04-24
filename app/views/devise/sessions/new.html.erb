@@ -9,10 +9,10 @@
 </head>
 <body>
 
-
-<div class="row mainbg nopadding height100vh">
+<div class="orangegradient">
+<div class="row nopadding height100vh">
   <div class="large-14 columns">
-    <div class="row padding3v mainbgoverlay padding2h">
+    <div class="row padding3t padding2h">
       <div class="large-24 columns content padding3v">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <h4 class="margin2b font5 weight900 white">Hi.</h4>
@@ -52,12 +52,13 @@
       </div>
     </div>
   </div>
-  <div class="large-10 columns skybg height100vh text-center">
-    <div class="building2bg content">
+  <div class="large-10 columns whitebg height100vh text-center">
+    <div class="content">
       <h2 class="white weight100 margin30vht margin2b">Haven't got Wyfi yet?</h2>
       <span class="logingetbutton">GET WYFI</span>
     </div>
   </div>
+</div>
 </div>
 
 <script>

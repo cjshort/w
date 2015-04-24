@@ -23,12 +23,15 @@
 
         <section class="top-bar-section">
           <!-- Right Nav Section -->
-          <ul class="right">
+          <ul class="left">
             <li><a href="#">HOW IT WORKS</a></li>
             <li><a href="#">INDUSTRIES</a></li>
             <li><a href="#">PRICING</a></li>
-            <li class="launch"><%= link_to new_user_session_path do %>GET WYFI<% end %></li>
-            <li class="login"><%= link_to new_user_session_path do %>LOGIN<% end %></li>
+          </ul>
+
+          <ul class="right">
+            <li><span class="mainlogin"><%= link_to new_user_session_path do %>LOGIN<% end %></span></li>
+            <li><span class="maingetstarted"><%= link_to new_user_session_path do %>GET WYFI<% end %></span></li>
           </ul>
         </section>
       </nav>
@@ -41,14 +44,17 @@
 <div class="whitebg">
   <Br><Br><Br><Br><br>
 </div>
-<div class="row footerbg">
-  <Br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="footerbg">
+  <div class="row">
+    <Br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
 </div>
 
 
 <script type="text/javascript">
   $("header").headroom({
-    "offset": 1000000,
+    "offset": 150,
   });
 </script>
 
