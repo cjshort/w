@@ -197,9 +197,9 @@ ul.disc.orange{
   padding-right: 3rem;
 }
 
-.padding20v-vh{
-  padding-top: 20vh;
-  padding-bottom: 20vh;
+.padding23v-vh{
+  padding-top: 23vh;
+  padding-bottom: 23vh;
 }
 
 .padding1t{
@@ -293,6 +293,10 @@ ul.disc.orange{
   margin-right: 1rem;
 }
 
+.mediaborder{
+  border-bottom: 2px solid #f1f1f1;
+}
+
 .maingetstarted{
   background: linear-gradient(180deg, #EF5A44 0%, #E9374A 100%);
   padding: 0.7rem 1rem;
@@ -307,6 +311,13 @@ ul.disc.orange{
   font-size: 1.1rem;
 }
 
+.learnmoretext{
+  margin-top: 3rem;
+  color: rgba(233, 55, 74, 1);
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
 .mainhowitworks{
   background: linear-gradient(to bottom, #333e48 1%, #24313d 100%);
   padding: 0.7rem 2rem;
@@ -317,7 +328,7 @@ ul.disc.orange{
 }
 
 .maingradient{
-  background: linear-gradient(156deg, rgba(255, 255, 255, 1) 60%, rgba(229, 229, 229, 0) 56%);
+  background: linear-gradient(162deg, rgba(255, 255, 255, 1) 60%, rgba(229, 229, 229, 0.2) 56%);
 }
 
 .mainbg{
@@ -334,8 +345,21 @@ ul.disc.orange{
   background: #fff;
 }
 
+.home1bg{
+  background: image-url('home1.png');
+  background-size: 38rem;
+  background-repeat: no-repeat;
+  background-position: 120% center;
+}
+
 .greybg{
   background: #F5F6F7;
+}
+
+.greybgborder{
+  background: #F5F6F7;
+  border-top: 2px solid #F1F1F1;
+  border-bottom: 2px solid #f1f1f1;
 }
 
 .footerbg{

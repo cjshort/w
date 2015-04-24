@@ -11,7 +11,7 @@
   border: 1px solid #E05B3C;
   padding: 0.7rem 2rem;
   text-transform: uppercase;
-  background: linear-gradient(to bottom, #e06b3c 1%, #e05a3c 100%);
+  background: linear-gradient(to bottom, #e06b3c 1%, #EF4444 100%);
   color: #fff;
   font-weight: 600;
   font-size: 0.75rem;
@@ -3585,13 +3585,13 @@ meta.foundation-mq-topbar {
 
 @media only screen and (min-width: 40.063em) {
     .top-bar {
-      background: #E06B3C;
-      background: -moz-linear-gradient(top,  #E06B3C 1%, #E05A3C 100%);
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#E06B3C), color-stop(100%,#E05A3C));
-      background: -webkit-linear-gradient(top,  #E06B3C 1%,#E05A3C 100%);
-      background: -o-linear-gradient(top,  #E06B3C 1%,#E05A3C 100%);
-      background: -ms-linear-gradient(top,  #E06B3C 1%,#E05A3C 100%);
-      background: linear-gradient(to bottom,  #E06B3C 1%,#E05A3C 100%);
+      background: #ef5a44;
+      background: -moz-linear-gradient(top,  #ef5a44 1%, #EF4444 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ef5a44), color-stop(100%#EF4444));
+      background: -webkit-linear-gradient(top,  #ef5a44 1%,#EF4444 100%);
+      background: -o-linear-gradient(top,  #ef5a44 1%,#EF4444 100%);
+      background: -ms-linear-gradient(top,  #ef5a44 1%,#EF4444 100%);
+      background: linear-gradient(to bottom, #ef5a44 1%, #EF4444 100%);
       overflow: visible;
     }
     .top-bar:before, .top-bar:after {
@@ -3722,12 +3722,12 @@ meta.foundation-mq-topbar {
         background: #333333; }
       .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
         color: #FFFFFF;
-        background: #E05A3C;
+        background: #EF4444;
         width: 11rem; }
       .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
 				color: #E9E9E9;
-				background-color: #E05A3C;
-				background: #E05A3C; }
+				background-color: #EF4444;
+				background: #EF4444; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
         background: #333333; }
