@@ -15,7 +15,7 @@
   task :lastvisit => :environment do
   	User.all.each do |user|
 			Schedule.where(:mode => 2, :user_id => user.id).each do |schedule|
-				humans = user.humans.where(human_logins_count
+				humans = user.humans
 				if humans.count > 0
 					PanelMailer.schedule(user, humans, schedule).deliver
 				end
