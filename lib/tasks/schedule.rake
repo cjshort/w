@@ -26,10 +26,8 @@
   task :fifthvisit => :environment do
   	User.all.each do |user|
 			Schedule.where(:mode => 3, :user_id => user.id).each do |schedule|
-        humans = user.humans.joins(:human_logins).where(human_logins_count: 5)
-                .group('humans.id')
-                .having('MAX(human_logins.created_at) >= ?', Date.today)
-        if humans.count > 0
+        humans = user.humans.joins(:human_logins).where(human_logins_count: 5).group('humans.id').having('MAX(human_logins.created_at) >= ?', Date.today)
+        if humans.count.length > 0
           PanelMailer.schedule(user, humans, schedule).deliver
         end
 			end
