@@ -1,4 +1,4 @@
-  task :checkers => [:firstvisit] do
+  task :checkers => [:firstvisit, :fithvisit] do
   end
 
   task :firstvisit => :environment do
