@@ -12,13 +12,18 @@
 			<div class="row content">
 	      <h4 class="title">Active Schedules</h4>
 	      <% if current_user.schedules.where(status: true) %>
-	      <h5 class="text-center padding3v">You have no active schedules at the moment</h4>
+		      <% current_user.schedules.where(status: true).each do |schedule| %>
+			      <%= schedule.name %>
+		      <% end %>
 	      <% else %>
+  	      <h5 class="text-center padding3v">You have no active schedules at the moment</h4>
 	      <% end %>
 	      <h4 class="title">Inactive Schedules</h4>
 	      <% if current_user.schedules.where(status: false) %>
-	      <h5 class="text-center padding3v">You have no inactive schedules at the moment</h4>
+		      <% current_user.schedules.where(status: false).each do |schedule| %>
+		      <% end %>
 	      <% else %>
+		      <h5 class="text-center padding3v">You have no inactive schedules at the moment</h4>
 	      <% end %>
 	    </div>
 		</div>

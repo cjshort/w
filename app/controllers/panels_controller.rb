@@ -62,8 +62,8 @@ class PanelsController < ApplicationController
   end
 
   def emailblastcreate
-  	email = Blast.create(blast_params)
-  	user = current_user
+    user = current_user
+  	email = user.blasts.create(blast_params)
     case email.to
     when 1
       to_map = user.humans.where(provider: ["linkedin", "facebook"]).map { |human| { email: human.email, name: human.fullname }}

@@ -10,7 +10,8 @@ class SchedulesController < ApplicationController
   end
 
   def create
-  	Schedule.create(schedule_params)
+    user = current_user
+  	user.schedules.create(schedule_params)
   end
 
   def new
@@ -18,6 +19,6 @@ class SchedulesController < ApplicationController
   end
 
   def schedule_params
-  	params.require(:schedule).permit(:subject, :body, :mode, :value, :status)
+  	params.require(:schedule).permit(:subject, :body, :mode, :value, :status, :name)
   end
 end
