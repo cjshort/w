@@ -1,3 +1,59 @@
+.posrel{
+  position: relative;
+}
+
+.learnmore-arrow{
+  height: 0.7rem;
+  margin-left: 0.7rem;
+  margin-bottom: 3px;
+  transition-duration: 300ms;
+}
+
+.learnmoretext:hover .learnmore-arrow{
+  margin-left: 0.9rem;
+  transition-duration: 300ms;
+}
+
+.emailblock{
+  width: 620px;
+  height: 524px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  border-top-right-radius: 3px;
+}
+
+.eb-header{
+  background: #4C453B;
+  border-top-right-radius: 3px;
+  padding: 25px 0;
+}
+
+.eb-logo{
+  height: 60px;
+  margin-left: 195px;
+}
+
+.eb-h1 {
+  font-size: 30px;
+}
+
+.eb-h2{
+  font-size: 20px;
+  color: #949494;
+}
+
+.eb-p{
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.eb-container {
+  padding: 43px 80px 0 42px;
+  opacity: 0.95;
+}
+
 .media1{
   background-image: image-url('media1.png');
   background-repeat: no-repeat;
@@ -147,6 +203,10 @@ ul.disc.orange{
 
 .font3{
   font-size: 3rem;
+}
+
+.font28{
+  font-size: 2.8rem;
 }
 
 .font11{
