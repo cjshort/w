@@ -2,20 +2,20 @@
 	<div class="large-18 columns maincontainer containers">
 		<div class="row main">
 			<div class="row">
-				<div class="large-13 columns skybg content2 row1">
-			      <h3 class="white padding4v margin0tb"><span class="weight100 font14 opacity09">Welcome to mission control</span><br><%= current_user.businessname %></h3>
+				<div class="large-13 columns content2 row1">
+			      <h2 class="red padding2v margin0tb"><span class="font1 opacity09">Welcome to mission control</span><br><%= current_user.businessname %></h2>
 				</div>
-				<div class="large-11 columns content2 valuebg row1 padding3v text-center">
+				<div class="large-11 columns content2 row1 padding3v text-center">
 					<h1 class="margin0b weight600">£<%= @value %></h1>
 					<p class="margin0b weight600 textup opacity08">ROI this month</p>
 				</div>
 			</div>
 			<div class="row padding1v">
-				<div class="large-13 columns content row2">
+				<div class="large-13 columns content15">
 					<h4 class="title">Quick stats</h4>
 					<p></p>
 				</div>
-				<div class="large-11 columns content row2">
+				<div class="large-11 columns content15">
 					<h4 class="title">Top visitors</h4>
 					<div class="row dashrow">
 						<div class="large-6 columns dashtop">
@@ -47,11 +47,11 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="large-13 columns content">
+					<div class="large-13 columns content15">
 						<h4 class="title">Visits over time</h4>
 						<div id="homegraph" class="row3"></div>
 					</div>
-					<div class="large-11 columns content">
+					<div class="large-11 columns content15">
 						<h4 class="title">Did you know?</h4>
 						<div class="row3">
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -96,7 +96,6 @@
 
 <script>
 	$('.row1').matchHeight();
-	$('.row2').matchHeight();
 	$('.row3').matchHeight();
 	$('.containers').matchHeight();
 </script>
@@ -119,9 +118,9 @@ new Morris.Line({
   xlabels: 'month',
   parseTime: false,
   hideHover: 'auto',
-  lineColors: ['#E06B3C'],
+  lineColors: ['#E9374A'],
   lineWidth: '4px',
-  pointStrokeColors: ['#E05A3C'],
+  pointStrokeColors: ['#E9374A'],
   ykeys: ['value'],
   goalStrokeWidth: "10px" ,
 

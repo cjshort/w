@@ -6,7 +6,7 @@
 			</div>
 		</div>
 		<div class="row main">
-			<div class="row content padding2v">
+			<div class="row content15 padding2v">
 				<%= form_for @schedule, url: schedules_create_path do |f| %>
 					<%= f.label "Name" %>
 					<%= f.text_field :name, placeholder: "Use this to identify the schedule" %>
@@ -100,7 +100,9 @@
 				<%= f.select(:status, [
 					['Active', true], 
 					['Inactive', false]]) %>
-				<%= f.submit(class: "proceed-btn") %>
+				<div class="text-right">
+					<%= f.submit(class: "proceed-btn") %>
+				</div>
 				<% end %>
 	    </div>
 		</div>

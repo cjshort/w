@@ -25,12 +25,13 @@
           <!-- Right Nav Section -->
           <ul class="left">
             <li><a href="#">HOW IT WORKS</a></li>
+            <li><a href="#">INDUSTRIES</a></li>
             <li><a href="#">PRICING</a></li>
           </ul>
 
           <ul class="right">
             <li><span class="mainlogin"><%= link_to new_user_session_path do %>LOGIN<% end %></span></li>
-            <li><span class="maingetstarted"><%= link_to new_user_session_path do %>GET WYFI<% end %></span></li>
+            <li><span class="maingetwyfi"><%= link_to new_user_session_path do %>GET WYFI<% end %></span></li>
           </ul>
         </section>
       </nav>
@@ -41,8 +42,8 @@
 <%= yield %>
 
 <div class="footerbg">
-  <div class="row">
-    <Br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="row text-center padding2v">
+    <%= image_tag('logo.png', class: "height3") %>
   </div>
 </div>
 

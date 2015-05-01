@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<div class="row main">
-			<div class="row content padding2v">
+			<div class="row content15 padding2v">
 				<%= form_for @blast, url: panels_emailblast_create_path do |email| %>
 				<%= email.label "Recepients" %>
 				<%= email.select(:to, [
@@ -80,7 +80,9 @@
 					</a>
 				</div>
 				<%= email.text_area :body, id: 'wysihtml5-textarea' %>
-				<%= email.submit(class: "proceed-btn") %>
+				<div class="text-right">
+					<%= email.submit(class: "proceed-btn") %>
+				</div>
 				<% end %>
 			</div>
 		</div>

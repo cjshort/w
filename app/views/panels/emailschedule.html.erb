@@ -9,11 +9,13 @@
 			</div>
 		</div>
 		<div class="row main">
-			<div class="row content">
+			<div class="row content15">
 	      <h4 class="title">Active Schedules</h4>
 	      <% if current_user.schedules.where(status: true) %>
 		      <% current_user.schedules.where(status: true).each do |schedule| %>
+		      <div class="row schedulecontainer padding2v content2">
 			      <%= schedule.name %>
+			    </div>
 		      <% end %>
 	      <% else %>
   	      <h5 class="text-center padding3v">You have no active schedules at the moment</h4>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421145828) do
+ActiveRecord::Schema.define(version: 20150426133849) do
 
   create_table "blasts", force: true do |t|
     t.string   "subject"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150421145828) do
     t.datetime "updated_at"
     t.text     "body"
     t.integer  "to"
+    t.integer  "user_id"
   end
 
   create_table "human_logins", force: true do |t|
