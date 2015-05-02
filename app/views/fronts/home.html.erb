@@ -2,7 +2,7 @@
 <div class="mainbg">
 <div class="maingradient">
   <div class="row nopadding">
-    <div class="large-15 columns height100vh content3">
+    <div class="large-16 columns height100vh content3">
       <div class="maincontainer">
         <h1 class="maintitle">a <span class="weight600">360°</span> degree view of your customer traffic</h1>
         <div class="row nopadding padding1t">
@@ -19,6 +19,12 @@
             <br>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="large-8 columns text-left content">
+      <div class="mobilewrap">
+        <%= video_tag("maskfill.webm", autobuffer: true, loop: true, autoplay: true, class: "maskfill") %>
+        <%= image_tag('mobilemask.png', class: "mobilemask") %>
       </div>
     </div>
   </div>
