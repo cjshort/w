@@ -356,9 +356,15 @@ ul.disc.orange{
     transition: transform 300ms linear;
 }
 
-.headroom--not-top {
-    background: #fff;
+.top-bar-background{
+  background: rgba(255, 255, 255, 0);
+  transition-duration: 300ms;
+}
+
+.headroom--not-top .top-bar-background {
+    background: rgba(255, 255, 255, 1);
     border-bottom: 1px solid #ececec;
+    transition-duration: 300ms;
 }
 
 .row.nopadding {
@@ -3213,12 +3219,12 @@ body.pricing .contain-to-grid{
 
 .headroom--not-top .top-bar, .headroom--not-top .top-bar .name h1, .headroom--not-top .top-bar .toggle-topbar a, .headroom--not-top .top-bar-section li:not(.has-form) a:not(.button){
   line-height: 4.8125rem !important;
-  transition-duration: 300ms;
+  transition-duration: 500ms;
 }
 
 .headroom--not-top .top-bar img{
   height: 2.6rem;
-  transition-duration: 300ms;
+  transition-duration: 500ms;
 }
 
 .headroom--not-top .top-bar-section ul li > a{
@@ -3238,11 +3244,11 @@ body.pricing .contain-to-grid{
 }
 
 .headroom--top .top-bar, .headroom--top .top-bar .name h1, .headroom--top .top-bar .toggle-topbar a, .headroom--top .top-bar-section li:not(.has-form) a:not(.button){
-  transition-duration: 300ms;
+  transition-duration: 500ms;
 }
 
 .headroom--top .top-bar img{
-  transition-duration: 300ms;
+  transition-duration: 500ms;
 }
 
 .top-bar {
