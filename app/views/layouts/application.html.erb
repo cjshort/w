@@ -8,7 +8,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body class="<%= action_name %>">
 
   <div class="fixed contain-to-grid">
     <header>
@@ -24,9 +24,9 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="left">
-            <li><a href="#">HOW IT WORKS</a></li>
+            <li><%= link_to fronts_howitworks_path do %>HOW IT WORKS<% end %></li>
             <li><a href="#">INDUSTRIES</a></li>
-            <li><a href="#">PRICING</a></li>
+            <li><%= link_to fronts_pricing_path do %>PRICING<% end %></li>
           </ul>
 
           <ul class="right">
@@ -61,6 +61,7 @@
 <script>
   $('.navheight').matchHeight();
 </script>
+
 
 </body>
 </html>

@@ -2,6 +2,7 @@
   position: relative;
 }
 
+
 .learnmore-arrow{
   height: 0.7rem;
   margin-left: 0.7rem;
@@ -14,14 +15,21 @@
   transition-duration: 300ms;
 }
 
+#block3{
+  transition: all 1s 0.5s ease;
+  opacity: 0;
+}
+
 .emailblock{
   width: 620px;
   height: 524px;
   position: absolute;
-  left: 0;
+  left: -15%;
   bottom: 0;
   background: #fff;
   border-top-right-radius: 3px;
+  transition: all 1s 0.7s ease;
+  opacity: 0;
 }
 
 .eb-header{
@@ -425,6 +433,15 @@ ul.disc.orange{
   font-weight: 900;
 }
 
+.howitworksbg{
+  background: image-url('howitworksbg.png');
+  background-size: cover;
+}
+
+.howitworksgradient{
+  
+}
+
 .maingradient{
   background: radial-gradient(1400px 40% at center 10px,rgba(96, 72, 77, 0.85) 10%,rgba(58, 44, 47, 0.68) 50%);
 }
@@ -485,13 +502,9 @@ ul.disc.orange{
   border: 1px solid #ececec;
   border-radius: 10px;
   left: 25%;
-  top: -42%;
-  transition-duration: 300ms;
-}
-
-.personality-1:hover{
-  top: -46%;
-  transition-duration: 300ms;
+  top: -27%;
+  transition: all 1s 0.5s ease;
+  opacity: 0;
 }
 
 .personality-2{
@@ -502,13 +515,9 @@ ul.disc.orange{
   border: 1px solid #ececec;
   border-radius: 10px;
   left: 62%;
-  top: -40%;
-  transition-duration: 300ms;
-}
-
-.personality-2:hover{
-  top: -44%;
-  transition-duration: 300ms;
+  top: -35%;
+  transition: all 1s 0.5s ease;
+  opacity: 0;
 }
 
 .personality-3{
@@ -519,15 +528,10 @@ ul.disc.orange{
   border: 1px solid #ececec;
   border-radius: 10px;
   left: 36%;
-  top: -9%;
+  top: -24%;
   z-index: -1;
-  opacity: 0.7;
-  transition-duration: 300ms;
-}
-
-.personality-3:hover{
-  top: -13%;
-  transition-duration: 300ms;
+  opacity: 0;
+  transition: all 1s 0.5s ease;
 }
 
 .personality-4{
@@ -538,15 +542,10 @@ ul.disc.orange{
   border: 1px solid #ececec;
   border-radius: 10px;
   left: 56%;
-  top: -28%;
+  top: -43%;
   z-index: -1;
-  opacity: 0.7;
-  transition-duration: 300ms;
-}
-
-.personality-4:hover{
-  top: -32%;
-  transition-duration: 300ms;
+  opacity: 0;
+  transition: all 1s 0.5s ease;
 }
 
 .personality-5{
@@ -557,14 +556,9 @@ ul.disc.orange{
   border: 1px solid #ececec;
   border-radius: 10px;
   left: -3%;
-  top: -22%;
-  opacity: 0.7;
-  transition-duration: 300ms;
-}
-
-.personality-5:hover{
-  top: -26%;
-  transition-duration: 300ms;
+  top: -37%;
+  opacity: 0;
+  transition: all 1s 0.5s ease;
 }
 
 .personality-6{
@@ -575,14 +569,9 @@ ul.disc.orange{
   border: 1px solid #ececec;
   border-radius: 10px;
   left: 90.5%;
-  top: -26%;
-  opacity: 0.7;
-  transition-duration: 300ms;
-}
-
-.personality-6:hover{
-  top: -30%;
-  transition-duration: 300ms;
+  top: -41%;
+  opacity: 0;
+  transition: all 1s 0.5s ease;
 }
 
 .bottom-cta{
@@ -593,7 +582,14 @@ ul.disc.orange{
   background: image-url('home1.png');
   background-size: 50rem;
   background-repeat: no-repeat;
-  background-position: 135% center;
+  background-position: 150% center;
+  opacity:0;
+  transition: all 1s 0.5s ease;
+}
+
+#block2-text{
+  opacity: 0;
+  transition: all 1s 0.5s ease;
 }
 
 .greybg{
@@ -3177,6 +3173,19 @@ meta.foundation-mq-topbar {
   width: 90em; }
 
 /* Wrapped around .top-bar to contain to grid width */
+
+body.home .contain-to-grid{
+  background: none;
+}
+
+body.howitworks .contain-to-grid{
+  background: radial-gradient(800px at center 200px, rgba(96, 72, 77, 0.85) 0, rgba(58, 44, 47, 0.85) 100%);
+}
+
+body.pricing .contain-to-grid{
+  background: radial-gradient(800px at center 200px, rgba(96, 72, 77, 1) 0, rgba(58, 44, 47, 1) 100%);
+}
+
 .contain-to-grid {
   width: 100%;}
   .contain-to-grid .top-bar {
@@ -4110,3 +4119,25 @@ blockquote p {
 
   h6 {
     font-size: 1rem; } }
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

@@ -12,8 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require typed
 //= require turbolinks
-//= require ScrollMagic.min
+//= require jquery.waypoints.min
 //= require jquery.matchHeight
 //= require headroom
 //= require jQuery.headroom

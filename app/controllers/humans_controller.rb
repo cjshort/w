@@ -12,11 +12,11 @@ class HumansController < ApplicationController
   	@lastvisit = human.human_logins.last
   	@visits = human.human_logins.count
 
-  	@fivemonths = human.human_logins.all.where("created_at = ?", 5.months.ago).count
-  	@fourmonths = human.human_logins.all.where("created_at = ?", 4.months.ago).count
-  	@threemonths = human.human_logins.all.where("created_at = ?", 3.months.ago).count
-  	@twomonths = human.human_logins.all.where("created_at = ?", 2.months.ago).count
-  	@onemonths = human.human_logins.all.where("created_at = ?", 1.months.ago).count
+  	@fivemonths = human.human_logins.all.where("created_at BETWEEN ? AND ?", 5.months.ago.time.beginning_of_month, 5.months.ago.time.end_of_month).count
+  	@fourmonths = human.human_logins.all.where("created_at BETWEEN ? AND ?", 4.months.ago.time.beginning_of_month, 4.months.ago.time.end_of_month).count
+  	@threemonths = human.human_logins.all.where("created_at BETWEEN ? AND ?", 3.months.ago.time.beginning_of_month, 3.months.ago.time.end_of_month).count
+  	@twomonths = human.human_logins.all.where("created_at BETWEEN ? AND ?", 2.months.ago.time.beginning_of_month, 2.months.ago.time.end_of_month).count
+  	@onemonths = human.human_logins.all.where("created_at BETWEEN ? AND ?", 1.months.ago.time.beginning_of_month, 1.months.ago.time.end_of_month).count
   	@zeromonths =  human.human_logins.all.where("created_at BETWEEN ? AND ?", Time.now.beginning_of_month, Time.now.end_of_month).count
   	# Postgres should be: eated_at > ? AND < ?", Time.now.beginning_of_month, Time.now.end_of_month)
   end

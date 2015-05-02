@@ -36,7 +36,7 @@
 </div>
 
 
-<div class="whitebg home1bg">
+<div class="whitebg home1bg" id="block1">
   <div class="row padding23v-vh">
     <div class="large-12 columns">
       <h2 class="font2 weight600">Know your visitors</h2>
@@ -46,14 +46,14 @@
   </div>
 </div>
 
-<div class="greybgborder posrel">
+<div class="greybgborder posrel" id="block2">
   <div class="emailblock">
     <div class="eb-header">
       <%= image_tag('eb-logo.png', class: "eb-logo") %>
     </div>
     <div class="eb-container">
       <h1 class="eb-h1">
-        We miss you Mike
+        <span class="writer"></span>
       </h1>
       <h2 class="eb-h2">
         How about a drink on us?
@@ -64,7 +64,7 @@
   <div class="row padding23v-vh">
     <div class="large-12 columns">
     </div>
-    <div class="large-12 columns">
+    <div class="large-12 columns" id="block2-text">
       <h2 class="font2 weight600">Automate marketing</h2>
       <p class="maintext margin1t">Use the data profiles your WIFI collects to send out targeted e-shots to thousands of previous customers.</p>
       <p class="maintext">Add schedules to automatically send personal emails based on triggers such as days since last visit and days since first visit, increasing customer loyalty and repeat business.</p>
@@ -73,24 +73,22 @@
   </div>
 </div>
 
-<div class="">
-  <div class="row padding23v-vh">
-    <div class="large-6 columns">
-      <br>
-    </div>
-    <div class="large-12 columns text-center">
-      <h2 class="font2 weight600">Big data, small business</h2>
-      <p class="maintext margin1t">Automatically generate insightful profiles on every visitor who connects to your WIFI. View trends in visits and use demographic analytics to understand exactly who your customers are. It's the social network of your business.</p>
-      <p class="learnmoretext">LEARN MORE ABOUT ANALYTICS<%= image_tag('learnmore-arrow.png', class: "learnmore-arrow") %></p>
-    </div>
-    <div class="large-6 columns">
-      <br>
-    </div>
+
+<div class="row padding23v-vh" id="block3">
+  <div class="large-6 columns">
+    <br>
+  </div>
+  <div class="large-12 columns text-center">
+    <h2 class="font2 weight600">Big data, small business</h2>
+    <p class="maintext margin1t">Automatically generate insightful profiles on every visitor who connects to your WIFI. View trends in visits and use demographic analytics to understand exactly who your customers are. It's the social network of your business.</p>
+    <p class="learnmoretext">LEARN MORE ABOUT ANALYTICS<%= image_tag('learnmore-arrow.png', class: "learnmore-arrow") %></p>
+  </div>
+  <div class="large-6 columns">
+    <br>
   </div>
 </div>
 
-
-<div class="bigdatabg">
+<div class="bigdatabg" id="block4">
   <div class="personality-1">
   <div class="bigdata-arrow">  
     <ul class="no-bullet selected">
@@ -189,5 +187,68 @@
       $('.navheight').matchHeight()
 
   });
-</script>
 
+  var block1 = $('#block1').waypoint({
+    handler: function(direction) {
+      $(".home1bg").css({ 
+        opacity: "1",
+        backgroundPosition: "135%"
+      });
+    },
+    offset: '85%'
+  })
+  var block2 = $('#block2').waypoint({
+      handler: function(direction) {
+        $("#block2-text").css({ 
+          opacity: "1",
+        });
+        $(".emailblock").css({ 
+          opacity: "1",
+          left: 0
+        });
+        $(".writer").typed({
+          strings: ["We miss you Natalie", "We miss you Elaine"],
+          typeSpeed: 70,
+          startDelay: 2500
+        });
+      },
+      offset: '85%'
+    })
+  var block3 = $('#block3').waypoint({
+    handler: function(direction) {
+      $("#block3").css({ 
+        opacity: "1"
+      });
+    },
+    offset: '85%'
+  })
+  var block4 = $('#block4').waypoint({
+    handler: function(direction) {
+      $(".personality-1").css({ 
+        opacity: "1",
+        top: "-42%"
+      });
+      $(".personality-2").css({ 
+        opacity: "1",
+        top: "-40%"
+      });
+      $(".personality-3").css({ 
+        opacity: "0.7",
+        top: "-9%"
+      });
+      $(".personality-4").css({ 
+        opacity: "0.7",
+        top: "-28%"
+      });
+      $(".personality-5").css({ 
+        opacity: "0.7",
+        top: "-22%"
+      });
+      $(".personality-6").css({ 
+        opacity: "0.7",
+        top: "-26%"
+      });
+    },
+    offset: '85%'
+  })
+</script>

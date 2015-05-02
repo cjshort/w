@@ -3,14 +3,17 @@ class PanelsController < ApplicationController
 	before_action :authenticate_user!
 
   def dashboard
-  	@fivemonths = HumanLogin.all.where("created_at = ?", 5.months.ago).count
-  	@fourmonths = HumanLogin.all.where("created_at = ?", 4.months.ago).count
-  	@threemonths = HumanLogin.all.where("created_at = ?", 3.months.ago).count
-  	@twomonths = HumanLogin.all.where("created_at = ?", 2.months.ago).count
-  	@onemonths = HumanLogin.all.where("created_at = ?", 1.months.ago).count
-  	@zeromonths =  HumanLogin.all.where("created_at BETWEEN ? AND ?", Time.now.beginning_of_month, Time.now.end_of_month).count
+    humans = current_user.humans
+    humanlogins = HumanLogin.all.where(user_id: current_user.id)
 
-  	@latest = Human.all.order('created_at DESC').limit(10)
+  	@fivemonths = humanlogins.all.where("created_at BETWEEN ? AND ?", 5.months.ago.time.beginning_of_month, 5.months.ago.time.end_of_month).count
+  	@fourmonths = humanlogins.all.where("created_at BETWEEN ? AND ?", 4.months.ago.time.beginning_of_month, 4.months.ago.time.end_of_month).count
+  	@threemonths = humanlogins.all.where("created_at BETWEEN ? AND ?", 3.months.ago.time.beginning_of_month, 3.months.ago.time.end_of_month).count
+  	@twomonths = humanlogins.all.where("created_at BETWEEN ? AND ?", 2.months.ago.time.beginning_of_month, 2.months.ago.time.end_of_month).count
+  	@onemonths = humanlogins.all.where("created_at BETWEEN ? AND ?", 1.months.ago.time.beginning_of_month, 1.months.ago.time.end_of_month).count
+  	@zeromonths =  humanlogins.all.where("created_at BETWEEN ? AND ?", Time.now.beginning_of_month, Time.now.end_of_month).count
+
+  	@latest = humans.all.order('created_at DESC').limit(10)
   	@value = current_user.humans.where("created_at BETWEEN ? AND ?", Time.now.beginning_of_month, Time.now.end_of_month).count * 8
   end
 

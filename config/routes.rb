@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   post 'panels/emailblast/create', to: 'panels#emailblastcreate', as: 'panels_emailblast_create'
 
   root 'fronts#home'
+  get 'fronts/howitworks'
+  get 'fronts/pricing'
 
   get '/:id/login', to: 'publics#login', as: 'public_login' #hotspot portal
   get '/:id/welcome', to: 'publics#redirect', as: 'public_redirect' #hotspot redirect
