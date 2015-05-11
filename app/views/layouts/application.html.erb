@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Wyfi | Social WIFI Marketing for small business</title>
+  <title>Beam | WIFI marketing for small business</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -32,8 +32,8 @@
           </ul>
 
           <ul class="right">
-            <li><span class="mainlogin"><%= link_to new_user_session_path do %>LOGIN<% end %></span></li>
-            <li><span class="maingetwyfi"><%= link_to new_user_session_path do %>GET WYFI<% end %></span></li>
+            <li><%= link_to new_user_session_path do %><span class="mainlogin">LOGIN</span><% end %></li>
+            <li><%= link_to new_user_session_path do %><span class="maingetwyfi">GET WYFI</span><% end %></li>
           </ul>
         </section>
       </nav>
