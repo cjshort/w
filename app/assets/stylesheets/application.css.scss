@@ -205,7 +205,7 @@
 }
 
 .twitter-outline{
-  height: 1.5rem;
+  height: 21px;
   margin-bottom: 4px;
   margin-right: 5px;
 }
@@ -238,7 +238,7 @@ ul.pricing-ul li{
 }
 
 .mobilewrap{
-  margin-top: 28vh;
+  margin-top: 27.7vh;
   position: relative;
 }
 
@@ -283,6 +283,52 @@ ul.pricing-ul li{
 #block3{
   transition: all 1s 0.5s ease;
   opacity: 0;
+}
+
+.emailblock3 {
+  width: 700px;
+  height: 510px;
+  position: absolute;
+  left: 3%;
+  bottom: -1%;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.eb3-header{
+  background: #F7F7F7;
+  text-align: center;
+  padding: 1.5rem;
+  color: rgba(58, 44, 47, 0.9);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.emailblock2{
+  width: 700px;
+  height: 590px;
+  position: absolute;
+  right: 3%;
+  bottom: -4%;
+  background: #fff;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.eb-header2{
+  background: #5C5455;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  padding: 25px 0;
+}
+
+.eb-logo2{
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .emailblock{
@@ -512,6 +558,10 @@ ul.disc.orange{
   font-size: 1.6rem;
 }
 
+.font19{
+  font-size: 1.9rem;
+}
+
 .font35{
   font-size: 3.5rem;
 }
@@ -575,6 +625,11 @@ ul.disc.orange{
   padding-bottom: 20vh;
 }
 
+.padding17v-vh{
+  padding-top: 17vh;
+  padding-bottom: 17vh;
+}
+
 .padding20t5b-vh{
   padding-top: 20vh;
   padding-bottom: 5vh;
@@ -583,6 +638,10 @@ ul.disc.orange{
 .padding5v-vh{
   padding-top: 5vh;
   padding-bottom: 5vh;
+}
+
+.padding5b{
+  padding-bottom: 5rem;
 }
 
 .padding35t30b-vh{
@@ -610,6 +669,10 @@ ul.disc.orange{
 
 .padding3t{
   padding-top: 3rem;
+}
+
+.padding3b{
+  padding-bottom: 3rem;
 }
 
 
@@ -761,6 +824,28 @@ ul.disc.orange{
   font-weight: 900;
 }
 
+.personalitiesbg{
+  background: image-url('personalitiesbg.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.personalitiesoverlay{
+  background: linear-gradient(to right, rgba(76, 68, 70, 1) 54%, rgba(198, 198, 198, 0) 100%)
+}
+
+.schedulebg{
+  background: image-url('schedulebg.jpg');
+  background-size: cover;
+  background-position: top left;
+  position: relative;
+}
+
+.scheduleoverlay{
+  background: linear-gradient(to bottom, #474042 34%, rgba(109, 90, 90, 0.57) 100%)
+}
+
 .howitworksbg{
   background: url(https://s3.amazonaws.com/deathtostock/photos/files/000/000/513/large/IMG_0030.jpg?1421725521);
   background-size: cover;
@@ -830,10 +915,14 @@ ul.disc.orange{
   position:relative;
 }
 
+.bigdata-gradient{
+background: linear-gradient(rgb(241, 241, 241) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 .personality-1{
   width: 12rem;
   height: 8rem;
-  background: linear-gradient(180deg, #F5F5F5 0%, #EFEFEF 100%);
+  background: linear-gradient(180deg, white 0%, #F9F9F9 100%);
   position: absolute;
   border: 1px solid #ececec;
   border-radius: 10px;
@@ -846,7 +935,7 @@ ul.disc.orange{
 .personality-2{
   width: 12rem;
   height: 8rem;
-  background: linear-gradient(180deg, #F5F5F5 0%, #EFEFEF 100%);
+  background: linear-gradient(180deg, white 0%, #F9F9F9 100%);
   position: absolute;
   border: 1px solid #ececec;
   border-radius: 10px;
@@ -859,7 +948,7 @@ ul.disc.orange{
 .personality-3{
   width: 12rem;
   height: 8rem;
-  background: linear-gradient(180deg, #F5F5F5 0%, #EFEFEF 100%);
+  background: linear-gradient(180deg, white 0%, #F9F9F9 100%);
   position: absolute;
   border: 1px solid #ececec;
   border-radius: 10px;
@@ -873,7 +962,7 @@ ul.disc.orange{
 .personality-4{
   width: 12rem;
   height: 8rem;
-  background: linear-gradient(180deg, #F5F5F5 0%, #EFEFEF 100%);
+  background: linear-gradient(180deg, white 0%, #F9F9F9 100%);
   position: absolute;
   border: 1px solid #ececec;
   border-radius: 10px;
@@ -887,7 +976,7 @@ ul.disc.orange{
 .personality-5{
   width: 12rem;
   height: 8rem;
-  background: linear-gradient(180deg, #F5F5F5 0%, #EFEFEF 100%);
+  background: linear-gradient(180deg, white 0%, #F9F9F9 100%);
   position: absolute;
   border: 1px solid #ececec;
   border-radius: 10px;
@@ -900,7 +989,7 @@ ul.disc.orange{
 .personality-6{
   width: 12rem;
   height: 8rem;
-  background: linear-gradient(180deg, #F5F5F5 0%, #EFEFEF 100%);
+  background: linear-gradient(180deg, white 0%, #F9F9F9 100%);
   position: absolute;
   border: 1px solid #ececec;
   border-radius: 10px;
@@ -941,6 +1030,12 @@ ul.disc.orange{
   background: #F5F6F7;
   border-top: 2px solid #F1F1F1;
   border-bottom: 2px solid #f1f1f1;
+}
+
+.greybordertop{
+  border-top: 2px solid #f1f1f1;
+  position: relative;
+  overflow:hidden;
 }
 
 .footerbg{
@@ -1130,7 +1225,7 @@ body {
 body {
   overflow-x: hidden;
   background: #fff;
-  color: #3A3A3A;
+  color: #181818;
   padding: 0;
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -3573,6 +3668,16 @@ body.pricing .contain-to-grid{
   transition-duration: 500ms;
 }
 
+.headroom--not-top .top-bar-section ul.dropdown li:not(.has-form) a:not(.button){
+  line-height: 2.8125rem !important;
+  transition-duration: 500ms;
+}
+
+.headroom--not-top .top-bar-section .left li .dropdown{
+  top: 4rem;
+  transition-duration: 500ms;
+}
+
 .headroom--not-top .top-bar img{
   height: 2.6rem;
   transition-duration: 500ms;
@@ -3594,6 +3699,12 @@ body.pricing .contain-to-grid{
 
 .headroom--not-top .mainlogin:hover{
   color: inherit;
+}
+
+.headroom--not-top .top-bar-section .has-dropdown > a:after{
+  border-color: rgba(97, 86, 89, 0.59) transparent transparent transparent;
+  top: 2.40625rem;
+  transition-duration: 500ms;
 }
 
 .headroom--top .top-bar, .headroom--top .top-bar .name h1, .headroom--top .top-bar .toggle-topbar a, .headroom--top .top-bar-section li:not(.has-form) a:not(.button){
@@ -3833,8 +3944,7 @@ body.pricing .contain-to-grid{
         .top-bar-section ul li > button.warning:hover, .top-bar-section ul li > button.warning:focus {
           color: #FFFFFF; }
     .top-bar-section ul li:hover:not(.has-form) > a {
-      background-color: #555555;
-      background: #333333;
+      background: none;
       }
     .top-bar-section ul li.active > a {
       background: #2ba6cb;
@@ -3858,6 +3968,7 @@ body.pricing .contain-to-grid{
       margin-top: -4.5px;
       position: absolute;
       top: 50%;
+      transition-duration: 300ms;
       right: 0; }
     .top-bar-section .has-dropdown.moved {
       position: static; }
@@ -3997,7 +4108,7 @@ body.pricing .contain-to-grid{
         border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
         border-top-style: solid;
         margin-top: -2.5px;
-        top: 1.40625rem; }
+        top: 4.40625rem; }
     .top-bar-section .has-dropdown.moved {
       position: relative; }
       .top-bar-section .has-dropdown.moved > .dropdown {
@@ -4042,12 +4153,16 @@ body.pricing .contain-to-grid{
         padding: 12px 0.9375rem;
         background: #333333; }
       .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
-        color: #FFFFFF;
-        background: #333333; }
+        color: #454545;
+        background: #FFFFFF;}
+      .top-bar-section ul.dropdown li:not(.has-form) a:not(.button){
+        line-height: 2.8125rem;
+        font-size: 0.78rem;
+      }
       .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
-        color: #FFFFFF;
+        color: #454545;
         background-color: #555555;
-        background: #333333; }
+        background: #f0f0f0;}
       .top-bar-section .dropdown li label {
         white-space: nowrap;
         background: #333333; }
@@ -4071,8 +4186,16 @@ body.pricing .contain-to-grid{
       .top-bar-section .right li .dropdown li .dropdown {
         right: 100%; }
     .top-bar-section .left li .dropdown {
-      right: auto;
-      left: 0; }
+        right: auto;
+        left: 3rem;
+        border: 1px solid #dfdfdf;
+        border-radius: 3px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        top: 6rem;
+        background: #fff;
+        transition-duration: 300ms;
+      }
       .top-bar-section .left li .dropdown li .dropdown {
         left: 100%; }
 

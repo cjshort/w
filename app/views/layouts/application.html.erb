@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Beam | WIFI marketing for small business</title>
+  <title>BeamWIFI | Hotspot marketing for small business</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -27,13 +27,20 @@
           <!-- Right Nav Section -->
           <ul class="left">
             <li><%= link_to fronts_howitworks_path do %>HOW IT WORKS<% end %></li>
-            <li><a href="#">INDUSTRIES</a></li>
+            <li class="has-dropdown">
+              <a href="#">INDUSTRIES</a>
+              <ul class="dropdown">
+                <li><a href="#">CAFES &amp; COFFEE SHOPS</a></li>
+                <li><a href="#">RESTAURANTS &amp; BARS</a></li>
+                <li><a href="#">NIGHTCLUBS &amp; PUBS</a></li>
+              </ul>
+            </li>
             <li><%= link_to fronts_pricing_path do %>PRICING<% end %></li>
           </ul>
 
           <ul class="right">
             <li><%= link_to new_user_session_path do %><span class="mainlogin">LOGIN</span><% end %></li>
-            <li><%= link_to new_user_session_path do %><span class="maingetwyfi">GET WYFI</span><% end %></li>
+            <li><%= link_to new_user_session_path do %><span class="maingetwyfi">GET BEAM</span><% end %></li>
           </ul>
         </section>
       </nav>
