@@ -1,4 +1,3 @@
-
 <div class="mainbg">
 <div class="maingradient">
   <div class="row nopadding">
@@ -12,8 +11,8 @@
           <div class="large-2 columns">
             <br>
           </div>
-          <div class="large-7 columns maingetstarted text-center">
-            GET STARTED
+          <div class="large-7 columns text-center">
+            <a href=""><div class="maingetstarted">GET STARTED</div></a>
           </div>
           <div class="large-8 columns">
             <br>
@@ -73,32 +72,12 @@
     </div>
     <div class="large-12 columns" id="block2-text">
       <h2 class="font2 weight600">Automate marketing</h2>
-      <p class="maintext margin1t">Use the data profiles your WIFI collects to send out targeted e-shots to thousands of previous customers.</p>
+      <p class="maintext margin1t">Use the profiles your WIFI collects to send out targeted e-shots to thousands of previous customers.</p>
       <p class="maintext">Add schedules to automatically send personal emails based on triggers such as days since last visit and days since first visit, increasing customer loyalty and repeat business.</p>
       <p class="learnmoretext">LEARN MORE ABOUT MARKETING<%= image_tag('learnmore-arrow.png', class: "learnmore-arrow") %></p>
     </div>
   </div>
 </div>
-
-<div class="whitebg" id="block5">
-  <div class="row padding17v-vh">
-    <div class="large-12 columns content">
-      <div class="mobilewrap-interaction">
-        <%= video_tag("maskfill.webm", autobuffer: true, loop: true, autoplay: true, class: "maskfill-interaction") %>
-        <%= image_tag('mobilemask.png', class: "mobilemask-interaction") %>
-      </div>
-    </div>
-    <div class="large-12 columns" id="block5-text">
-      <div class="padding15v">
-        <h2 class="font2 weight600">Boost interaction</h2>
-        <p class="maintext margin1t">Use your control panel to completely customise and brand the experience for your customers, creating a bold impression where it counts.</p>
-        <p class="maintext">Customise your welcome screen to promote other aspects of your business. Increase likes on your facebook page, impressions on your website and reviews on your social pages.</p>
-        <p class="learnmoretext">LEARN MORE ABOUT BRANDING<%= image_tag('learnmore-arrow.png', class: "learnmore-arrow") %></p>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <div class="bigdata-gradient">
 <div class="row padding23v-vh" id="block3">
@@ -179,6 +158,25 @@
 </div>
 </div>
 
+<div class="whitebg" id="block5">
+  <div class="row padding17v-vh">
+    <div class="large-12 columns content">
+      <div class="mobilewrap-interaction">
+        <%= video_tag("maskfill.webm", autobuffer: true, loop: true, autoplay: true, class: "maskfill-interaction") %>
+        <%= image_tag('mobilemask.png', class: "mobilemask-interaction") %>
+      </div>
+    </div>
+    <div class="large-12 columns" id="block5-text">
+      <div class="padding15v">
+        <h2 class="font2 weight600">Boost interaction</h2>
+        <p class="maintext margin1t">Use your control panel to completely customise and brand the experience for your customers, creating a bold impression where it counts.</p>
+        <p class="maintext">Customise your welcome screen to promote other aspects of your business. Increase likes on your facebook page, impressions on your website and reviews on your social pages.</p>
+        <p class="learnmoretext">LEARN MORE ABOUT BRANDING<%= image_tag('learnmore-arrow.png', class: "learnmore-arrow") %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <div class="bottom-cta">
@@ -191,11 +189,12 @@
             <p class="recommended-text">RECOMMENDED</p>
             <h4 class="pricing-header pricing-header-main">£30/month</h4>
             <ul class="no-bullet text-left pricing-ul">
-              <li class="weight600">Unlimited profiles</li>
-              <li class="weight600">20,000 emails every month</li>
-              <li>No setup cost</li>
-              <li>All features</li>
-              <li>Plug &amp; Play into existing broadband</li>
+              <li class="weight600"><%= image_tag('profile-icon.png', class: "pricing-icons") %>Unlimited profiles</li>
+              <li class="weight600"><%= image_tag('emails-icon.png', class: "pricing-icons") %>20,000 emails every month</li>
+              <li class="weight600"><%= image_tag('moneyback-icon.png', class: "pricing-icons") %>90 days money back guarantee <%= image_tag('info-icon.png', class: "infoicon") %></li>
+              <li><%= image_tag('setup-icon.png', class: "pricing-icons") %>No setup cost</li>
+              <li><%= image_tag('features-icon.png', class: "pricing-icons") %>All features</li>
+              <li><%= image_tag('plugandplay-icon.png', class: "pricing-icons") %>Plug &amp; Play into existing broadband</li>
             </ul>
           </div>
         </div>
@@ -204,11 +203,12 @@
             <p class="recommended-text">SCALABLE</p>
             <h4 class="pricing-header">Pay as you grow</h4>
             <ul class="no-bullet text-left pricing-ul">
-              <li class="weight600">£0.03 per profile</li>
-              <li class="weight600">£2 per 1000 emails</li>
-              <li>£70 setup cost</li>
-              <li>All features</li>
-              <li>Plug &amp; Play into existing broadband</li>
+              <li class="weight600"><%= image_tag('profile-icon.png', class: "pricing-icons") %>£0.03 per profile</li>
+              <li class="weight600"><%= image_tag('emails-icon.png', class: "pricing-icons") %>£2 per 1000 emails</li>
+              <li><%= image_tag('scalable-icon.png', class: "pricing-icons") %>Scalable to any volume</li>
+              <li><%= image_tag('setup-icon.png', class: "pricing-icons") %>£70 setup cost</li>
+              <li><%= image_tag('features-icon.png', class: "pricing-icons") %>All features</li>
+              <li><%= image_tag('plugandplay-icon.png', class: "pricing-icons") %>Plug &amp; Play into existing broadband</li>
             </ul>
           </div>
         </div>
@@ -218,8 +218,8 @@
       <div class="large-8 columns">
         <br>
       </div>
-        <div class="large-8 columns maingetstarted text-center margin4t">
-          GET STARTED
+        <div class="large-8 columns text-center margin4t">
+          <a href=""><div class="maingetstarted">GET STARTED</div></a>
         </div>
       <div class="large-8 columns">
         <br>

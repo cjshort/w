@@ -6,8 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
 </head>
 <body class="<%= action_name %>">
 
@@ -26,21 +26,20 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="left">
-            <li><%= link_to fronts_howitworks_path do %>HOW IT WORKS<% end %></li>
+            <li><%= link_to(fronts_howitworks_path, class: "pointer") do %><span>HOW IT WORKS</span><% end %></li>
             <li class="has-dropdown">
-              <a href="#">INDUSTRIES</a>
+              <a href="#" class="pointer"><span>INDUSTRIES</span></a>
               <ul class="dropdown">
-                <li><a href="#">CAFES &amp; COFFEE SHOPS</a></li>
-                <li><a href="#">RESTAURANTS &amp; BARS</a></li>
-                <li><a href="#">NIGHTCLUBS &amp; PUBS</a></li>
+                <li><%= link_to fronts_caferestaurant_path do %>CAFES &amp; RESTAURANTS<% end %></li>
+                <li><%= link_to fronts_nightclubbar_path do %>NIGHTCLUBS &amp; BARS<% end %></li>
               </ul>
             </li>
-            <li><%= link_to fronts_pricing_path do %>PRICING<% end %></li>
+            <li><%= link_to(fronts_pricing_path, class: "pointer") do %><span>PRICING</span><% end %></li>
           </ul>
 
           <ul class="right">
-            <li><%= link_to new_user_session_path do %><span class="mainlogin">LOGIN</span><% end %></li>
-            <li><%= link_to new_user_session_path do %><span class="maingetwyfi">GET BEAM</span><% end %></li>
+            <li><%= link_to(new_user_session_path, class: "pointer") do %><span class="mainlogin">LOGIN</span><% end %></li>
+            <li><%= link_to(new_user_session_path, class: "pointer") do %><span class="maingetbeam">GET BEAM</span><% end %></li>
           </ul>
         </section>
       </nav>

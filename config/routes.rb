@@ -26,12 +26,15 @@ Rails.application.routes.draw do
   get 'panels/emailblast'
   get 'panels/emailschedule'
   get 'panels/settings'
+  get 'panels/loader'
   patch 'panels/settings/update', to: 'panels#settingsupdate', as: 'panels_settingsupdate'
   post 'panels/emailblast/create', to: 'panels#emailblastcreate', as: 'panels_emailblast_create'
 
   root 'fronts#home'
   get 'fronts/howitworks'
   get 'fronts/pricing'
+  get 'fronts/caferestaurant'
+  get 'fronts/nightclubbar'
 
   get '/:id/login', to: 'publics#login', as: 'public_login' #hotspot portal
   get '/:id/welcome', to: 'publics#redirect', as: 'public_redirect' #hotspot redirect

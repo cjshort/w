@@ -8,5 +8,8 @@ class FrontsController < ApplicationController
 
   def pricing
   end
+
+  def cafecoffee
+  end
   
 end

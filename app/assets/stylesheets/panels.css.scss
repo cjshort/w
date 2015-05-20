@@ -612,6 +612,16 @@ ul.dropdown a {
   background: #fff;
 }
 
+.loaderbg{
+  position: absolute;
+  height: 100vh;
+  background: -webkit-radial-gradient(circle, #60484d, #3a2c2f);
+  width: 100vw;
+  z-index: 10000;
+  top: 0;
+  overflow: hidden;
+}
+
 .greybg{
   background: #EFEFEF;
 }
@@ -2894,7 +2904,6 @@ table {
   table tr th,
   table tr td {
   color: rgba(58, 58, 58, 0.85);
-  font-size: 0.9rem;
   padding: 1.5rem 0.55556rem;
   border-right: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
