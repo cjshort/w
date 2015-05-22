@@ -14,7 +14,7 @@
   <div class="fixed contain-to-grid">
     <header>
       <div class="top-bar-background">
-      <nav class="top-bar navheight" data-topbar role="navigation">
+      <nav class="top-bar" data-topbar role="navigation">
             <ul class="title-area">
               <li class="name">
                 <h1><%= link_to root_path do %><%= image_tag('logo.png') %><% end %></h1>
@@ -28,10 +28,10 @@
           <ul class="left">
             <li><%= link_to(fronts_howitworks_path, class: "pointer") do %><span>HOW IT WORKS</span><% end %></li>
             <li class="has-dropdown">
-              <a href="#" class="pointer"><span>INDUSTRIES</span></a>
+              <a href="#" class="pointer"><span>STORIES</span></a>
               <ul class="dropdown">
-                <li><%= link_to fronts_caferestaurant_path do %>CAFES &amp; RESTAURANTS<% end %></li>
-                <li><%= link_to fronts_nightclubbar_path do %>NIGHTCLUBS &amp; BARS<% end %></li>
+                <li><%= link_to fronts_caferestaurant_path do %>CAFÉS &amp; RESTAURANTS<% end %></li>
+                <li><%= link_to fronts_nightclubbar_path do %>MIKE CAKE SMITHS<% end %></li>
               </ul>
             </li>
             <li><%= link_to(fronts_pricing_path, class: "pointer") do %><span>PRICING</span><% end %></li>
@@ -66,11 +66,6 @@
 <script>
   $(document).foundation();
 </script>
-
-<script>
-  $('.navheight').matchHeight();
-</script>
-
 
 </body>
 </html>

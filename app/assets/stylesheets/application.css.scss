@@ -2,6 +2,11 @@
   transform: translateY(35vh);
 }
 
+.navheight{
+  height: 8.8125rem;
+  width: 100%;
+}
+
 .industrybanner h1{
   font-family: "Merriweather";
   font-size: 3rem;
@@ -51,19 +56,19 @@
 
 .prof-all-anim{
   -webkit-animation: profanim 7s 0s linear;
-  bottom: -25%;
+  bottom: -21%;
   right: -23% !important;
 }
 
 @-webkit-keyframes profanim {
     0%   {bottom: -100%; right: -100%}
     1%   {bottom: -100%; right: -23%}
-    13%  {bottom: -75%;}
-    33%  {bottom: -75%;}
-    46%  {bottom: -50%;}
-    66%  {bottom: -50%;}
-    79%  {bottom: -25%;}
-    99%  {bottom: -25%;}
+    13%  {bottom: -64%;}
+    33%  {bottom: -64%;}
+    46%  {bottom: -42%;}
+    66%  {bottom: -42%;}
+    79%  {bottom: -21%;}
+    99%  {bottom: -21%;}
 } 
 
 .prof-img{
@@ -412,9 +417,9 @@ ul.pricing-ul li{
 
 .emailblock3 {
   width: 700px;
-  height: 550px;
+  height: 625px;
   position: absolute;
-  left: 3%;
+  right: 43%;
   bottom: -1%;
   background: #FFFFFF;
   border: 1px solid #E5E5E5;
@@ -451,7 +456,7 @@ ul.pricing-ul li{
   width: 700px;
   height: 620px;
   position: absolute;
-  right: 3%;
+  left: 43%;
   bottom: -4%;
   background: #fff;
   border-top-right-radius: 5px;
@@ -973,6 +978,11 @@ ul.disc.orange{
   margin-right: 1rem;
 }
 
+.mainlogin:hover{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 100%);
+  color: #3A2C2F ;
+}
+
 .maingetbeam{
   background: linear-gradient(to bottom, #e74946 1%, #da4041 100%);
   padding: 0.7rem 2.5rem;
@@ -1030,6 +1040,11 @@ ul.disc.orange{
   color: #fff;
   font-size: 0.79rem;
   font-weight: 900;
+}
+
+.mainhowitworks:hover{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 100%);
+  color: #3A2C2F ;
 }
 
 .personalitiesbg{
@@ -1138,7 +1153,7 @@ ul.disc.orange{
 }
 
 .bigdata-gradient{
-  background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(231, 231, 231, 0.51) 100%);
+    background:linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(63, 48, 51, 0.22) 100%)
 }
 
 .personality-1{
@@ -3917,6 +3932,11 @@ body.pricing .contain-to-grid{
   transition-duration: 300ms;  
 }
 
+.headroom--not-top .top-bar-section ul li.has-dropdown > a:hover{
+  color: rgba(58, 44, 47, 0.8);
+  transition-duration: 300ms;
+}
+
 .headroom--not-top .mainlogin{
   color: inherit;
 }
@@ -3926,7 +3946,7 @@ body.pricing .contain-to-grid{
 }
 
 .headroom--not-top .top-bar-section .has-dropdown > a:after{
-  border-color: rgba(97, 86, 89, 0.59) transparent transparent transparent;
+  border-color: rgba(58, 44, 47, 0.5) transparent transparent transparent;
   top: 2.40625rem;
   transition-duration: 500ms;
 }
@@ -4079,6 +4099,10 @@ body.pricing .contain-to-grid{
       letter-spacing: 1px; }
       .top-bar-section ul li > a:hover {
         color: rgba(255, 255, 255, 0.7);
+        transition-duration: 300ms;
+      }
+      .top-bar-section ul li.has-dropdown > a:hover {
+        color: rgba(255, 255, 255, 0.9);
         transition-duration: 300ms;
       }
       .top-bar-section ul li > a.button {
@@ -4333,6 +4357,28 @@ body.pricing .contain-to-grid{
         border-top-style: solid;
         margin-top: -2.5px;
         top: 4.40625rem; }
+      .top-bar-section .has-dropdown:hover > a:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: inset 5px;
+        border-color: rgba(255, 255, 255, 1) transparent transparent transparent;
+        border-top-style: solid;
+        margin-top: -2.5px;
+        top: 4.40625rem;
+      }
+      .headroom--not-top .top-bar-section .has-dropdown:hover > a:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: inset 5px;
+        border-color: rgba(58, 44, 47, 0.8) transparent transparent transparent;
+        border-top-style: solid;
+        margin-top: -2.5px;
+        top: 2.40625rem;
+      }
     .top-bar-section .has-dropdown.moved {
       position: relative; }
       .top-bar-section .has-dropdown.moved > .dropdown {

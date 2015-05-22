@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   get 'fronts/pricing'
   get 'fronts/caferestaurant'
   get 'fronts/nightclubbar'
+  get 'fronts/getstarted'
 
   get '/:id/login', to: 'publics#login', as: 'public_login' #hotspot portal
   get '/:id/welcome', to: 'publics#redirect', as: 'public_redirect' #hotspot redirect

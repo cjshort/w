@@ -11,5 +11,8 @@ class FrontsController < ApplicationController
 
   def cafecoffee
   end
+
+  def getstarted
+  end
   
 end

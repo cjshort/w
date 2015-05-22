@@ -5,8 +5,8 @@
       <div class="maincontainer">
         <h1 class="maintitle">a <span class="weight600">360°</span> degree view of your customer traffic</h1>
         <div class="row nopadding padding1t">
-          <div class="large-7 columns mainhowitworks text-center">
-            HOW IT WORKS
+          <div class="large-7 columns text-center">
+            <%= link_to fronts_howitworks_path do %><div class="mainhowitworks">HOW IT WORKS</div><% end %>
           </div>
           <div class="large-2 columns">
             <br>
@@ -79,8 +79,28 @@
   </div>
 </div>
 
+<div class="whitebg" id="block5">
+  <div class="row padding17v-vh">
+    <div class="large-12 columns content">
+      <div class="mobilewrap-interaction">
+        <%= video_tag("maskfill.webm", autobuffer: true, loop: true, autoplay: true, class: "maskfill-interaction") %>
+        <%= image_tag('mobilemask.png', class: "mobilemask-interaction") %>
+      </div>
+    </div>
+    <div class="large-12 columns" id="block5-text">
+      <div class="padding15v">
+        <h2 class="font2 weight600">Boost interaction</h2>
+        <p class="maintext margin1t">Use your control panel to completely customise and brand the experience for your customers, creating a bold impression where it counts.</p>
+        <p class="maintext">Customise your welcome screen to promote other aspects of your business. Increase likes on your facebook page, impressions on your website and reviews on your social pages.</p>
+        <p class="learnmoretext">LEARN MORE ABOUT BRANDING<%= image_tag('learnmore-arrow.png', class: "learnmore-arrow") %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="bigdata-gradient">
-<div class="row padding23v-vh" id="block3">
+<div class="row padding17v-vh" id="block3">
   <div class="large-6 columns">
     <br>
   </div>
@@ -158,25 +178,7 @@
 </div>
 </div>
 
-<div class="whitebg" id="block5">
-  <div class="row padding17v-vh">
-    <div class="large-12 columns content">
-      <div class="mobilewrap-interaction">
-        <%= video_tag("maskfill.webm", autobuffer: true, loop: true, autoplay: true, class: "maskfill-interaction") %>
-        <%= image_tag('mobilemask.png', class: "mobilemask-interaction") %>
-      </div>
-    </div>
-    <div class="large-12 columns" id="block5-text">
-      <div class="padding15v">
-        <h2 class="font2 weight600">Boost interaction</h2>
-        <p class="maintext margin1t">Use your control panel to completely customise and brand the experience for your customers, creating a bold impression where it counts.</p>
-        <p class="maintext">Customise your welcome screen to promote other aspects of your business. Increase likes on your facebook page, impressions on your website and reviews on your social pages.</p>
-        <p class="learnmoretext">LEARN MORE ABOUT BRANDING<%= image_tag('learnmore-arrow.png', class: "learnmore-arrow") %></p>
-      </div>
-    </div>
-  </div>
-</div>
-
+<br><br><br><br><br><br><br><br>
 
 
 <div class="bottom-cta">
@@ -187,7 +189,7 @@
         <div class="large-14 columns content">
           <div class="pricing-container">
             <p class="recommended-text">RECOMMENDED</p>
-            <h4 class="pricing-header pricing-header-main">£30/month</h4>
+            <h4 class="pricing-header pricing-header-main">£30/Month</h4>
             <ul class="no-bullet text-left pricing-ul">
               <li class="weight600"><%= image_tag('profile-icon.png', class: "pricing-icons") %>Unlimited profiles</li>
               <li class="weight600"><%= image_tag('emails-icon.png', class: "pricing-icons") %>20,000 emails every month</li>
@@ -201,7 +203,7 @@
         <div class="large-10 columns content">
           <div class="pricing-container">
             <p class="recommended-text">SCALABLE</p>
-            <h4 class="pricing-header">Pay as you grow</h4>
+            <h4 class="pricing-header">Pay as you Grow</h4>
             <ul class="no-bullet text-left pricing-ul">
               <li class="weight600"><%= image_tag('profile-icon.png', class: "pricing-icons") %>£0.03 per profile</li>
               <li class="weight600"><%= image_tag('emails-icon.png', class: "pricing-icons") %>£2 per 1000 emails</li>
