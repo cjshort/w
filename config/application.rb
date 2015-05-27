@@ -13,6 +13,7 @@ module Wyfi
 
     config.to_prepare do
       Devise::SessionsController.layout false 
+      Devise::RegistrationsController.layout false
     end
 
     

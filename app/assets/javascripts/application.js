@@ -16,7 +16,11 @@
 //= require turbolinks
 //= require jquery.waypoints.min
 //= require jquery.matchHeight
+//= require tipso.min
+//= require waves
 //= require headroom
 //= require jQuery.headroom
 //= require foundation
+//= require foundation.slider
+//= require foundation.topbar
 //= require_tree .

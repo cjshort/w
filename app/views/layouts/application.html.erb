@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BeamWIFI | Hotspot marketing for small business</title>
+  <title>BeamWiFi | Hotspot marketing for small business</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
 </head>
 <body class="<%= action_name %>">
 
@@ -26,20 +26,28 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="left">
-            <li><%= link_to(fronts_howitworks_path, class: "pointer") do %><span>HOW IT WORKS</span><% end %></li>
+            <li><%= link_to(fronts_howitworks_path, class: "pointer") do %><span>MISSION CONTROL</span><% end %></li>
             <li class="has-dropdown">
               <a href="#" class="pointer"><span>STORIES</span></a>
               <ul class="dropdown">
                 <li><%= link_to fronts_caferestaurant_path do %>CAFÉS &amp; RESTAURANTS<% end %></li>
-                <li><%= link_to fronts_nightclubbar_path do %>MIKE CAKE SMITHS<% end %></li>
+                <li><%= link_to fronts_nightclubbar_path do %><span class="weight600">MIKE BENNET</span> - CAKESMITHS<% end %></li>
               </ul>
             </li>
             <li><%= link_to(fronts_pricing_path, class: "pointer") do %><span>PRICING</span><% end %></li>
           </ul>
 
           <ul class="right">
-            <li><%= link_to(new_user_session_path, class: "pointer") do %><span class="mainlogin">LOGIN</span><% end %></li>
-            <li><%= link_to(new_user_session_path, class: "pointer") do %><span class="maingetbeam">GET BEAM</span><% end %></li>
+            <li>
+              <%= link_to(new_user_session_path, class: "buttnav") do %>
+                <div class="mainlogin butt">LOGIN</div>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to(new_user_registration_path, class: "buttnav") do %>
+                <div class="maingetbeam butt">GET BEAM</div>
+              <% end %>
+            </li>
           </ul>
         </section>
       </nav>
@@ -59,11 +67,12 @@
 
 <script type="text/javascript">
   $("header").headroom({
-    "offset": 150,
+    "offset": 70,
   });
-</script>
 
-<script>
+  Waves.attach('.butt');
+  Waves.init();
+
   $(document).foundation();
 </script>
 

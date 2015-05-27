@@ -1,3 +1,42 @@
+.tick {
+  height: 19px;
+  margin-bottom: 7px;
+  margin-right: 25px;
+}
+
+.hicon {
+  height: 13px;
+  margin-right: 10px;
+  margin-bottom: 4px;
+}
+
+.calculator-container {
+  background: #59464B;
+  border-radius: 3px;
+  border: 2px solid #423236;
+}
+
+.calculator-padding{
+  padding: 1.5rem 3rem;
+}
+
+.calculator-equals{
+  margin-bottom: 0;
+  border-top: 2px solid #423236;
+  padding: 0.5rem;
+  background: #655056;
+}
+
+ul.monthly-list li{
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+ul.monthly-list{
+  margin: 3rem 0;
+}
+
 .industrybanner{
   transform: translateY(35vh);
 }
@@ -368,7 +407,7 @@ ul.pricing-ul li{
 }
 
 .mobilewrap{
-  margin-top: 27.7vh;
+  margin-top: 26.5vh;
   position: relative;
 }
 
@@ -410,11 +449,6 @@ ul.pricing-ul li{
   transition-duration: 300ms;
 }
 
-#block3{
-  transition: all 1s 0.5s ease;
-  opacity: 0;
-}
-
 .emailblock3 {
   width: 700px;
   height: 625px;
@@ -426,6 +460,15 @@ ul.pricing-ul li{
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   cursor: default !important;
+}
+
+.eb3-grab{
+  position:relative;
+  top: 0;
+  z-index: 2;
+  transition-duration: 500ms;
+  transition-delay: 6s;
+  opacity: 0.7;
 }
 
 .eb3-container{
@@ -454,17 +497,16 @@ ul.pricing-ul li{
 
 .emailblock2{
   width: 700px;
-  height: 620px;
+  height: 645px;
   position: absolute;
   left: 43%;
   bottom: -4%;
-  background: #fff;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
 
 .eb-header2{
-  background: #4B383C;
+  background: #57454A;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   padding: 25px 0;
@@ -502,26 +544,41 @@ ul.pricing-ul li{
 
 .eb-h1 {
   font-size: 30px;
+  opacity: 0.95;
 }
 
 .eb-h2{
   font-size: 20px;
   color: #949494;
+  opacity: 0.95;
 }
 
 .eb-p{
   font-size: 14px;
   margin-top: 40px;
+  opacity: 0.95;
 }
 
 .eb3-p{
   font-size: 14px;
   margin-top: 15px;
+  opacity: 0.95;
 }
 
 .eb-container {
   padding: 43px 80px 0 42px;
-  opacity: 0.95;
+  background: #fff;
+  height: 100vh;
+}
+
+.loginfield1.auto{
+  border: 1px solid rgba(58, 44, 47, 0.5)
+}
+
+.loginfield1, .loginfield2{
+  border-radius: 3px;
+  transition-duration: 300ms;
+  border: 1px solid rgba(58, 44, 47, 0.14);
 }
 
 .logincontainer{
@@ -530,6 +587,13 @@ ul.pricing-ul li{
   border-radius: 3px;
   border: 1px solid #fff;
   box-shadow: 0 0 0 1px rgba(14,41,57,0.12),0 2px 5px rgba(14,41,57,0.44),inset 0 -1px 2px rgba(14,41,57,0.15);
+}
+
+.quotetext{
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #fff;
+  font-weight: 100;
 }
 
 .media1{
@@ -631,6 +695,10 @@ ul.pricing-ul li{
    color: rgba(58, 44, 47, 0.8);  
 }
 
+input[type="email"]:focus.login, input[type="password"]:focus.login {
+  background: #fff;
+}
+
 
 input[type="email"].login, input[type="password"].login {
   -webkit-appearance: none;
@@ -639,14 +707,12 @@ input[type="email"].login, input[type="password"].login {
   font-family: inherit;
   border-style: solid;
   border-width: 0px;
-  border-color: #E06B3C;
   color: #454545;
   display: block;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   font-size: 1rem;
   margin: 0 0 1rem 0;
-  border: 1px solid #ececec;
   padding: 1.5rem 1rem;
   height: 2.3125rem;
   width: 100%;
@@ -657,27 +723,8 @@ input[type="email"].login, input[type="password"].login {
   box-shadow: none;
 }
 
-input[type="email"].login:focus, input[type="password"].login:focus{
-   border-right: 1px solid #cfcfcf;
-   border-left: 1px solid #ececec;
-   border-bottom: 1px solid #cfcfcf;
-   border-top: 1px solid #cfcfcf;
-}
-
-input[type="email"].login:focus .loginicons, input[type="password"].login:focus .loginicons{
-   border-right: none;
-   border-left: 1px solid #cfcfcf;
-   border-bottom: 1px solid #cfcfcf;
-   border-top: 1px solid #cfcfcf;
-}
-
 .loginicons{
-  border-top: 1px solid #ececec;
-  border-left: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
-  background: linear-gradient(to bottom, #FFFFFF 1%, #F1F1F1 100%);
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 1%, #EDEDED 100%);
 }
 
 .loginicons img {
@@ -724,6 +771,10 @@ ul.disc.orange{
     background: rgba(110, 96, 96, 1);
 }
 
+.opensans{
+  font-family: "Open Sans" sans-serif;
+}
+
 .font3{
   font-size: 3rem;
 }
@@ -734,6 +785,10 @@ ul.disc.orange{
 
 .font2{
   font-size: 2rem;
+}
+
+.font25{
+  font-size: 2.5rem;
 }
 
 .font11{
@@ -829,6 +884,21 @@ ul.disc.orange{
   padding-bottom: 5vh;
 }
 
+.padding23t10b-vh{
+  padding-top: 23vh;
+  padding-bottom: 10vh;
+}
+
+.padding17t5b-vh{
+  padding-top: 17vh;
+  padding-bottom: 5vh;
+}
+
+.padding17t10b-vh{
+  padding-top: 17vh;
+  padding-bottom: 10vh;
+}
+
 .padding5v-vh{
   padding-top: 5vh;
   padding-bottom: 5vh;
@@ -842,14 +912,18 @@ ul.disc.orange{
   padding-bottom: 7rem;
 }
 
-.padding35t30b-vh{
-  padding-top: 35vh;
-  padding-bottom: 30vh;
+.padding27t21b-vh{
+  padding-top: 27vh;
+  padding-bottom: 21vh;
 }
 
 .padding15v-vh{
   padding-top: 15vh;
   padding-bottom: 15vh;
+}
+
+.padding15t-vh{
+  padding-top: 15vh;
 }
 
 .padding1v{
@@ -952,19 +1026,12 @@ ul.disc.orange{
 }
 
 .maintitle{
-  font-size: 3.5rem;
+  font-size: 3.7rem;
   color: #fff;
 }
 
 .maincontainer{
-  padding-top: 29vh;
-}
-
-.twitter-cta{
-  color: rgba(235, 222, 222, 1);
-  font-size: 1.3rem;
-  font-weight: 100;
-  margin-top: 14vh;
+  padding-top: 35vh;
 }
 
 .mainlogin{
@@ -974,44 +1041,71 @@ ul.disc.orange{
   color: #FFFFFF;
   font-size: 0.8125rem;
   font-weight: 900;
+  line-height: 1rem;
   border: 2px solid #EDEDED;
   margin-right: 1rem;
 }
 
 .mainlogin:hover{
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 100%);
-  color: #3A2C2F ;
+  color: #3A2C2F;
 }
 
-.maingetbeam{
-  background: linear-gradient(to bottom, #e74946 1%, #da4041 100%);
-  padding: 0.7rem 2.5rem;
+.maingetbeam {
+  background: linear-gradient(to bottom, #e74946 1%, #da4041 100%) !important;
+  padding: 0.7rem 2.5rem !important;
   border-radius: 3px;
+  line-height: 1rem;
   color: #fff;
   font-size: 0.8125rem;
-  font-weight: 900;  
+  font-weight: 900;
   border: 2px solid #da4041;
 }
 
 .maingetbeam:hover {
-  background: linear-gradient(to bottom, #EF514E 1%, #F24E4F 100%);
+  background: linear-gradient(to bottom, #EF514E 1%, #F24E4F 100%) !important;
 }
 
-.maingetstarted{
-  background: linear-gradient(to bottom, #E74946 1%, #DA4041 100%);
+.maingetstarted {
+  background: linear-gradient(to bottom, #e74946 1%, #da4041 100%);
   padding: 1rem 1rem;
   border-radius: 3px;
   border: 2px solid #da4041;
   color: #fff;
   font-size: 0.79rem;
+  width: 17rem;
+  display: block;
+  text-align: center;
   font-weight: 900;
-  transition-duration: 300ms;
-  -webkit-transition  : all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition-duration: 0ms;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .maingetstarted:hover{
   background: linear-gradient(to bottom, #EF514E 1%, #F24E4F 100%);
-  transition-duration: 300ms;
+  transition-duration: 0ms;
+}
+
+.signup-proceed {
+  background: linear-gradient(to bottom, #7FC24F 1%, #6CBA49 100%);
+  padding: 0.7rem 2.5rem;
+  border-radius: 3px !important;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 900;
+  border: 2px solid rgba(107, 177, 73, 1);
+}
+
+.signup-proceed:hover {
+  background: linear-gradient(to bottom, #7FC24F 1%, #79CC54 100%);
+  padding: 0.7rem 2.5rem;
+  border-radius: 3px !important;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 900;
+  border: 2px solid rgba(107, 177, 73, 1);
 }
 
 .maintext{
@@ -1042,9 +1136,37 @@ ul.disc.orange{
   font-weight: 900;
 }
 
+.mac-container {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 2rem;
+}
+
 .mainhowitworks:hover{
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 100%);
   color: #3A2C2F ;
+}
+
+.missioncontrolbg{
+  background: image-url('howitworksbg.jpg');
+  overflow:hidden;
+}
+
+.missioncontrolgradient{
+  background: radial-gradient(800px at center 700px, rgba(218, 64, 65, 0.53) 0, #433336 100%);
+}
+
+.getstartedbg{
+  background: image-url('getstartedbg.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.getstartedgradient {
+  background: radial-gradient(800px at center 200px, rgba(96, 72, 77, 0.85) 0, rgba(58, 44, 47, 0.85) 100%)
 }
 
 .personalitiesbg{
@@ -1065,6 +1187,7 @@ ul.disc.orange{
   background-size: cover;
   background-position: top left;
   position: relative;
+  overflow:hidden;
 }
 
 .scheduleoverlay{
@@ -1089,12 +1212,16 @@ ul.disc.orange{
   background-position: top right;
 }
 
-.howitworksgradient{
-  
+.maingradient{
+  background: radial-gradient(1400px 100% at center 10px,rgba(96, 72, 77, 1) 10%,rgba(58, 44, 47, 1) 50%);
 }
 
-.maingradient{
+.homegradient{
   background: radial-gradient(1400px 100% at center 10px,rgba(96, 72, 77, 0.85) 10%,rgba(58, 44, 47, 0.68) 50%);
+}
+
+.capacitybg{
+  background: #48373B;
 }
 
 .mainbg{
@@ -1119,7 +1246,8 @@ ul.disc.orange{
   background: image-url('profile-preview.png');
   background-repeat: no-repeat;
   background-size: 58rem;
-  background-position: 142% 135%;
+  background-position: 142% 470%;
+  transition: all 700ms 0s ease;
 }
 
 .bigdata-arrow {
@@ -1244,7 +1372,7 @@ ul.disc.orange{
   background: image-url('home1.png');
   background-size: 50rem;
   background-repeat: no-repeat;
-  background-position: 150% center;
+  background-position: 100vw center;
   opacity:0;
   transition: all 700ms 0.5s ease;
 }
@@ -1275,6 +1403,10 @@ ul.disc.orange{
   border-top: 2px solid #f1f1f1;
   position: relative;
   overflow:hidden;
+}
+
+.greyborderbottom{
+  border-bottom: 2px solid #f1f1f1;
 }
 
 .footerbg{
@@ -1315,12 +1447,28 @@ ul.disc.orange{
   width: 100%;
 }
 
+.registerborder{
+  border-left: 1px solid #B9B9B9;
+}
+
 .height100vh{
   height: 100vh;
 }
 
+.min-height100vh{
+  min-height: 100vh;
+}
+
+.height90vh{
+  height: 90vh;
+}
+
 .height3{
   height:3rem;
+}
+
+.height4{
+  height:4rem;
 }
 
 .loginlogo{
@@ -1346,6 +1494,26 @@ ul.disc.orange{
   bottom: -4rem;
   right: 3rem;
   height: 15rem;
+}
+
+.mcbutton {
+  position: absolute !important;
+  top: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: linear-gradient(to bottom, #523E42 1%, #433336 100%) !important;
+  border: 2px solid #443437;
+  left: 34%;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0.8rem 3rem;
+}
+
+.mcbutton:hover{
+  background: linear-gradient(to bottom, #523e42 1%, #503C40 100%) !important;
 }
 
 .logingetbutton{
@@ -1392,6 +1560,10 @@ ul.disc.orange{
 
 .margin0t{
   margin-top: 0;
+}
+
+.margin0b{
+  margin-bottom: 0;
 }
 
 
@@ -3549,6 +3721,8 @@ label {
     text-transform: capitalize;
     color: #676767; }
 
+
+
 /* Attach elements to the beginning or end of an input */
 .prefix,
 .postfix {
@@ -3623,6 +3797,53 @@ span.postfix, label.postfix {
   border-left: none;
   color: #333333;
   border-color: #cccccc; }
+
+
+body.getstarted input[type="text"], body.getstarted input[type="password"], body.getstarted input[type="email"], body.getstarted textarea {
+  -webkit-appearance: none;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  font-family: inherit;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  box-shadow: none;
+  color: rgba(0, 0, 0, 1);
+  display: block;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  height: 2.7125rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: all 0.15s linear;
+}
+
+body.getstarted ::-webkit-input-placeholder {
+   color: rgba(58, 44, 47, 0.8);
+}
+
+body.getstarted :-moz-placeholder { /* Firefox 18- */
+   color: rgba(58, 44, 47, 0.8);  
+}
+
+body.getstarted ::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(58, 44, 47, 0.8);  
+}
+
+body.getstarted :-ms-input-placeholder {  
+   color: rgba(58, 44, 47, 0.8);  
+}
+
+.spacer2{
+  height: 2rem;
+}
+
+.spacer1{
+  height: 1rem;
+}
 
 /* We use this to get basic styling on all basic form elements */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
@@ -3873,10 +4094,6 @@ body.howitworks .contain-to-grid{
   background: none;
 }
 
-body.pricing .contain-to-grid{
-  background: radial-gradient(800px at center 200px, rgba(96, 72, 77, 1) 0, rgba(58, 44, 47, 1) 100%);
-}
-
 .contain-to-grid {
   width: 100%;}
   .contain-to-grid .top-bar {
@@ -3956,6 +4173,16 @@ body.pricing .contain-to-grid{
 }
 
 .headroom--top .top-bar img{
+  transition-duration: 500ms;
+}
+
+.headroom--not-top ul.right li a.buttnav{
+  margin-top: 1.1rem;
+  transition-duration: 500ms;
+}
+
+ul.right li a.buttnav {
+  margin-top: 2.8rem;
   transition-duration: 500ms;
 }
 
@@ -4965,3 +5192,402 @@ textarea#wysihtml5-textarea{
 
 
 /* END WYSIHTML */
+
+/* Tipso Bubble Styles */
+.tipso_bubble, .tipso_bubble > .tipso_arrow{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+}
+.tipso_bubble {
+  position: absolute;
+  text-align: center;
+  border-radius: 3px;
+  z-index: 9999;
+  padding: 1.5rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #ABABAB;
+}
+.tipso_style{
+  cursor: help;
+}
+
+/* Tipso Bubble Div */
+.tipso_bubble > .tipso_arrow{
+  position: absolute;
+  width: 0; height: 0;
+  border: 8px solid;
+  pointer-events: none;
+}
+.tipso_bubble.top > .tipso_arrow {
+    border-top-color: #000;
+    border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+}
+.tipso_bubble.bottom > .tipso_arrow {
+    border-bottom-color: #000;
+    border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -8px;
+}
+.tipso_bubble.left > .tipso_arrow {
+    border-left-color: #000;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+    top: 50%;
+  left: 100%;
+  margin-top: -8px;
+}
+.tipso_bubble.right > .tipso_arrow {
+  border-right-color: #000;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+    top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  border-color: transparent rgb(171, 171, 171) transparent transparent !important;
+}
+
+/*!
+ * Waves v0.7.2
+ * http://fian.my.id/Waves 
+ * 
+ * Copyright 2014 Alfiana E. Sibuea and other contributors 
+ * Released under the MIT license 
+ * https://github.com/fians/Waves/blob/master/LICENSE 
+ */
+
+@mixin waves-transition($transition){
+    -webkit-transition: $transition;
+    -moz-transition: $transition; 
+    -o-transition: $transition;
+    transition: $transition;  
+}
+
+@mixin waves-transform($string){
+    -webkit-transform: $string;
+    -moz-transform: $string;
+    -ms-transform: $string;
+    -o-transform: $string;
+    transform: $string;
+}
+
+@mixin waves-box-shadow($shadow){
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+.waves-effect {
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    
+    .waves-ripple {
+        position: absolute;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-top:-50px;
+        margin-left:-50px;
+        opacity: 0;
+        background: rgba(0,0,0,0.2);
+        $gradient: rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%;
+        background: -webkit-radial-gradient($gradient);
+        background: -o-radial-gradient($gradient);
+        background: -moz-radial-gradient($gradient);
+        background: radial-gradient($gradient);
+        @include waves-transition(all 0.3s ease-out);
+        -webkit-transition-property: -webkit-transform, opacity;
+        -moz-transition-property: -moz-transform, opacity;
+        -o-transition-property: -o-transform, opacity;
+        transition-property: transform, opacity;
+        @include waves-transform(scale(0) translate(0,0));
+        pointer-events: none;
+    }
+
+    &.waves-light .waves-ripple {
+        background: rgba(255,255,255,0.4);
+        $gradient: rgba(255,255,255,0.2) 0,rgba(255,255,255,.3) 40%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 60%,rgba(255,255,255,0) 70%;
+        background: -webkit-radial-gradient($gradient);
+        background: -o-radial-gradient($gradient);
+        background: -moz-radial-gradient($gradient);
+        background: radial-gradient($gradient);
+    }
+    
+    &.waves-classic .waves-ripple {
+        background: rgba(0,0,0,0.2);
+    }
+    
+    &.waves-classic.waves-light .waves-ripple {
+        background: rgba(255,255,255,0.4);
+    }
+}
+
+.waves-notransition {
+    @include waves-transition(none #{"!important"});
+}
+
+.waves-button, 
+.waves-circle {
+    @include waves-transform(translateZ(0));
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.waves-button,
+.waves-button:hover,
+.waves-button:visited,
+.waves-button-input {
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 1em;
+    line-height:1em;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.waves-button {
+    padding: 0.85em 1.1em;
+    border-radius: 0.2em;
+}
+
+.waves-button-input {
+    margin: 0;
+    padding: 0.85em 1.1em;
+}
+
+.waves-input-wrapper {
+    border-radius: 0.2em;
+    vertical-align: bottom;
+
+    &.waves-button {
+        padding: 0;
+    }
+
+    .waves-button-input {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+.waves-circle {
+    text-align: center;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-radius: 50%;
+}
+
+.waves-float {
+    -webkit-mask-image: none;
+    @include waves-box-shadow(0px 1px 1.5px 1px rgba(0, 0, 0, 0.12));
+    @include waves-transition(all 300ms);
+
+    &:active {
+        @include waves-box-shadow(0px 8px 20px 1px rgba(0, 0, 0, 0.30));
+    }
+}
+
+.waves-block {
+    display: block;
+}
+
+/* Firefox Bug: link not triggered */
+a.waves-effect .waves-ripple {
+    z-index: -1;
+}
+
+
+.clock {
+  position: relative;
+  top: 0;
+  height: 85px;
+  width: 85px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 10px solid #DDDDDD;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  transition-duration: 1.5s;
+  transition-delay: 5s;
+  z-index: 1;
+  .top {
+    position: absolute;
+    width: 3px;
+    height: 8px;
+    background: #262626;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .right {
+    position: absolute;
+    width: 8px;
+    height: 3px;
+    background: #262626;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+  }
+  .bottom {
+    position: absolute;
+    width: 3px;
+    height: 8px;
+    background: #262626;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }
+  .left {
+    position: absolute;
+    width: 8px;
+    height: 3px;
+    background: #262626;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+  }
+  .center {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #262626;
+    border-radius: 100%;
+  }
+  .shadow {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    transform: rotate(135deg);
+    background: linear-gradient(transparent, rgba(#000, 0.1));
+  }
+  .hour {
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    //animation: time 86400s infinite linear;
+    animation: time 6s infinite linear;
+    &:before {
+      position: absolute;
+      content: "";
+      background: #57454A;
+      height: 26px;
+      width: 3px;
+      top: 25px;
+    }
+  }
+  .minute {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    //animation: time 3600s infinite linear;
+    animation: time 3s infinite linear;
+    &:before {
+      position: absolute;
+      content: "";
+      background: #57454A;
+      height: 25px;
+      width: 1px;
+      top: 25px;
+    }
+  }
+  .second {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    //animation: time 60s infinite linear;
+    animation: time 1500ms infinite linear;
+    &:before {
+      position: absolute;
+      content: "";
+      background: #fd1111;
+      height: 45px;
+      width: 2px;
+      top: 45px;
+    }
+  }
+}
+
+@keyframes time {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.range-slider {
+  border: 1px solid #DDDDDD;
+  margin: 1.25rem 0;
+  position: relative;
+  -ms-touch-action: none;
+  touch-action: none;
+  display: block;
+  height: 1rem;
+  width: 100%;
+  background: #FAFAFA; }
+
+.range-slider-active-segment {
+  background: #e7e7e7;
+  border-bottom-left-radius: inherit;
+  border-top-left-radius: inherit;
+  display: inline-block;
+  height: 0.875rem;
+  position: absolute; }
+
+.range-slider-handle {
+  border: 1px solid none;
+  cursor: pointer;
+  display: inline-block;
+  height: 1.575rem;
+  position: absolute;
+  top: -0.3525rem;
+  width: 2rem;
+  z-index: 1;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  background: #E64946;
+  border-radius: 3px;
+}
+  .range-slider-handle:hover {
+    background: #DA4041; }

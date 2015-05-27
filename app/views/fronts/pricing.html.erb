@@ -1,11 +1,79 @@
-<div class="navheight">
-</div>
-
-<div class="row padding3v">
-	<div class="large-24 columns text-center">
-		<h1>The average return on BeamWIFI is 663%</h1>
-		<h2>WIFI that pays for itself</h2>
+<div class="maingradient min-height100vh">
+	<div class="row padding23t10b-vh">
+		<h1 class="white font4">£37.50 <span class="offwhite font2">/Month for your most powerful marketing tool</span></h1>
+		<ul class="no-bullet monthly-list">
+			<li><%= image_tag("tick.png", class: "tick") %>Access all features</li>
+			<li><%= image_tag("tick.png", class: "tick") %>Generate unlimited profiles on your customers</li>
+			<li><%= image_tag("tick.png", class: "tick") %>Send up to 30,000 emails every month</li>
+			<li><%= image_tag("tick.png", class: "tick") %>Free BeamWiFi extension to plug into your router</li>
+			<li><%= image_tag("tick.png", class: "tick") %>Included unlimited support with our experts</li>
+			<li><%= image_tag("tick.png", class: "tick") %>90 days money back guarantee</li>
+		</ul>
+			<%= link_to new_user_registration_path do %><div class="maingetstarted butt margin4t">PAY MONTHLY</div><% end %>
 	</div>
 </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="capacitybg">
+	<div class="row padding17t10b-vh">
+		<h2 class="white font2 text-center margin2b">Need capacity? Pay as you Grow</h2>
+		<div class="row">
+			<div class="large-4 columns"><br>
+			</div>
+			<div class="large-16 columns calculator-container">
+				<div class="calculator-padding">
+					<p class="white font13 text-center"><span id="sliderOutput1"></span> daily WiFi users</p>
+					<div class="range-slider radius" data-slider data-options="display_selector: #sliderOutput1; start: 0; end: 300;" id="slider1">
+					  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+					  <span class="range-slider-active-segment"></span>
+					  <input type="hidden">
+					</div>
+					<p class="white font13 text-center"><span id="sliderOutput2"></span> emails monthly</p>
+					<div class="range-slider radius" data-slider data-options="display_selector: #sliderOutput2; start: 0; end: 100000;" id="slider2">
+					  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+					  <span class="range-slider-active-segment"></span>
+					  <input type="hidden">
+					</div>
+				</div>
+				<div class="calculator-equals">
+					<h3 class="white text-center font15 margin0b"><span class="calculator-value"></span><span class="offwhite font09">/month</span></h3>
+					<p class="margin0t white offwhite font08 text-center">(approximate)</p>
+				</div>
+			</div>
+			<div class="large-4 columns"><br>
+			</div>
+		</div>
+		<%= link_to new_user_registration_path do %><div class="maingetstarted butt margin4t">APPLY NOW</div><% end %>
+	</div>
+</div>
+
+<div class="row padding17v-vh">
+	<div class="large-24 columns text-center">
+		<h2 class="font2">What's in the box</h2>
+	</div>
+</div>
+
+<div class="greybg">
+	<div class="row padding17v-vh">
+		<div class="large-24 columns text-center">
+			<h2 class="font2">Access to all features</h2>
+		</div>
+	</div>
+</div>
+
+<script>
+$(document).foundation({
+  slider: {
+    on_change: function(){
+      var one = (15 / 100) *  $('#slider1').attr('data-slider') * 0.03 * 30;
+      var two = $('#slider2').attr('data-slider') / 2000 * 1;
+      var total = one + two
+      $(".calculator-value").text("£" + Math.round(total))
+    }
+  }
+});
+</script>
+
+Total Control
+Completely Scalable
+Undeniably Powerful

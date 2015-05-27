@@ -1,29 +1,84 @@
-<h2>Sign up</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Get Started | BeamWiFi</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body class="getstarted">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+<div class="getstartedbg">
+  <div class="getstartedgradient">
+    <div class="row padding2v text-center">
+      <%= image_tag('logo.png', class: "height4") %>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+<div class="row padding2v">
+  <div class="large-10 columns content2 regmatch">
+    <h1 class="font2">The average return on BeamWiFi is 477%</h1>
   </div>
+  <div class="large-14 columns content2 regmatch registerborder">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <div class="row nopadding">
+        <div class="large-11 columns">
+          <%= f.text_field :firstname, placeholder: "First Name"  %>
+        </div>
+        <div class="large-2 columns">
+          <br>
+        </div>
+        <div class="large-11 columns">
+          <%= f.text_field :lastname, placeholder: "Last Name"  %>
+        </div>
+      </div>
+        <%= f.email_field :email, placeholder: "Email Address" %>
+        <%= f.email_field :email, placeholder: "Business Name" %>
+
+        <div class="spacer2"></div>
+
+        <%= f.text_field :address1, placeholder: "Address Line One"  %>
+        <%= f.text_field :address2, placeholder: "Address Line Two"  %>
+        <div class="row nopadding">
+          <div class="large-11 columns">
+            <%= f.text_field :region, placeholder: "Region"  %>
+          </div>
+          <div class="large-2 columns">
+            <br>
+          </div>
+          <div class="large-11 columns">
+            <%= f.text_field :postcode, placeholder: "Postcode"  %>
+          </div>
+        </div>
+        <%= f.text_field :country, placeholder: "Country"  %>
+
+        <div class="spacer"></div>
+
+        <% if @validatable %>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+
+        <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation" %>
+
+        <div class="text-right">
+
+        <%= content_tag :button, type: 'submit', class: "signup-proceed butt" do %>
+          PROCEED
+        <% end %>
+
+        </div>
+    <% end %>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+<script>
+  $('.regmatch').matchHeight();
 
-<%= render "devise/shared/links" %>
+  Waves.attach('.butt');
+  Waves.init();
+
+</script>
