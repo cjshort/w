@@ -5,7 +5,7 @@
 			<li><%= image_tag("tick.png", class: "tick") %>Access all features</li>
 			<li><%= image_tag("tick.png", class: "tick") %>Generate unlimited profiles on your customers</li>
 			<li><%= image_tag("tick.png", class: "tick") %>Send up to 30,000 emails every month</li>
-			<li><%= image_tag("tick.png", class: "tick") %>Free BeamWiFi extension to plug into your router</li>
+			<li><%= image_tag("tick.png", class: "tick") %>Free Beambox extension to plug into your router</li>
 			<li><%= image_tag("tick.png", class: "tick") %>Included unlimited support with our experts</li>
 			<li><%= image_tag("tick.png", class: "tick") %>90 days money back guarantee</li>
 		</ul>
@@ -43,7 +43,12 @@
 			<div class="large-4 columns"><br>
 			</div>
 		</div>
-		<%= link_to new_user_registration_path do %><div class="maingetstarted butt margin4t">APPLY NOW</div><% end %>
+		<p class="white font1 inline-ticks text-center">
+			<%= image_tag("tick.png") %> Total Control 
+			<%= image_tag("tick.png") %> Completely Scalable 
+			<%= image_tag("tick.png") %> Undeniably Powerful
+		</p>
+		<%= link_to new_user_registration_path do %><div class="maingetstarted butt margin2t">APPLY NOW</div><% end %>
 	</div>
 </div>
 
@@ -73,7 +78,3 @@ $(document).foundation({
   }
 });
 </script>
-
-Total Control
-Completely Scalable
-Undeniably Powerful
