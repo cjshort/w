@@ -1,3 +1,21 @@
+.faq-sec{
+  h2{
+    margin-bottom: 5rem;
+  }
+  h4{
+
+  }
+  p{
+
+  }
+  span{
+  font-weight: 600;
+  font-size: 1.4375rem;
+  color: rgba(58, 58, 58, 0.8);
+  font-style: italic;
+  margin-right: 1rem;
+  }
+}
 .how-1-bg {
   background: image-url('profile-preview.png');
   background-size: contain;
@@ -570,7 +588,7 @@ ul.pricing-ul li{
   width: 700px;
   height: 625px;
   position: absolute;
-  right: 43%;
+  right: 5%;
   bottom: -1%;
   background: #FFFFFF;
   border: 1px solid #E5E5E5;
@@ -584,7 +602,7 @@ ul.pricing-ul li{
   top: 0;
   z-index: 2;
   transition-duration: 500ms;
-  transition-delay: 6s;
+  transition-delay: 3s;
   opacity: 0.7;
 }
 
@@ -616,7 +634,7 @@ ul.pricing-ul li{
   width: 700px;
   height: 645px;
   position: absolute;
-  left: 43%;
+  left: 5%;
   bottom: -4%;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -1268,7 +1286,7 @@ ul.disc.orange{
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: 8vh;
+  top: 9vh;
 }
 
 .mainhowitworks:hover{
@@ -1305,7 +1323,9 @@ ul.disc.orange{
 }
 
 .personalitiesoverlay{
-  background: linear-gradient(to right, #4B383C 54%, rgba(198, 198, 198, 0) 100%)
+  background: linear-gradient(to right, #F5F6F7 54%, rgba(245, 246, 247, 0.44) 100%);
+  border-top: 2px solid #F1F1F1;
+  border-bottom: 2px solid #f1f1f1;
 }
 
 .schedulebg{
@@ -5560,7 +5580,7 @@ a.waves-effect .waves-ripple {
   margin-right: auto;
   margin-bottom: 2rem;
   transition-duration: 1.5s;
-  transition-delay: 5s;
+  transition-delay: 2s;
   z-index: 1;
   .top {
     position: absolute;
